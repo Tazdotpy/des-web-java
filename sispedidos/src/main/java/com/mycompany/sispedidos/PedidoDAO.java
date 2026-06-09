@@ -8,7 +8,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-/** data crud*/
+/** DATA LAYER — CRUD operations for Pedido and DetallePedido. */
 public class PedidoDAO {
 
     public void insert(Pedido pedido) throws SQLException {
@@ -55,33 +55,34 @@ public class PedidoDAO {
     }
 
     public List<Pedido> findAll() throws SQLException {
+        // Step 1: load all order headers into memory first, closing the ResultSet
         List<Pedido> list = new ArrayList<>();
         String sql = "SELECT * FROM Pedido";
         try (Connection conn = DatabaseConnection.getConnection();
              Statement st = conn.createStatement();
              ResultSet rs = st.executeQuery(sql)) {
-            while (rs.next()) {
-                Pedido p = mapHeader(rs);
-                p.setDetalles(findDetalles(p.getIdPedido()));
-                list.add(p);
-            }
+            while (rs.next()) list.add(mapHeader(rs));
+        }
+        // Step 2: now safely load details for each order (no open ResultSet above)
+        for (Pedido p : list) {
+            p.setDetalles(findDetalles(p.getIdPedido()));
         }
         return list;
     }
 
     public List<Pedido> findByCliente(int idCliente) throws SQLException {
+        // Same pattern: headers first, then details
         List<Pedido> list = new ArrayList<>();
         String sql = "SELECT * FROM Pedido WHERE id_cliente = ?";
         try (Connection conn = DatabaseConnection.getConnection();
              PreparedStatement ps = conn.prepareStatement(sql)) {
             ps.setInt(1, idCliente);
             try (ResultSet rs = ps.executeQuery()) {
-                while (rs.next()) {
-                    Pedido p = mapHeader(rs);
-                    p.setDetalles(findDetalles(p.getIdPedido()));
-                    list.add(p);
-                }
+                while (rs.next()) list.add(mapHeader(rs));
             }
+        }
+        for (Pedido p : list) {
+            p.setDetalles(findDetalles(p.getIdPedido()));
         }
         return list;
     }
