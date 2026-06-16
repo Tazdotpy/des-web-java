@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TechStore Online - Tu tienda de productos tecnológicos">
+    <meta name="keywords" content="tecnología, laptops, smartphones, accesorios, gaming">
+    <title>TechStore Online - Tienda Tecnológica</title>
+</head>
+<body>
+    <header>
+        <div class="container-header">
+            <h1>TechStore Online</h1>
+            <figure>
+                <img src="img/logo.png" alt="Logo de TechStore" width="100" height="100">
+                <figcaption>Logo de la tienda</figcaption>
+            </figure>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="acerca.html">Acerca de</a></li>
+            </ul>
+        </nav>
+
+        <form method="get" action="productos.html">
+            <input type="search" name="busqueda" placeholder="Buscar productos..." required>
+            <button type="submit">Buscar</button>
+        </form>
+    </header>
+
+    <main>
+        <!-- Banner Promocional -->
+        <section class="banner-promo">
+            <h2>Ofertas Especiales</h2>
+            <figure>
+                <img src="img/banner-promo.jpg" alt="Banner promocional de descuentos especiales" width="800" height="300">
+                <figcaption>Descuentos hasta 50% en productos seleccionados</figcaption>
+            </figure>
+            <p>¡Aprovecha nuestras ofertas limitadas en los mejores productos tecnológicos del mercado!</p>
+            <button><a href="productos.html">Comprar ahora</a></button>
+        </section>
+
+        <!-- Categorías de Productos -->
+        <section class="categorias">
+            <h2>Categorías Destacadas</h2>
+            
+            <article class="categoria-card">
+                <h3>Laptops</h3>
+                <p>Computadoras portátiles de última generación para profesionales y estudiantes.</p>
+                <a href="productos.html?categoria=laptops">Ver más</a>
+            </article>
+
+            <article class="categoria-card">
+                <h3>Smartphones</h3>
+                <p>Teléfonos inteligentes con tecnología de punta y características innovadoras.</p>
+                <a href="productos.html?categoria=smartphones">Ver más</a>
+            </article>
+
+            <article class="categoria-card">
+                <h3>Accesorios</h3>
+                <p>Complementos tecnológicos para mejorar tu experiencia digital.</p>
+                <a href="productos.html?categoria=accesorios">Ver más</a>
+            </article>
+
+            <article class="categoria-card">
+                <h3>Gaming</h3>
+                <p>Equipos y accesorios especializados para gamers profesionales.</p>
+                <a href="productos.html?categoria=gaming">Ver más</a>
+            </article>
+        </section>
+
+        <!-- Productos Destacados -->
+        <section class="productos-destacados">
+            <h2>Productos Destacados</h2>
+            
+            <article class="producto">
+                <header>
+                    <h3>Laptop Gaming Pro</h3>
+                </header>
+                <img src="img/laptop-gaming.jpg" alt="Laptop Gaming Pro con procesador de última generación" width="200" height="200">
+                <p>Laptop de alto rendimiento para juegos y edición profesional.</p>
+                <p><strong>Precio: $1,299</strong></p>
+                <p><mark>25% OFF</mark> - Disponible ahora</p>
+                <footer>
+                    <button><a href="producto.html?id=1">Ver Detalles</a></button>
+                    <button>Agregar al Carrito</button>
+                </footer>
+            </article>
+
+            <article class="producto">
+                <header>
+                    <h3>Smartphone Premium X</h3>
+                </header>
+                <img src="img/smartphone-premium.jpg" alt="Smartphone Premium X con pantalla AMOLED" width="200" height="200">
+                <p>Teléfono inteligente con cámara de 108MP y pantalla AMOLED.</p>
+                <p><strong>Precio: $899</strong></p>
+                <p><mark>15% OFF</mark> - Disponible ahora</p>
+                <footer>
+                    <button><a href="producto.html?id=2">Ver Detalles</a></button>
+                    <button>Agregar al Carrito</button>
+                </footer>
+            </article>
+
+            <article class="producto">
+                <header>
+                    <h3>Tablet Ultra</h3>
+                </header>
+                <img src="img/tablet-ultra.jpg" alt="Tablet Ultra con pantalla de 12 pulgadas" width="200" height="200">
+                <p>Tablet de 12 pulgadas perfecta para trabajo y entretenimiento.</p>
+                <p><strong>Precio: $599</strong></p>
+                <p><mark>10% OFF</mark> - Disponible ahora</p>
+                <footer>
+                    <button><a href="producto.html?id=3">Ver Detalles</a></button>
+                    <button>Agregar al Carrito</button>
+                </footer>
+            </article>
+
+            <article class="producto">
+                <header>
+                    <h3>Auriculares Wireless Pro</h3>
+                </header>
+                <img src="img/auriculares-wireless.jpg" alt="Auriculares Wireless Pro con cancelación de ruido" width="200" height="200">
+                <p>Auriculares inalámbricos con cancelación activa de ruido.</p>
+                <p><strong>Precio: $299</strong></p>
+                <p><mark>20% OFF</mark> - Disponible ahora</p>
+                <footer>
+                    <button><a href="producto.html?id=4">Ver Detalles</a></button>
+                    <button>Agregar al Carrito</button>
+                </footer>
+            </article>
+
+            <article class="producto">
+                <header>
+                    <h3>Monitor 4K</h3>
+                </header>
+                <img src="img/monitor-4k.jpg" alt="Monitor 4K de 32 pulgadas con HDR" width="200" height="200">
+                <p>Monitor de 32 pulgadas resolución 4K con soporte HDR.</p>
+                <p><strong>Precio: $499</strong></p>
+                <p><mark>12% OFF</mark> - Disponible ahora</p>
+                <footer>
+                    <button><a href="producto.html?id=5">Ver Detalles</a></button>
+                    <button>Agregar al Carrito</button>
+                </footer>
+            </article>
+
+            <article class="producto">
+                <header>
+                    <h3>Teclado Mecánico RGB</h3>
+                </header>
+                <img src="img/teclado-mecanico.jpg" alt="Teclado Mecánico RGB con switches Cherry MX" width="200" height="200">
+                <p>Teclado mecánico gaming con iluminación RGB personalizable.</p>
+                <p><strong>Precio: $149</strong></p>
+                <p><mark>18% OFF</mark> - Disponible ahora</p>
+                <footer>
+                    <button><a href="producto.html?id=6">Ver Detalles</a></button>
+                    <button>Agregar al Carrito</button>
+                </footer>
+            </article>
+
+            <article class="producto">
+                <header>
+                    <h3>Mouse Gaming Profesional</h3>
+                </header>
+                <img src="img/mouse-gaming.jpg" alt="Mouse Gaming Profesional con sensor de 16000 DPI" width="200" height="200">
+                <p>Ratón gaming con sensor de 16000 DPI y 8 botones programables.</p>
+                <p><strong>Precio: $79</strong></p>
+                <p><mark>22% OFF</mark> - Disponible ahora</p>
+                <footer>
+                    <button><a href="producto.html?id=7">Ver Detalles</a></button>
+                    <button>Agregar al Carrito</button>
+                </footer>
+            </article>
+
+            <article class="producto">
+                <header>
+                    <h3>Webcam 4K Pro</h3>
+                </header>
+                <img src="img/webcam-4k.jpg" alt="Webcam 4K Pro con micrófono estéreo" width="200" height="200">
+                <p>Cámara web 4K con micrófono estéreo integrado para streaming.</p>
+                <p><strong>Precio: $199</strong></p>
+                <p><mark>16% OFF</mark> - Disponible ahora</p>
+                <footer>
+                    <button><a href="producto.html?id=8">Ver Detalles</a></button>
+                    <button>Agregar al Carrito</button>
+                </footer>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <address>
+            <p>TechStore Online</p>
+            <p>Dirección: Calle Principal 123, Ciudad Tecnológica</p>
+            <p>Email: <a href="mailto:info@techstore.com">info@techstore.com</a></p>
+            <p>Teléfono: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+        </address>
+        <small>&copy; 2024 TechStore Online. Todos los derechos reservados.</small>
+    </footer>
+</body>
+</html>

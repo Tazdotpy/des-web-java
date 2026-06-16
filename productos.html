@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catálogo de productos - TechStore Online">
+    <title>Productos - TechStore Online</title>
+</head>
+<body>
+    <header>
+        <h1>TechStore Online</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="acerca.html">Acerca de</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Catálogo de Productos</h2>
+
+        <div class="productos-container">
+            <!-- Filtros -->
+            <aside class="filtros">
+                <h3>Filtros de Búsqueda</h3>
+                
+                <form method="get" action="productos.html">
+                    <!-- Filtro por Precio -->
+                    <fieldset>
+                        <legend>Rango de Precio</legend>
+                        <label for="precio-min">Mínimo: $</label>
+                        <input type="number" id="precio-min" name="precio-min" min="0" step="50" placeholder="0">
+                        
+                        <label for="precio-max">Máximo: $</label>
+                        <input type="number" id="precio-max" name="precio-max" min="0" step="50" placeholder="2000">
+                    </fieldset>
+
+                    <!-- Filtro por Marca -->
+                    <fieldset>
+                        <legend>Marca</legend>
+                        <label>
+                            <input type="checkbox" name="marca" value="apple"> Apple
+                        </label>
+                        <label>
+                            <input type="checkbox" name="marca" value="samsung"> Samsung
+                        </label>
+                        <label>
+                            <input type="checkbox" name="marca" value="dell"> Dell
+                        </label>
+                        <label>
+                            <input type="checkbox" name="marca" value="lenovo"> Lenovo
+                        </label>
+                        <label>
+                            <input type="checkbox" name="marca" value="asus"> ASUS
+                        </label>
+                    </fieldset>
+
+                    <!-- Filtro por Categoría -->
+                    <fieldset>
+                        <legend>Categoría</legend>
+                        <label for="categoria">Selecciona una categoría:</label>
+                        <select id="categoria" name="categoria">
+                            <option value="">Todas las categorías</option>
+                            <option value="laptops">Laptops</option>
+                            <option value="smartphones">Smartphones</option>
+                            <option value="tablets">Tablets</option>
+                            <option value="accesorios">Accesorios</option>
+                            <option value="gaming">Gaming</option>
+                        </select>
+                    </fieldset>
+
+                    <!-- Filtro por Color -->
+                    <fieldset>
+                        <legend>Color</legend>
+                        <label for="colores">Sugerencias de colores:</label>
+                        <input type="text" id="colores" name="colores" list="color-list" placeholder="Ingresa un color">
+                        <datalist id="color-list">
+                            <option value="Negro">
+                            <option value="Blanco">
+                            <option value="Plata">
+                            <option value="Oro">
+                            <option value="Azul">
+                            <option value="Rojo">
+                        </datalist>
+                    </fieldset>
+
+                    <!-- Disponibilidad -->
+                    <fieldset>
+                        <legend>Disponibilidad</legend>
+                        <label>
+                            <input type="radio" name="disponibilidad" value="todos" checked> Todos
+                        </label>
+                        <label>
+                            <input type="radio" name="disponibilidad" value="disponible"> Solo disponibles
+                        </label>
+                        <label>
+                            <input type="radio" name="disponibilidad" value="agotado"> Agotados
+                        </label>
+                    </fieldset>
+
+                    <button type="submit">Aplicar Filtros</button>
+                    <button type="reset">Limpiar Filtros</button>
+                </form>
+            </aside>
+
+            <!-- Lista de Productos -->
+            <section class="productos-lista">
+                <article class="producto">
+                    <header>
+                        <h3>Laptop Dell XPS 15</h3>
+                    </header>
+                    <img src="img/laptop-dell-xps.jpg" alt="Laptop Dell XPS 15 con pantalla 4K" width="150" height="150">
+                    <p>Portátil premium con procesador Intel de 11ª generación</p>
+                    <p><strong>Precio: $1,499</strong></p>
+                    <p>Disponibilidad: <mark>En stock</mark></p>
+                    <footer>
+                        <button><a href="producto.html?id=9">Ver Detalles</a></button>
+                    </footer>
+                </article>
+
+                <article class="producto">
+                    <header>
+                        <h3>Samsung Galaxy S23 Ultra</h3>
+                    </header>
+                    <img src="img/samsung-s23.jpg" alt="Samsung Galaxy S23 Ultra con cámara de 200MP" width="150" height="150">
+                    <p>Smartphone flagship con pantalla de 6.8 pulgadas y S Pen</p>
+                    <p><strong>Precio: $1,199</strong></p>
+                    <p>Disponibilidad: <mark>En stock</mark></p>
+                    <footer>
+                        <button><a href="producto.html?id=10">Ver Detalles</a></button>
+                    </footer>
+                </article>
+
+                <article class="producto">
+                    <header>
+                        <h3>iPad Pro 12.9"</h3>
+                    </header>
+                    <img src="img/ipad-pro.jpg" alt="iPad Pro 12.9 pulgadas con M2" width="150" height="150">
+                    <p>Tablet profesional con chip M2 y pantalla Liquid Retina</p>
+                    <p><strong>Precio: $1,099</strong></p>
+                    <p>Disponibilidad: <mark>En stock</mark></p>
+                    <footer>
+                        <button><a href="producto.html?id=11">Ver Detalles</a></button>
+                    </footer>
+                </article>
+
+                <article class="producto">
+                    <header>
+                        <h3>Lenovo ThinkPad X1 Carbon</h3>
+                    </header>
+                    <img src="img/lenovo-thinkpad.jpg" alt="Lenovo ThinkPad X1 Carbon ultradelgado" width="150" height="150">
+                    <p>Laptop empresarial ultraligera con batería de 10+ horas</p>
+                    <p><strong>Precio: $1,299</strong></p>
+                    <p>Disponibilidad: <mark>En stock</mark></p>
+                    <footer>
+                        <button><a href="producto.html?id=12">Ver Detalles</a></button>
+                    </footer>
+                </article>
+
+                <article class="producto">
+                    <header>
+                        <h3>ASUS ROG Gaming Laptop</h3>
+                    </header>
+                    <img src="img/asus-rog.jpg" alt="ASUS ROG Laptop con RTX 4070" width="150" height="150">
+                    <p>Laptop gaming con GPU RTX 4070 y procesador de última generación</p>
+                    <p><strong>Precio: $1,799</strong></p>
+                    <p>Disponibilidad: <mark>Pocas unidades</mark></p>
+                    <footer>
+                        <button><a href="producto.html?id=13">Ver Detalles</a></button>
+                    </footer>
+                </article>
+
+                <article class="producto">
+                    <header>
+                        <h3>Apple AirPods Pro</h3>
+                    </header>
+                    <img src="img/airpods-pro.jpg" alt="Apple AirPods Pro con estuche de carga" width="150" height="150">
+                    <p>Auriculares inalámbricos con cancelación activa de ruido</p>
+                    <p><strong>Precio: $249</strong></p>
+                    <p>Disponibilidad: <mark>En stock</mark></p>
+                    <footer>
+                        <button><a href="producto.html?id=14">Ver Detalles</a></button>
+                    </footer>
+                </article>
+
+                <article class="producto">
+                    <header>
+                        <h3>Sony WH-1000XM5</h3>
+                    </header>
+                    <img src="img/sony-wh1000.jpg" alt="Sony WH-1000XM5 auriculares over-ear" width="150" height="150">
+                    <p>Auriculares inalámbricos premium con cancelación mejorada</p>
+                    <p><strong>Precio: $399</strong></p>
+                    <p>Disponibilidad: <mark>En stock</mark></p>
+                    <footer>
+                        <button><a href="producto.html?id=15">Ver Detalles</a></button>
+                    </footer>
+                </article>
+
+                <article class="producto">
+                    <header>
+                        <h3>Microsoft Surface Pro 9</h3>
+                    </header>
+                    <img src="img/surface-pro9.jpg" alt="Microsoft Surface Pro 9 2 en 1" width="150" height="150">
+                    <p>Dispositivo 2 en 1 con pantalla táctil de 13 pulgadas</p>
+                    <p><strong>Precio: $999</strong></p>
+                    <p>Disponibilidad: <mark>En stock</mark></p>
+                    <footer>
+                        <button><a href="producto.html?id=16">Ver Detalles</a></button>
+                    </footer>
+                </article>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <address>
+            <p>TechStore Online</p>
+            <p>Email: <a href="mailto:info@techstore.com">info@techstore.com</a></p>
+        </address>
+        <small>&copy; 2024 TechStore Online</small>
+    </footer>
+</body>
+</html>
