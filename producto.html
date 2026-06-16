@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Detalle del producto - TechStore Online">
+    <title>Detalle del Producto - TechStore Online</title>
+</head>
+<body>
+    <header>
+        <h1>TechStore Online</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="acerca.html">Acerca de</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Laptop Gaming Pro - Detalle del Producto</h2>
+
+        <section class="producto-detalle">
+            <!-- Galería Multimedia Responsiva -->
+            <section class="galeria-multimedia">
+                <h3>Galería del Producto</h3>
+                
+                <picture>
+                    <source media="(min-width: 1024px)" srcset="img/laptop-gaming-desktop.jpg">
+                    <source media="(min-width: 768px)" srcset="img/laptop-gaming-tablet.jpg">
+                    <img src="img/laptop-gaming-mobile.jpg" alt="Laptop Gaming Pro vista frontal en todos los dispositivos" width="400" height="400">
+                </picture>
+
+                <!-- Video del Producto -->
+                <div class="video-container">
+                    <h4>Video del Producto</h4>
+                    <video width="400" height="300" controls>
+                        <source src="video/laptop-gaming-demo.mp4" type="video/mp4">
+                        <source src="video/laptop-gaming-demo.webm" type="video/webm">
+                        Tu navegador no soporta el elemento video.
+                    </video>
+                </div>
+
+                <!-- Audio Promocional -->
+                <div class="audio-container">
+                    <h4>Descripción de Audio</h4>
+                    <audio controls>
+                        <source src="audio/laptop-gaming-descripcion.mp3" type="audio/mpeg">
+                        <source src="audio/laptop-gaming-descripcion.ogg" type="audio/ogg">
+                        Tu navegador no soporta el elemento audio.
+                    </audio>
+                </div>
+            </section>
+
+            <!-- Información del Producto -->
+            <section class="info-producto">
+                <h3>Laptop Gaming Pro</h3>
+                <p><strong>Marca:</strong> TechBrand</p>
+                <p><strong>Modelo:</strong> GP-2024-Ultra</p>
+                <p><strong>Precio: $1,299</strong></p>
+                <p><strong>Descuento:</strong> <mark>25% OFF</mark></p>
+                <p><strong>Disponibilidad:</strong> <mark>En Stock</mark></p>
+                
+                <p><strong>Descripción General:</strong></p>
+                <p>La Laptop Gaming Pro es una máquina de alto rendimiento diseñada para gamers profesionales y creadores de contenido. Con un procesador de última generación y una tarjeta gráfica RTX 4070, ofrece el máximo rendimiento en juegos y aplicaciones exigentes.</p>
+
+                <!-- Tabla de Especificaciones Técnicas -->
+                <table class="especificaciones">
+                    <caption>Especificaciones Técnicas de la Laptop Gaming Pro</caption>
+                    <thead>
+                        <tr>
+                            <th>Característica</th>
+                            <th>Especificación</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Procesador</strong></td>
+                            <td>Intel Core i9-13900H (24 núcleos)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>RAM</strong></td>
+                            <td>32 GB DDR5</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Almacenamiento</strong></td>
+                            <td>1 TB SSD NVMe</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tarjeta Gráfica</strong></td>
+                            <td>NVIDIA RTX 4070 (12GB GDDR6)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Pantalla</strong></td>
+                            <td>15.6" FHD IPS 165Hz</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Resolución</strong></td>
+                            <td>1920 x 1080 píxeles</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Batería</strong></td>
+                            <td>86Wh Li-Po (8-10 horas)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Peso</strong></td>
+                            <td>2.5 kg</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Puertos</strong></td>
+                            <td>2x USB-C Thunderbolt 4, 2x USB 3.2, HDMI 2.1, Jack 3.5mm</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Sistema Operativo</strong></td>
+                            <td>Windows 11 Pro</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Conectividad</strong></td>
+                            <td>WiFi 6E, Bluetooth 5.3</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Color</strong></td>
+                            <td>Negro Mate con detalles RGB</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2"><strong>Garantía:</strong> 2 años de cobertura internacional</td>
+                        </tr>
+                    </tfoot>
+                </table>
+
+                <!-- Acciones de Compra -->
+                <section class="acciones-compra">
+                    <h4>Opciones de Compra</h4>
+                    <label for="cantidad">Cantidad:</label>
+                    <input type="number" id="cantidad" name="cantidad" min="1" max="10" value="1">
+                    
+                    <button>Agregar al Carrito</button>
+                    <button>Comprar Ahora</button>
+                </section>
+
+                <!-- Información Adicional -->
+                <section class="info-adicional">
+                    <h4>Información Adicional</h4>
+                    <ul>
+                        <li>Envío gratuito para pedidos superiores a $100</li>
+                        <li>Devolución de 30 días sin preguntas</li>
+                        <li>Garantía extendida disponible</li>
+                        <li>Soporte técnico 24/7</li>
+                    </ul>
+                </section>
+
+                <!-- Reseñas de Clientes -->
+                <section class="resenas">
+                    <h4>Reseñas de Clientes</h4>
+                    <article class="resena">
+                        <p><strong>Juan García</strong> - ⭐⭐⭐⭐⭐</p>
+                        <p>"Excelente laptop, cumple todas mis expectativas para gaming y edición de video. La construcción es sólida y el rendimiento es impresionante."</p>
+                    </article>
+                    <article class="resena">
+                        <p><strong>María López</strong> - ⭐⭐⭐⭐</p>
+                        <p>"Muy buena máquina, aunque un poco pesada para llevar. Definitivamente recomendada para gamers profesionales."</p>
+                    </article>
+                </section>
+            </section>
+        </section>
+
+        <!-- Productos Relacionados -->
+        <section class="productos-relacionados">
+            <h3>Productos Relacionados</h3>
+            <article class="producto">
+                <h4>Monitor 4K Gaming</h4>
+                <img src="img/monitor-gaming-4k.jpg" alt="Monitor 4K para gaming profesional" width="150" height="150">
+                <p>Monitor de 32" 4K 144Hz ideal para gaming</p>
+                <p><strong>$599</strong></p>
+            </article>
+            <article class="producto">
+                <h4>Mousepad XL RGB</h4>
+                <img src="img/mousepad-rgb.jpg" alt="Mousepad XL con iluminación RGB" width="150" height="150">
+                <p>Mousepad grande con LED RGB personalizable</p>
+                <p><strong>$49</strong></p>
+            </article>
+            <article class="producto">
+                <h4>Refrigerador Laptop</h4>
+                <img src="img/refrigerador-laptop.jpg" alt="Refrigerador de laptop con ventiladores" width="150" height="150">
+                <p>Sistema de refrigeración activa para laptops gaming</p>
+                <p><strong>$89</strong></p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <address>
+            <p>TechStore Online</p>
+            <p>Email: <a href="mailto:soporte@techstore.com">soporte@techstore.com</a></p>
+        </address>
+        <small>&copy; 2024 TechStore Online</small>
+    </footer>
+</body>
+</html>

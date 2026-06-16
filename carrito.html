@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Carrito de Compras - TechStore Online">
+    <title>Carrito de Compras - TechStore Online</title>
+</head>
+<body>
+    <header>
+        <h1>TechStore Online</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="acerca.html">Acerca de</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Carrito de Compras</h2>
+
+        <section class="carrito-contenedor">
+            <!-- Tabla del Carrito -->
+            <section class="carrito-items">
+                <h3>Productos en el Carrito</h3>
+                <table class="tabla-carrito">
+                    <caption>Artículos agregados a tu carrito de compras</caption>
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Precio Unitario</th>
+                            <th>Cantidad</th>
+                            <th>Subtotal</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Laptop Gaming Pro</td>
+                            <td>$1,299</td>
+                            <td><input type="number" min="1" value="1" style="width: 50px;"></td>
+                            <td>$1,299</td>
+                            <td><button>Eliminar</button></td>
+                        </tr>
+                        <tr>
+                            <td>Monitor 4K Gaming</td>
+                            <td>$599</td>
+                            <td><input type="number" min="1" value="2" style="width: 50px;"></td>
+                            <td>$1,198</td>
+                            <td><button>Eliminar</button></td>
+                        </tr>
+                        <tr>
+                            <td>Teclado Mecánico RGB</td>
+                            <td>$149</td>
+                            <td><input type="number" min="1" value="1" style="width: 50px;"></td>
+                            <td>$149</td>
+                            <td><button>Eliminar</button></td>
+                        </tr>
+                        <tr>
+                            <td>Mouse Gaming Profesional</td>
+                            <td>$79</td>
+                            <td><input type="number" min="1" value="1" style="width: 50px;"></td>
+                            <td>$79</td>
+                            <td><button>Eliminar</button></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3" style="text-align: right;"><strong>Subtotal:</strong></td>
+                            <td colspan="2"><strong>$2,725</strong></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </section>
+
+            <!-- Resumen del Carrito -->
+            <section class="carrito-resumen">
+                <h3>Resumen del Pedido</h3>
+                
+                <!-- Código de Descuento -->
+                <div class="codigo-descuento">
+                    <label for="codigo">Código de Descuento:</label>
+                    <input type="text" id="codigo" name="codigo" placeholder="Ingresa tu código">
+                    <button>Aplicar</button>
+                </div>
+
+                <!-- Detalles de Costos -->
+                <div class="detalles-costos">
+                    <p>
+                        <span>Subtotal:</span>
+                        <strong>$2,725.00</strong>
+                    </p>
+                    <p>
+                        <span>Envío:</span>
+                        <strong>$0.00 (Envío Gratis)</strong>
+                    </p>
+                    <p>
+                        <span>Impuestos:</span>
+                        <strong>$272.50</strong>
+                    </p>
+                    <p>
+                        <span>Descuento:</span>
+                        <strong>-$136.25</strong>
+                    </p>
+                    <hr>
+                    <p>
+                        <strong>Total:</strong>
+                        <strong style="font-size: 1.2em;">$2,861.25</strong>
+                    </p>
+                </div>
+
+                <!-- Medidor de Descuento -->
+                <div class="medidor-descuento">
+                    <h4>Descuento Aplicado</h4>
+                    <label for="descuento-meter">Porcentaje de Descuento:</label>
+                    <meter id="descuento-meter" value="20" min="0" max="100">
+                        20% de descuento
+                    </meter>
+                    <p>Tienes un descuento del <strong>20%</strong> en tu compra actual.</p>
+                </div>
+
+                <!-- Progreso del Pedido -->
+                <div class="progreso-pedido">
+                    <h4>Progreso de Pago</h4>
+                    <label for="progreso">Estado del pago:</label>
+                    <progress id="progreso" value="3" max="5">
+                        60%
+                    </progress>
+                    <p>Paso 3 de 5: Revisando carrito</p>
+                </div>
+
+                <!-- Botones de Acción -->
+                <div class="botones-accion">
+                    <button class="btn-primario">Proceder al Pago</button>
+                    <button><a href="productos.html">Seguir Comprando</a></button>
+                    <button>Guardar para Después</button>
+                </div>
+
+                <!-- Métodos de Pago -->
+                <div class="metodos-pago">
+                    <h4>Métodos de Pago Disponibles</h4>
+                    <label>
+                        <input type="radio" name="pago" value="tarjeta" checked>
+                        Tarjeta de Crédito/Débito
+                    </label>
+                    <label>
+                        <input type="radio" name="pago" value="paypal">
+                        PayPal
+                    </label>
+                    <label>
+                        <input type="radio" name="pago" value="transferencia">
+                        Transferencia Bancaria
+                    </label>
+                </div>
+
+                <!-- Cupones Disponibles -->
+                <div class="cupones">
+                    <h4>Cupones Disponibles</h4>
+                    <ul>
+                        <li>TECH20 - 20% de descuento</li>
+                        <li>ENVIO10 - $10 de descuento en envío</li>
+                        <li>NUEVO15 - 15% para nuevos clientes</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Recomendaciones -->
+            <section class="recomendaciones">
+                <h3>Productos que Podrían Interesarte</h3>
+                <article class="producto-recomendado">
+                    <h4>Refrigerador Laptop</h4>
+                    <img src="img/refrigerador-laptop.jpg" alt="Refrigerador activo para laptop" width="120" height="120">
+                    <p>$89 - Compatible con tu laptop</p>
+                    <button>Agregar al Carrito</button>
+                </article>
+                <article class="producto-recomendado">
+                    <h4>Cable USB-C 3m</h4>
+                    <img src="img/cable-usb-c.jpg" alt="Cable USB-C de 3 metros" width="120" height="120">
+                    <p>$19 - Carga rápida</p>
+                    <button>Agregar al Carrito</button>
+                </article>
+                <article class="producto-recomendado">
+                    <h4>Funda Laptop 15"</h4>
+                    <img src="img/funda-laptop.jpg" alt="Funda protectora de neopreno" width="120" height="120">
+                    <p>$39 - Protección premium</p>
+                    <button>Agregar al Carrito</button>
+                </article>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <address>
+            <p>TechStore Online</p>
+            <p>Teléfono: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+            <p>Email: <a href="mailto:ventas@techstore.com">ventas@techstore.com</a></p>
+        </address>
+        <small>&copy; 2024 TechStore Online - Todos los derechos reservados</small>
+    </footer>
+</body>
+</html>
