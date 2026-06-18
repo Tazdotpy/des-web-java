@@ -1,0 +1,333 @@
+/* ============================================================
+   TechStore Online — responsive.css
+   Práctica 2: Media Queries — Mobile / Tablet / Desktop
+   ============================================================ */
+
+/* ============================================================
+   MOBILE FIRST — max-width: 768px
+   ============================================================ */
+@media (max-width: 768px) {
+
+  /* Variables ajustadas para móvil */
+  :root {
+    --alto-topbar: 0px;
+    --alto-header: 60px;
+    --alto-nav: 0px;
+    --alto-total-header: 60px;
+  }
+
+  /* Topbar oculta en móvil */
+  body > div:first-child {
+    display: none;
+  }
+
+  /* Header mobile */
+  header {
+    top: 0;
+    padding: var(--espacio-sm) 0;
+  }
+
+  header > div {
+    flex-wrap: wrap;
+    gap: var(--espacio-sm);
+    height: auto;
+    padding: var(--espacio-sm) var(--espacio-md);
+  }
+
+  header figure img {
+    width: 110px;
+  }
+
+  /* Buscador ocupa ancho completo en segunda fila */
+  header > div > form[role="search"] {
+    order: 3;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  /* Acciones del usuario */
+  header > div > div {
+    gap: var(--espacio-sm);
+  }
+
+  header > div > div a {
+    font-size: 0.75rem;
+    padding: var(--espacio-xs);
+  }
+
+  /* ============================================================
+     MENÚ HAMBURGUESA — BONUS CSS
+     Se usa un checkbox oculto para controlar el menú
+     ============================================================ */
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: var(--espacio-xs);
+    order: 2;
+  }
+
+  .menu-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: var(--color-primario);
+    border-radius: 2px;
+    transition: var(--transicion-normal);
+  }
+
+  /* Nav colapsada en móvil */
+  header > nav {
+    height: auto;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+
+  /* Nav expandida cuando el checkbox está checked */
+  #menu-check:checked ~ header > nav,
+  header > nav:focus-within {
+    max-height: 400px;
+  }
+
+  header > nav > ul {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--espacio-sm) var(--espacio-md);
+    gap: 0;
+    height: auto;
+  }
+
+  header > nav > ul > li {
+    width: 100%;
+  }
+
+  header > nav > ul > li > a {
+    height: auto;
+    padding: var(--espacio-sm) var(--espacio-md);
+    width: 100%;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  header > nav > ul > li > a::after {
+    display: none;
+  }
+
+  /* main padding */
+  main {
+    padding: calc(var(--alto-total-header) + var(--espacio-lg)) var(--espacio-md) var(--espacio-2xl);
+  }
+
+  /* Hero banner — una columna */
+  section[aria-label="Banner promocional principal"] {
+    grid-template-columns: 1fr;
+    padding: var(--espacio-xl) var(--espacio-md);
+  }
+
+  section[aria-label="Banner promocional principal"] > aside {
+    display: none;
+  }
+
+  section[aria-label="Banner promocional principal"] h1 {
+    font-size: 1.6rem;
+  }
+
+  /* Categorías: scroll horizontal */
+  section[aria-labelledby="titulo-categorias"] nav > ul {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding-bottom: var(--espacio-sm);
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+
+  /* Productos: 2 columnas en móvil */
+  section[aria-labelledby="titulo-productos"] {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--espacio-md);
+  }
+
+  /* Listado con aside: una columna */
+  main > div {
+    flex-direction: column;
+  }
+
+  aside[aria-labelledby="titulo-filtros"] {
+    width: 100%;
+    position: static;
+  }
+
+  section[aria-labelledby="titulo-listado"] {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Tabla responsive: scroll horizontal */
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Footer: una columna */
+  footer > div {
+    flex-direction: column;
+    gap: var(--espacio-lg);
+  }
+
+  footer section {
+    min-width: 100%;
+  }
+
+  /* Newsletter footer: columna */
+  footer form {
+    flex-direction: column;
+  }
+
+  footer form input[type="email"] {
+    border-radius: var(--radio-md);
+    border-right: 2px solid rgba(255,255,255,0.2);
+    margin-bottom: var(--espacio-sm);
+  }
+
+  footer form button {
+    border-radius: var(--radio-md);
+    width: 100%;
+  }
+
+  /* Tipografía */
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.25rem; }
+
+  /* Dialog full width */
+  dialog {
+    width: 95vw;
+    padding: var(--espacio-lg);
+  }
+}
+
+/* ============================================================
+   TABLET — min-width: 769px and max-width: 1024px
+   ============================================================ */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  :root {
+    --alto-total-header: calc(var(--alto-topbar) + var(--alto-header) + var(--alto-nav));
+  }
+
+  main {
+    padding: calc(var(--alto-total-header) + var(--espacio-lg)) var(--espacio-lg) var(--espacio-2xl);
+  }
+
+  /* Hero: dos columnas ajustadas */
+  section[aria-label="Banner promocional principal"] {
+    grid-template-columns: 1fr 200px;
+    padding: var(--espacio-xl);
+  }
+
+  section[aria-label="Banner promocional principal"] h1 {
+    font-size: 2rem;
+  }
+
+  /* Productos: 3 columnas en tablet */
+  section[aria-labelledby="titulo-productos"] {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Listado: aside más estrecho */
+  aside[aria-labelledby="titulo-filtros"] {
+    width: 220px;
+  }
+
+  section[aria-labelledby="titulo-listado"] {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Nav: reducir padding */
+  header > nav > ul > li > a {
+    padding: 0 var(--espacio-md);
+    font-size: 0.875rem;
+  }
+
+  /* Footer: 2 columnas */
+  footer > div {
+    gap: var(--espacio-lg);
+  }
+
+  footer section {
+    min-width: 45%;
+  }
+
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.625rem; }
+}
+
+/* ============================================================
+   DESKTOP — min-width: 1025px
+   ============================================================ */
+@media (min-width: 1025px) {
+
+  /* Productos: 4 columnas */
+  section[aria-labelledby="titulo-productos"] {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Listado: 3 columnas */
+  section[aria-labelledby="titulo-listado"] {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Hero: completo */
+  section[aria-label="Banner promocional principal"] {
+    grid-template-columns: 1fr 280px;
+  }
+
+  /* Footer: fila completa */
+  footer section {
+    min-width: 160px;
+  }
+}
+
+/* ============================================================
+   EXTRA LARGE — min-width: 1280px
+   ============================================================ */
+@media (min-width: 1280px) {
+  section[aria-labelledby="titulo-productos"] {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ============================================================
+   PRINT — Estilos de impresión
+   ============================================================ */
+@media print {
+  body > div:first-child,
+  header > nav,
+  footer,
+  button,
+  aside[aria-labelledby="titulo-filtros"] {
+    display: none !important;
+  }
+
+  header {
+    position: static;
+    box-shadow: none;
+  }
+
+  main {
+    padding-top: 0;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.75em;
+    color: #666;
+  }
+
+  table {
+    page-break-inside: avoid;
+  }
+}

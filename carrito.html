@@ -1,205 +1,352 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Carrito de Compras - TechStore Online">
-    <title>Carrito de Compras - TechStore Online</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Carrito de compras - TechStore Online">
+  <meta name="author" content="TechStore Online">
+  <title>Carrito de Compras - TechStore Online</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animaciones.css">
 </head>
 <body>
-    <header>
-        <h1>TechStore Online</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="productos.html">Productos</a></li>
-                <li><a href="carrito.html">Carrito</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="acerca.html">Acerca de</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <h2>Carrito de Compras</h2>
+  <div>
+    <p><small>🚚 Envío gratis en compras mayores a $50.000</small></p>
+  </div>
 
-        <section class="carrito-contenedor">
-            <!-- Tabla del Carrito -->
-            <section class="carrito-items">
-                <h3>Productos en el Carrito</h3>
-                <table class="tabla-carrito">
-                    <caption>Artículos agregados a tu carrito de compras</caption>
-                    <thead>
-                        <tr>
-                            <th>Producto</th>
-                            <th>Precio Unitario</th>
-                            <th>Cantidad</th>
-                            <th>Subtotal</th>
-                            <th>Acción</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Laptop Gaming Pro</td>
-                            <td>$1,299</td>
-                            <td><input type="number" min="1" value="1" style="width: 50px;"></td>
-                            <td>$1,299</td>
-                            <td><button>Eliminar</button></td>
-                        </tr>
-                        <tr>
-                            <td>Monitor 4K Gaming</td>
-                            <td>$599</td>
-                            <td><input type="number" min="1" value="2" style="width: 50px;"></td>
-                            <td>$1,198</td>
-                            <td><button>Eliminar</button></td>
-                        </tr>
-                        <tr>
-                            <td>Teclado Mecánico RGB</td>
-                            <td>$149</td>
-                            <td><input type="number" min="1" value="1" style="width: 50px;"></td>
-                            <td>$149</td>
-                            <td><button>Eliminar</button></td>
-                        </tr>
-                        <tr>
-                            <td>Mouse Gaming Profesional</td>
-                            <td>$79</td>
-                            <td><input type="number" min="1" value="1" style="width: 50px;"></td>
-                            <td>$79</td>
-                            <td><button>Eliminar</button></td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <td colspan="3" style="text-align: right;"><strong>Subtotal:</strong></td>
-                            <td colspan="2"><strong>$2,725</strong></td>
-                        </tr>
-                    </tfoot>
-                </table>
-            </section>
+  <header>
+    <div>
+      <figure>
+        <a href="index.html">
+          <img src="img/ui/logo.png" alt="Logo TechStore Online — Ir al inicio">
+        </a>
+      </figure>
+      <form action="productos.html" method="get" role="search">
+        <label for="busqueda">Buscar:</label>
+        <input type="search" id="busqueda" name="q" placeholder="Buscar productos..." aria-label="Buscar productos" autocomplete="on">
+        <button type="submit">Buscar</button>
+      </form>
+      <div>
+        <a href="carrito.html" aria-label="Ver carrito" aria-current="page">🛒 Carrito <strong>(3)</strong></a>
+        <a href="#" aria-label="Mi cuenta">👤 Mi cuenta</a>
+      </div>
+    </div>
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="productos.html?cat=ofertas">Ofertas</a></li>
+        <li><a href="acerca.html">Blog</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
-            <!-- Resumen del Carrito -->
-            <section class="carrito-resumen">
-                <h3>Resumen del Pedido</h3>
-                
-                <!-- Código de Descuento -->
-                <div class="codigo-descuento">
-                    <label for="codigo">Código de Descuento:</label>
-                    <input type="text" id="codigo" name="codigo" placeholder="Ingresa tu código">
-                    <button>Aplicar</button>
-                </div>
+  <main>
 
-                <!-- Detalles de Costos -->
-                <div class="detalles-costos">
-                    <p>
-                        <span>Subtotal:</span>
-                        <strong>$2,725.00</strong>
-                    </p>
-                    <p>
-                        <span>Envío:</span>
-                        <strong>$0.00 (Envío Gratis)</strong>
-                    </p>
-                    <p>
-                        <span>Impuestos:</span>
-                        <strong>$272.50</strong>
-                    </p>
-                    <p>
-                        <span>Descuento:</span>
-                        <strong>-$136.25</strong>
-                    </p>
-                    <hr>
-                    <p>
-                        <strong>Total:</strong>
-                        <strong style="font-size: 1.2em;">$2,861.25</strong>
-                    </p>
-                </div>
+    <nav aria-label="Ruta de navegación (breadcrumb)">
+      <ol>
+        <li><a href="index.html">Inicio</a></li>
+        <li>Carrito de compras</li>
+      </ol>
+    </nav>
 
-                <!-- Medidor de Descuento -->
-                <div class="medidor-descuento">
-                    <h4>Descuento Aplicado</h4>
-                    <label for="descuento-meter">Porcentaje de Descuento:</label>
-                    <meter id="descuento-meter" value="20" min="0" max="100">
-                        20% de descuento
-                    </meter>
-                    <p>Tienes un descuento del <strong>20%</strong> en tu compra actual.</p>
-                </div>
+    <h1>Carrito de Compras</h1>
 
-                <!-- Progreso del Pedido -->
-                <div class="progreso-pedido">
-                    <h4>Progreso de Pago</h4>
-                    <label for="progreso">Estado del pago:</label>
-                    <progress id="progreso" value="3" max="5">
-                        60%
-                    </progress>
-                    <p>Paso 3 de 5: Revisando carrito</p>
-                </div>
+    <!-- ==================== PROGRESO DEL PEDIDO ==================== -->
+    <section aria-labelledby="titulo-progreso">
+      <h2 id="titulo-progreso">Progreso del pedido</h2>
 
-                <!-- Botones de Acción -->
-                <div class="botones-accion">
-                    <button class="btn-primario">Proceder al Pago</button>
-                    <button><a href="productos.html">Seguir Comprando</a></button>
-                    <button>Guardar para Después</button>
-                </div>
+      <ol aria-label="Pasos del proceso de compra">
+        <li><strong>1. Carrito</strong> ← Estás aquí</li>
+        <li>2. Datos de envío</li>
+        <li>3. Pago</li>
+        <li>4. Confirmación</li>
+      </ol>
 
-                <!-- Métodos de Pago -->
-                <div class="metodos-pago">
-                    <h4>Métodos de Pago Disponibles</h4>
-                    <label>
-                        <input type="radio" name="pago" value="tarjeta" checked>
-                        Tarjeta de Crédito/Débito
-                    </label>
-                    <label>
-                        <input type="radio" name="pago" value="paypal">
-                        PayPal
-                    </label>
-                    <label>
-                        <input type="radio" name="pago" value="transferencia">
-                        Transferencia Bancaria
-                    </label>
-                </div>
+      <label for="progreso-pedido">Avance del proceso:</label>
+      <progress id="progreso-pedido" value="1" max="4" aria-label="Paso 1 de 4 del proceso de compra">
+        Paso 1 de 4
+      </progress>
+      <p><small>Paso 1 de 4 — Revisa tu carrito</small></p>
+    </section>
 
-                <!-- Cupones Disponibles -->
-                <div class="cupones">
-                    <h4>Cupones Disponibles</h4>
-                    <ul>
-                        <li>TECH20 - 20% de descuento</li>
-                        <li>ENVIO10 - $10 de descuento en envío</li>
-                        <li>NUEVO15 - 15% para nuevos clientes</li>
-                    </ul>
-                </div>
-            </section>
+    <hr>
 
-            <!-- Recomendaciones -->
-            <section class="recomendaciones">
-                <h3>Productos que Podrían Interesarte</h3>
-                <article class="producto-recomendado">
-                    <h4>Refrigerador Laptop</h4>
-                    <img src="img/refrigerador-laptop.jpg" alt="Refrigerador activo para laptop" width="120" height="120">
-                    <p>$89 - Compatible con tu laptop</p>
-                    <button>Agregar al Carrito</button>
-                </article>
-                <article class="producto-recomendado">
-                    <h4>Cable USB-C 3m</h4>
-                    <img src="img/cable-usb-c.jpg" alt="Cable USB-C de 3 metros" width="120" height="120">
-                    <p>$19 - Carga rápida</p>
-                    <button>Agregar al Carrito</button>
-                </article>
-                <article class="producto-recomendado">
-                    <h4>Funda Laptop 15"</h4>
-                    <img src="img/funda-laptop.jpg" alt="Funda protectora de neopreno" width="120" height="120">
-                    <p>$39 - Protección premium</p>
-                    <button>Agregar al Carrito</button>
-                </article>
-            </section>
-        </section>
-    </main>
+    <!-- ==================== TABLA DEL CARRITO ==================== -->
+    <section aria-labelledby="titulo-carrito">
+      <h2 id="titulo-carrito">Mis productos</h2>
 
-    <footer>
-        <address>
-            <p>TechStore Online</p>
-            <p>Teléfono: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
-            <p>Email: <a href="mailto:ventas@techstore.com">ventas@techstore.com</a></p>
-        </address>
-        <small>&copy; 2024 TechStore Online - Todos los derechos reservados</small>
-    </footer>
+      <table aria-describedby="desc-carrito">
+        <caption>Lista de productos en tu carrito de compras</caption>
+        <thead>
+          <tr>
+            <th scope="col">Producto</th>
+            <th scope="col">Precio unitario</th>
+            <th scope="col">Cantidad</th>
+            <th scope="col">Descuento</th>
+            <th scope="col">Subtotal</th>
+            <th scope="col">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Producto 1 -->
+          <tr>
+            <td>
+              <figure>
+                <img src="img/productos/macbook-air.jpg" alt="Apple MacBook Air M2 plateado" width="70" height="70">
+                <figcaption>
+                  <strong>Apple MacBook Air M2</strong><br>
+                  <small>Color: Plateado | SKU: <data value="SKU-2001">MBX-M2-256</data></small>
+                </figcaption>
+              </figure>
+            </td>
+            <td>$1.299.990</td>
+            <td>
+              <form action="#" method="post" aria-label="Actualizar cantidad MacBook Air M2">
+                <label for="qty-1" class="sr-only">Cantidad:</label>
+                <input type="number" id="qty-1" name="cantidad_1" value="1" min="1" max="10" aria-label="Cantidad de MacBook Air M2">
+                <button type="submit" aria-label="Actualizar cantidad">Actualizar</button>
+              </form>
+            </td>
+            <td>
+              <meter
+                value="13"
+                min="0"
+                max="100"
+                low="5"
+                high="20"
+                optimum="15"
+                aria-label="Descuento del 13% en MacBook Air M2"
+              >13%</meter>
+              <small>13% OFF</small>
+            </td>
+            <td><strong>$1.130.991</strong></td>
+            <td>
+              <button type="button" aria-label="Eliminar MacBook Air M2 del carrito">🗑 Eliminar</button>
+              <button type="button" aria-label="Guardar MacBook Air M2 en favoritos">♥ Guardar</button>
+            </td>
+          </tr>
+
+          <!-- Producto 2 -->
+          <tr>
+            <td>
+              <figure>
+                <img src="img/productos/airpods-pro.jpg" alt="Apple AirPods Pro 2da generación" width="70" height="70">
+                <figcaption>
+                  <strong>AirPods Pro (2da Gen)</strong><br>
+                  <small>Color: Blanco | SKU: <data value="SKU-3001">APP-PRO-2</data></small>
+                </figcaption>
+              </figure>
+            </td>
+            <td>$299.990</td>
+            <td>
+              <form action="#" method="post" aria-label="Actualizar cantidad AirPods Pro">
+                <label for="qty-2" class="sr-only">Cantidad:</label>
+                <input type="number" id="qty-2" name="cantidad_2" value="1" min="1" max="10" aria-label="Cantidad de AirPods Pro">
+                <button type="submit" aria-label="Actualizar cantidad">Actualizar</button>
+              </form>
+            </td>
+            <td>
+              <meter
+                value="0"
+                min="0"
+                max="100"
+                aria-label="Sin descuento en AirPods Pro"
+              >0%</meter>
+              <small>Sin descuento</small>
+            </td>
+            <td><strong>$299.990</strong></td>
+            <td>
+              <button type="button" aria-label="Eliminar AirPods Pro del carrito">🗑 Eliminar</button>
+              <button type="button" aria-label="Guardar AirPods Pro en favoritos">♥ Guardar</button>
+            </td>
+          </tr>
+
+          <!-- Producto 3 -->
+          <tr>
+            <td>
+              <figure>
+                <img src="img/productos/logitech-mouse.jpg" alt="Mouse Logitech MX Master 3S negro" width="70" height="70">
+                <figcaption>
+                  <strong>Logitech MX Master 3S</strong><br>
+                  <small>Color: Negro | SKU: <data value="SKU-4001">LOG-MX3S</data></small>
+                </figcaption>
+              </figure>
+            </td>
+            <td>$129.990</td>
+            <td>
+              <form action="#" method="post" aria-label="Actualizar cantidad MX Master 3S">
+                <label for="qty-3" class="sr-only">Cantidad:</label>
+                <input type="number" id="qty-3" name="cantidad_3" value="2" min="1" max="10" aria-label="Cantidad de Logitech MX Master 3S">
+                <button type="submit" aria-label="Actualizar cantidad">Actualizar</button>
+              </form>
+            </td>
+            <td>
+              <meter
+                value="10"
+                min="0"
+                max="100"
+                low="5"
+                high="25"
+                optimum="10"
+                aria-label="Descuento del 10% en MX Master 3S"
+              >10%</meter>
+              <small>10% OFF</small>
+            </td>
+            <td><strong>$233.982</strong></td>
+            <td>
+              <button type="button" aria-label="Eliminar MX Master 3S del carrito">🗑 Eliminar</button>
+              <button type="button" aria-label="Guardar MX Master 3S en favoritos">♥ Guardar</button>
+            </td>
+          </tr>
+        </tbody>
+
+        <tfoot>
+          <tr>
+            <td colspan="4"><strong>Subtotal productos:</strong></td>
+            <td colspan="2"><strong>$1.664.963</strong></td>
+          </tr>
+          <tr>
+            <td colspan="4">Envío:</td>
+            <td colspan="2"><ins>Gratis</ins></td>
+          </tr>
+          <tr>
+            <td colspan="4"><abbr title="Impuesto al Valor Agregado">IVA</abbr> (19%):</td>
+            <td colspan="2">$316.342</td>
+          </tr>
+          <tr>
+            <td colspan="4"><strong>Total a pagar:</strong></td>
+            <td colspan="2"><strong>$1.981.305</strong></td>
+          </tr>
+        </tfoot>
+      </table>
+      <p id="desc-carrito"><small>Los precios incluyen IVA. El envío es gratis para compras mayores a $50.000.</small></p>
+    </section>
+
+    <hr>
+
+    <!-- ==================== MEDIDORES Y MÉTRICAS ==================== -->
+    <section aria-labelledby="titulo-metricas">
+      <h2 id="titulo-metricas">Métricas de tu compra</h2>
+
+      <div>
+        <label for="nivel-descuento">Nivel de descuento total obtenido:</label>
+        <meter
+          id="nivel-descuento"
+          value="75"
+          min="0"
+          max="100"
+          low="25"
+          high="60"
+          optimum="80"
+          aria-label="75% de descuento máximo posible aprovechado"
+        >75%</meter>
+        <p>Estás aprovechando el <strong>75%</strong> de los descuentos disponibles. ¡Bien hecho!</p>
+      </div>
+
+      <div>
+        <label for="umbral-envio">Progreso hacia envío gratis:</label>
+        <meter
+          id="umbral-envio"
+          value="1664963"
+          min="0"
+          max="50000"
+          aria-label="Monto actual supera el umbral de envío gratis"
+        >Superado</meter>
+        <p>✅ ¡Felicitaciones! Tu compra califica para <strong>envío gratis</strong>.</p>
+      </div>
+
+      <div>
+        <label for="prog-pasos">Progreso de la compra (paso actual):</label>
+        <progress id="prog-pasos" value="3" max="10" aria-label="3 de 10 pasos completados en el proceso de compra">
+          30% completado
+        </progress>
+        <p><small>3 de 10 pasos completados del proceso de pedido</small></p>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- ==================== CUPÓN DE DESCUENTO ==================== -->
+    <section aria-labelledby="titulo-cupon">
+      <h2 id="titulo-cupon">¿Tienes un cupón de descuento?</h2>
+      <form action="#" method="post" aria-label="Formulario de cupón de descuento">
+        <label for="cupon">Código de cupón:</label>
+        <input
+          type="text"
+          id="cupon"
+          name="cupon"
+          placeholder="Ej: TECH2024"
+          pattern="[A-Z0-9]{4,12}"
+          aria-describedby="cupon-ayuda"
+          autocomplete="off"
+        >
+        <p id="cupon-ayuda"><small>Ingresa el código en mayúsculas, entre 4 y 12 caracteres.</small></p>
+        <button type="submit">Aplicar cupón</button>
+      </form>
+    </section>
+
+    <!-- ==================== ACCIONES DEL CARRITO ==================== -->
+    <section aria-labelledby="titulo-acciones">
+      <h2 id="titulo-acciones">Resumen y acciones</h2>
+      <p>Total a pagar: <strong>$1.981.305</strong> (IVA incluido)</p>
+      <ul>
+        <li><a href="productos.html">← Seguir comprando</a></li>
+        <li><button type="button" aria-label="Vaciar carrito completo">🗑 Vaciar carrito</button></li>
+        <li><a href="contacto.html" aria-label="Proceder al pago">Proceder al pago →</a></li>
+      </ul>
+    </section>
+
+    <!-- ==================== PRODUCTOS SUGERIDOS ==================== -->
+    <section aria-labelledby="titulo-sugeridos">
+      <h2 id="titulo-sugeridos">También te puede interesar</h2>
+      <ul>
+        <li>
+          <article>
+            <figure>
+              <img src="img/productos/magic-kb.jpg" alt="Apple Magic Keyboard con Touch ID" width="120" height="120">
+            </figure>
+            <h3><a href="producto.html">Magic Keyboard con Touch ID</a></h3>
+            <p><strong>$119.990</strong></p>
+            <button type="button" aria-label="Agregar Magic Keyboard al carrito">🛒 Agregar</button>
+          </article>
+        </li>
+        <li>
+          <article>
+            <figure>
+              <img src="img/productos/usb-hub.jpg" alt="Hub USB-C 7 en 1" width="120" height="120">
+            </figure>
+            <h3><a href="producto.html">Hub USB-C 7 en 1</a></h3>
+            <p><strong>$39.990</strong></p>
+            <button type="button" aria-label="Agregar Hub USB-C al carrito">🛒 Agregar</button>
+          </article>
+        </li>
+        <li>
+          <article>
+            <figure>
+              <img src="img/productos/sleeve-mb.jpg" alt="Funda para MacBook Air 13 pulgadas" width="120" height="120">
+            </figure>
+            <h3><a href="producto.html">Funda MacBook Air 13"</a></h3>
+            <p><strong>$29.990</strong></p>
+            <button type="button" aria-label="Agregar funda MacBook al carrito">🛒 Agregar</button>
+          </article>
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <address>
+      <strong>TechStore Online</strong> |
+      <a href="tel:+56212345678">+56 2 1234 5678</a> |
+      <a href="mailto:contacto@techstore.cl">contacto@techstore.cl</a>
+    </address>
+    <p><small>&copy; 2024 TechStore Online. Todos los derechos reservados.</small></p>
+  </footer>
+
 </body>
 </html>

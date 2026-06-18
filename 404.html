@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Página no encontrada - TechStore Online">
+  <meta name="robots" content="noindex">
+  <title>404 - Página no encontrada | TechStore Online</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animaciones.css">
+  <style>
+    /* Estilos específicos del 404 */
+    .pagina-404 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 60vh;
+      text-align: center;
+      padding: var(--espacio-2xl) var(--espacio-xl);
+    }
+
+    .numero-404 {
+      font-family: var(--fuente-titulo);
+      font-size: clamp(6rem, 20vw, 12rem);
+      font-weight: 800;
+      line-height: 1;
+      background: linear-gradient(135deg, var(--color-primario), var(--color-secundario), var(--color-acento));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: pulso-404 3s ease-in-out infinite;
+      margin-bottom: var(--espacio-md);
+    }
+
+    @keyframes pulso-404 {
+      0%, 100% { transform: scale(1); }
+      50%       { transform: scale(1.04); }
+    }
+
+    .pagina-404 figure {
+      margin: var(--espacio-xl) 0;
+    }
+
+    .pagina-404 figure img {
+      border-radius: var(--radio-xl);
+      box-shadow: var(--sombra-lg);
+      animation: flotar-img 4s ease-in-out infinite;
+    }
+
+    @keyframes flotar-img {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(-12px); }
+    }
+
+    .pagina-404 h1 {
+      font-size: clamp(1.5rem, 4vw, 2.25rem);
+      margin-bottom: var(--espacio-md);
+    }
+
+    .pagina-404 p {
+      font-size: 1.125rem;
+      color: var(--color-texto-suave);
+      max-width: 480px;
+      margin-bottom: var(--espacio-xl);
+    }
+
+    .acciones-404 {
+      display: flex;
+      gap: var(--espacio-md);
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn-inicio {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--espacio-xs);
+      padding: var(--espacio-md) var(--espacio-xl);
+      background-color: var(--color-secundario);
+      color: #fff;
+      font-weight: 700;
+      font-size: 1rem;
+      border-radius: var(--radio-full);
+      text-decoration: none;
+      transition: var(--transicion-normal);
+      border: 2px solid var(--color-secundario);
+    }
+
+    .btn-inicio:hover {
+      background-color: var(--color-primario);
+      border-color: var(--color-primario);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(37,99,235,0.35);
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .btn-secundario {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--espacio-xs);
+      padding: var(--espacio-md) var(--espacio-xl);
+      background-color: transparent;
+      color: var(--color-secundario);
+      font-weight: 700;
+      font-size: 1rem;
+      border-radius: var(--radio-full);
+      text-decoration: none;
+      transition: var(--transicion-normal);
+      border: 2px solid var(--color-secundario);
+    }
+
+    .btn-secundario:hover {
+      background-color: var(--color-secundario);
+      color: #fff;
+      transform: translateY(-2px);
+      text-decoration: none;
+    }
+
+    .sugerencias-404 {
+      margin-top: var(--espacio-2xl);
+      padding: var(--espacio-xl);
+      background-color: var(--color-fondo-card);
+      border-radius: var(--radio-xl);
+      border: 1px solid var(--color-borde);
+      max-width: 600px;
+      width: 100%;
+    }
+
+    .sugerencias-404 h2 {
+      font-size: 1.25rem;
+      margin-bottom: var(--espacio-md);
+    }
+
+    .sugerencias-404 ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: var(--espacio-sm);
+      text-align: left;
+    }
+
+    .sugerencias-404 ul li a {
+      display: flex;
+      align-items: center;
+      gap: var(--espacio-sm);
+      padding: var(--espacio-sm) var(--espacio-md);
+      border-radius: var(--radio-md);
+      color: var(--color-texto);
+      transition: var(--transicion-rapida);
+      font-weight: 500;
+    }
+
+    .sugerencias-404 ul li a:hover {
+      background-color: #EFF6FF;
+      color: var(--color-secundario);
+      text-decoration: none;
+      padding-left: var(--espacio-lg);
+    }
+
+    /* SVG decorativo */
+    .svg-404 {
+      border: none;
+      background: none;
+      padding: 0;
+      box-shadow: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div>
+    <p><small>🚚 Envío gratis en compras mayores a $50.000</small></p>
+  </div>
+
+  <header>
+    <div>
+      <figure>
+        <a href="index.html">
+          <img src="img/ui/logo.png" alt="Logo TechStore Online — Ir al inicio">
+        </a>
+      </figure>
+      <form action="productos.html" method="get" role="search">
+        <label for="busqueda">Buscar:</label>
+        <input type="search" id="busqueda" name="q" placeholder="Buscar productos..." aria-label="Buscar productos" autocomplete="on">
+        <button type="submit">Buscar</button>
+      </form>
+      <div>
+        <a href="carrito.html" aria-label="Ver carrito">🛒 Carrito</a>
+        <a href="#" aria-label="Mi cuenta">👤 Mi cuenta</a>
+      </div>
+    </div>
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="productos.html?cat=ofertas">Ofertas</a></li>
+        <li><a href="acerca.html">Blog</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="pagina-404" aria-labelledby="titulo-404">
+
+      <!-- Número 404 animado -->
+      <p class="numero-404" aria-hidden="true">404</p>
+
+      <!-- Ilustración SVG decorativa -->
+      <figure>
+        <svg
+          class="svg-404"
+          width="280"
+          height="200"
+          viewBox="0 0 280 200"
+          role="img"
+          aria-label="Ilustración de robot confundido buscando una página perdida"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>Página no encontrada</title>
+          <desc>Robot simpático mirando un letrero de interrogación, indicando que la página no existe.</desc>
+
+          <!-- Fondo -->
+          <ellipse cx="140" cy="185" rx="100" ry="12" fill="#E5E7EB"/>
+
+          <!-- Cuerpo del robot -->
+          <rect x="90" y="90" width="100" height="80" rx="14" fill="#1E3A8A"/>
+          <rect x="100" y="100" width="80" height="50" rx="8" fill="#2563EB"/>
+
+          <!-- Pantalla del robot — muestra "404" -->
+          <rect x="108" y="108" width="64" height="30" rx="5" fill="#0F172A"/>
+          <text x="140" y="128" text-anchor="middle" font-size="14" font-weight="800" fill="#F59E0B" font-family="monospace">404</text>
+
+          <!-- Cabeza -->
+          <rect x="100" y="50" width="80" height="55" rx="14" fill="#1E3A8A"/>
+
+          <!-- Ojos -->
+          <circle cx="122" cy="72" r="10" fill="#fff"/>
+          <circle cx="158" cy="72" r="10" fill="#fff"/>
+          <circle cx="124" cy="74" r="5" fill="#2563EB"/>
+          <circle cx="160" cy="74" r="5" fill="#2563EB"/>
+          <circle cx="125" cy="73" r="2" fill="#0F172A"/>
+          <circle cx="161" cy="73" r="2" fill="#0F172A"/>
+
+          <!-- Boca -->
+          <path d="M 122 88 Q 140 96 158 88" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+          <!-- Antena -->
+          <line x1="140" y1="50" x2="140" y2="30" stroke="#94A3B8" stroke-width="3"/>
+          <circle cx="140" cy="26" r="6" fill="#F59E0B"/>
+
+          <!-- Brazos -->
+          <rect x="60" y="95" width="30" height="12" rx="6" fill="#1E3A8A"/>
+          <rect x="190" y="95" width="30" height="12" rx="6" fill="#1E3A8A"/>
+
+          <!-- Mano izquierda levantada (encogida) -->
+          <circle cx="60" cy="101" r="9" fill="#2563EB"/>
+
+          <!-- Mano derecha con signo ? -->
+          <circle cx="220" cy="101" r="9" fill="#2563EB"/>
+          <text x="220" y="106" text-anchor="middle" font-size="11" font-weight="800" fill="#fff">?</text>
+
+          <!-- Piernas -->
+          <rect x="110" y="168" width="22" height="18" rx="6" fill="#1E3A8A"/>
+          <rect x="148" y="168" width="22" height="18" rx="6" fill="#1E3A8A"/>
+
+          <!-- Pies -->
+          <ellipse cx="121" cy="186" rx="14" ry="6" fill="#0F172A"/>
+          <ellipse cx="159" cy="186" rx="14" ry="6" fill="#0F172A"/>
+        </svg>
+        <figcaption>Nuestro robot no encontró la página que buscas</figcaption>
+      </figure>
+
+      <h1 id="titulo-404">¡Ups! Página no encontrada</h1>
+      <p>
+        La página que estás buscando no existe, fue movida o el enlace es incorrecto.
+        No te preocupes, puedes volver al inicio o explorar nuestro catálogo.
+      </p>
+
+      <!-- Botones de acción -->
+      <div class="acciones-404">
+        <a href="index.html" class="btn-inicio" aria-label="Volver a la página de inicio de TechStore">
+          🏠 Volver al Inicio
+        </a>
+        <a href="productos.html" class="btn-secundario" aria-label="Ver catálogo de productos">
+          🛍 Ver Productos
+        </a>
+      </div>
+
+      <!-- Sugerencias de páginas -->
+      <aside class="sugerencias-404" aria-labelledby="titulo-sugerencias">
+        <h2 id="titulo-sugerencias">Quizás buscabas...</h2>
+        <ul>
+          <li>
+            <a href="index.html">🏠 Página Principal</a>
+          </li>
+          <li>
+            <a href="productos.html">📦 Catálogo de Productos</a>
+          </li>
+          <li>
+            <a href="carrito.html">🛒 Mi Carrito</a>
+          </li>
+          <li>
+            <a href="contacto.html">📬 Contacto y Soporte</a>
+          </li>
+          <li>
+            <a href="acerca.html">ℹ️ Acerca de TechStore</a>
+          </li>
+        </ul>
+      </aside>
+
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      <section aria-label="TechStore Online">
+        <h3>TechStore Online</h3>
+        <p>Tu tienda de tecnología favorita.</p>
+      </section>
+      <section aria-label="Navegación rápida">
+        <h3>Navegación</h3>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="acerca.html">Acerca de</a></li>
+        </ul>
+      </section>
+    </div>
+    <address>
+      <strong>TechStore Online</strong> |
+      <a href="tel:+56212345678">+56 2 1234 5678</a> |
+      <a href="mailto:contacto@techstore.cl">contacto@techstore.cl</a>
+    </address>
+    <p><small>&copy; 2024 TechStore Online. Todos los derechos reservados.</small></p>
+  </footer>
+
+</body>
+</html>

@@ -1,350 +1,487 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Acerca de TechStore Online">
-    <title>Acerca de Nosotros - TechStore Online</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conoce la historia, misión y equipo detrás de TechStore Online.">
+  <meta name="author" content="TechStore Online">
+  <title>Acerca de Nosotros - TechStore Online</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animaciones.css">
 </head>
 <body>
-    <header>
-        <h1>TechStore Online</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="productos.html">Productos</a></li>
-                <li><a href="carrito.html">Carrito</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="acerca.html">Acerca de</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <h2>Acerca de TechStore Online</h2>
+  <div>
+    <p><small>🚚 Envío gratis en compras mayores a $50.000</small></p>
+  </div>
 
-        <!-- Sección Principal -->
-        <section class="acerca-principal">
-            <article class="articulo-principal">
-                <h3>Nuestra Historia</h3>
-                <p>
-                    <abbr title="TechStore Online">TSO</abbr> fue fundada en <time datetime="2015">2015</time> con la misión de 
-                    democratizar el acceso a la tecnología de punta. Lo que comenzó como un pequeño negocio local 
-                    se ha convertido en una tienda de tecnología líder en la región.
-                </p>
-                <blockquote>
-                    <p>"La tecnología es la herramienta más poderosa para transformar vidas y negocios"</p>
-                    <cite>Fundador de TechStore Online</cite>
-                </blockquote>
-            </article>
+  <header>
+    <div>
+      <figure>
+        <a href="index.html">
+          <img src="img/ui/logo.png" alt="Logo TechStore Online — Ir al inicio">
+        </a>
+      </figure>
+      <form action="productos.html" method="get" role="search">
+        <label for="busqueda">Buscar:</label>
+        <input type="search" id="busqueda" name="q" placeholder="Buscar productos..." aria-label="Buscar productos">
+        <button type="submit">Buscar</button>
+      </form>
+      <div>
+        <a href="carrito.html" aria-label="Ver carrito">🛒 Carrito</a>
+        <a href="#" aria-label="Mi cuenta">👤 Mi cuenta</a>
+      </div>
+    </div>
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="acerca.html" aria-current="page">Acerca de</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
-            <!-- Misión y Visión -->
-            <section class="mision-vision">
-                <h3>Misión y Visión</h3>
+  <main>
 
-                <article class="articulo-mision">
-                    <h4>Nuestra Misión</h4>
-                    <details>
-                        <summary>Haz clic para ver más detalles</summary>
-                        <p>
-                            Proporcionar a nuestros clientes acceso a productos tecnológicos de alta calidad 
-                            con un servicio al cliente excepcional. Nos comprometemos a:
-                        </p>
-                        <ul>
-                            <li>Ofrecer productos genuinos y garantizados</li>
-                            <li>Proporcionar asesoramiento experto sin presión</li>
-                            <li>Garantizar precios competitivos y justos</li>
-                            <li>Brindar soporte técnico profesional</li>
-                            <li>Fomentar la innovación y la excelencia</li>
-                        </ul>
-                    </details>
-                </article>
+    <!-- Breadcrumb -->
+    <nav aria-label="Ruta de navegación">
+      <ol>
+        <li><a href="index.html">Inicio</a></li>
+        <li aria-current="page">Acerca de nosotros</li>
+      </ol>
+    </nav>
 
-                <article class="articulo-vision">
-                    <h4>Nuestra Visión</h4>
-                    <details>
-                        <summary>Haz clic para ver más detalles</summary>
-                        <p>
-                            Ser la tienda tecnológica más confiable y accesible en América Latina, 
-                            reconocida por:
-                        </p>
-                        <ul>
-                            <li>La calidad y variedad de nuestros productos</li>
-                            <li>Nuestro excelente servicio al cliente</li>
-                            <li>Nuestra responsabilidad social y ambiental</li>
-                            <li>La innovación en nuestras operaciones</li>
-                            <li>La satisfacción y lealtad de nuestros clientes</li>
-                        </ul>
-                    </details>
-                </article>
-            </section>
-        </section>
+    <h1>Acerca de TechStore Online</h1>
 
-        <!-- Sección de Valores -->
-        <section class="valores">
-            <h3>Nuestros Valores Fundamentales</h3>
+    <!-- ==================== NUESTRA HISTORIA ==================== -->
+    <section aria-labelledby="titulo-historia">
+      <h2 id="titulo-historia">Nuestra historia</h2>
 
-            <article class="valor">
-                <h4>Integridad</h4>
-                <details>
-                    <summary>Leer más</summary>
-                    <p>
-                        Actuamos con honestidad y transparencia en todas nuestras operaciones. 
-                        Cada promesa que hacemos la cumplimos.
-                    </p>
-                </details>
-            </article>
+      <article>
+        <header>
+          <h3>Los orígenes</h3>
+          <p>
+            Fundada en <time datetime="2010">2010</time> en Santiago de Chile.
+          </p>
+        </header>
 
-            <article class="valor">
-                <h4>Excelencia</h4>
-                <details>
-                    <summary>Leer más</summary>
-                    <p>
-                        Buscamos constantemente mejorar y superar las expectativas de nuestros clientes 
-                        en cada aspecto de nuestro servicio.
-                    </p>
-                </details>
-            </article>
+        <p>
+          <strong>TechStore Online</strong> nació con una visión clara: hacer que la tecnología de calidad fuera
+          accesible para todos en <abbr title="América Latina">LATAM</abbr>. Comenzamos como una pequeña tienda
+          física y hoy somos líderes del comercio electrónico tecnológico en la región.
+        </p>
 
-            <article class="valor">
-                <h4>Innovación</h4>
-                <details>
-                    <summary>Leer más</summary>
-                    <p>
-                        Nos mantenemos a la vanguardia de la tecnología para ofrecerles a nuestros 
-                        clientes las soluciones más modernas y efectivas.
-                    </p>
-                </details>
-            </article>
+        <p>
+          Nuestro fundador, <strong>Rodrigo Vásquez</strong>, tuvo la idea mientras cursaba su carrera de
+          <abbr title="Ingeniería en Informática">Ing. en Informática</abbr> en la
+          <abbr title="Universidad de Chile">U. de Chile</abbr>. Lo que comenzó como un proyecto universitario
+          se convirtió en una empresa con más de <strong>500 empleados</strong> y presencia en
+          <data value="8">8 países</data>.
+        </p>
 
-            <article class="valor">
-                <h4>Responsabilidad Social</h4>
-                <details>
-                    <summary>Leer más</summary>
-                    <p>
-                        Nos preocupamos por el impacto de nuestras actividades en la sociedad y el ambiente, 
-                        promoviendo prácticas sostenibles.
-                    </p>
-                </details>
-            </article>
-        </section>
+        <blockquote cite="https://www.techstore.cl/historia">
+          <p>Creemos que cada persona merece acceso a la mejor tecnología, sin importar dónde viva o cuánto gane.</p>
+          <cite>— Rodrigo Vásquez, <abbr title="Chief Executive Officer">CEO</abbr> y fundador de TechStore Online</cite>
+        </blockquote>
 
-        <!-- Sección de Equipo -->
-        <section class="equipo">
-            <h3>Nuestro Equipo</h3>
-            <p>
-                Contamos con un equipo de profesionales apasionados por la tecnología con experiencia 
-                acumulada de más de <strong>200 años</strong> en la industria.
-            </p>
+        <footer>
+          <p>
+            Última actualización:
+            <time datetime="2024-01-15">15 de enero de 2024</time>
+          </p>
+        </footer>
+      </article>
+    </section>
 
-            <article class="miembro-equipo">
-                <h4>Departamento de Ventas</h4>
-                <p>Profesionales capacitados listos para asesorarte en tu compra perfecta.</p>
-            </article>
+    <hr>
 
-            <article class="miembro-equipo">
-                <h4>Soporte Técnico</h4>
-                <p>Expertos disponibles 24/7 para resolver tus dudas y problemas técnicos.</p>
-            </article>
+    <!-- ==================== MISIÓN Y VALORES ==================== -->
+    <section aria-labelledby="titulo-mision">
+      <h2 id="titulo-mision">Misión, visión y valores</h2>
 
-            <article class="miembro-equipo">
-                <h4>Logística</h4>
-                <p>Equipo dedicado a garantizar entregas rápidas y seguras a todo el país.</p>
-            </article>
+      <article>
+        <h3>Misión</h3>
+        <p>
+          Proveer productos tecnológicos de alta calidad con el mejor servicio al cliente,
+          precios competitivos y envíos confiables a toda la región.
+        </p>
+      </article>
 
-            <article class="miembro-equipo">
-                <h4>Administración</h4>
-                <p>Profesionales que aseguran la eficiencia y transparencia de nuestras operaciones.</p>
-            </article>
-        </section>
+      <article>
+        <h3>Visión</h3>
+        <p>
+          Ser la plataforma de <abbr title="Comercio Electrónico">ecommerce</abbr> tecnológico más confiable y
+          preferida de <abbr title="América Latina">LATAM</abbr> para el año <time datetime="2030">2030</time>.
+        </p>
+      </article>
 
-        <!-- Sección de Logros -->
-        <section class="logros">
-            <h3>Nuestros Logros</h3>
+      <article>
+        <h3>Nuestros valores</h3>
+        <dl>
+          <dt><dfn>Confianza</dfn></dt>
+          <dd>Garantizamos la autenticidad de todos nuestros productos con certificación oficial de fabricantes.</dd>
 
-            <article class="logro">
-                <h4>Certificaciones y Reconocimientos</h4>
-                <details>
-                    <summary>Ver certificaciones</summary>
-                    <ul>
-                        <li><abbr title="Organización Internacional de Normalización">ISO</abbr> 9001 - Calidad</li>
-                        <li><abbr title="Seguridad de la Información">ISO</abbr> 27001 - Seguridad de Datos</li>
-                        <li>Vendedor Verificado Platinum - Plataforma X</li>
-                        <li>Mejor Tienda Tecnológica 2023 - Premio Regional</li>
-                        <li>Empresa Socialmente Responsable - Certificación Nacional</li>
-                    </ul>
-                </details>
-            </article>
+          <dt><dfn>Innovación</dfn></dt>
+          <dd>Siempre buscamos las últimas tendencias tecnológicas para ofrecerte lo mejor del mercado.</dd>
 
-            <article class="logro">
-                <h4>Estadísticas de Crecimiento</h4>
-                <details>
-                    <summary>Ver números</summary>
-                    <ul>
-                        <li>+500,000 clientes satisfechos</li>
-                        <li>+50,000 productos en catálogo</li>
-                        <li>+200 puntos de atención</li>
-                        <li>98% de satisfacción del cliente</li>
-                        <li>Crecimiento anual del 45%</li>
-                    </ul>
-                </details>
-            </article>
-        </section>
+          <dt><dfn>Accesibilidad</dfn></dt>
+          <dd>Precios justos, múltiples métodos de pago y envío a los lugares más remotos.</dd>
 
-        <!-- Sección de Asociaciones -->
-        <section class="asociaciones">
-            <h3>Nuestras Alianzas Estratégicas</h3>
-            
-            <article class="alianza">
-                <h4>Marcas Principales</h4>
-                <p>
-                    Somos distribuidor autorizado de las marcas más importantes: <strong>Apple</strong>, 
-                    <strong>Samsung</strong>, <strong>Dell</strong>, <strong>Lenovo</strong>, <strong>ASUS</strong>, 
-                    <strong>HP</strong>, <strong>Sony</strong> y muchas más.
-                </p>
-            </article>
+          <dt><dfn>Sostenibilidad</dfn></dt>
+          <dd>Programa de reciclaje de equipos y packaging 100% biodegradable desde <time datetime="2022">2022</time>.</dd>
+        </dl>
+      </article>
+    </section>
 
-            <article class="alianza">
-                <h4>Instituciones Financieras</h4>
-                <p>
-                    Contamos con convenios con los principales bancos para ofrecerte opciones de 
-                    financiamiento flexibles con tasas preferenciales.
-                </p>
-            </article>
+    <hr>
 
-            <article class="alianza">
-                <h4>Universidades y Educación</h4>
-                <p>
-                    Mantenemos programas especiales para instituciones educativas, facilitando acceso 
-                    a tecnología para estudiantes y docentes.
-                </p>
-            </article>
-        </section>
+    <!-- ==================== LÍNEA DE TIEMPO ==================== -->
+    <section aria-labelledby="titulo-timeline">
+      <h2 id="titulo-timeline">Nuestra trayectoria</h2>
+      <ol aria-label="Hitos importantes de TechStore Online">
+        <li>
+          <time datetime="2010">2010</time> —
+          Fundación de TechStore como tienda física en Santiago.
+        </li>
+        <li>
+          <time datetime="2013">2013</time> —
+          Lanzamiento de la primera tienda online con <mark>500 productos</mark>.
+        </li>
+        <li>
+          <time datetime="2016">2016</time> —
+          Expansión a <data value="3">3 países</data>: Chile, Argentina y Colombia.
+        </li>
+        <li>
+          <time datetime="2019">2019</time> —
+          Apertura del primer centro de distribución automatizado.
+        </li>
+        <li>
+          <time datetime="2021">2021</time> —
+          Lanzamiento de la app móvil con más de <strong>1 millón de descargas</strong>.
+        </li>
+        <li>
+          <time datetime="2023">2023</time> —
+          Presencia en <data value="8">8 países</data> y más de <strong>500.000 clientes activos</strong>.
+        </li>
+        <li>
+          <time datetime="2024">2024</time> —
+          Integración de <abbr title="Inteligencia Artificial">IA</abbr> para recomendaciones personalizadas.
+        </li>
+      </ol>
+    </section>
 
-        <!-- Información de Contacto -->
-        <section class="contacto-acerca">
-            <h3>Ponte en Contacto con Nosotros</h3>
-            
-            <address>
-                <h4>Oficina Principal</h4>
-                <p>
-                    <strong>TechStore Online - Sede Central</strong><br>
-                    Avenida Tecnológica 456<br>
-                    Ciudad Innovadora, Estado Tecnológico 12345<br>
-                    País: Región Latinoamericana
-                </p>
-                <p>
-                    <strong>Teléfono:</strong> <a href="tel:+1234567890">+1 (234) 567-890</a><br>
-                    <strong>Email:</strong> <a href="mailto:contacto@techstore.com">contacto@techstore.com</a><br>
-                    <strong>Email de Gerencia:</strong> <a href="mailto:gerencia@techstore.com">gerencia@techstore.com</a>
-                </p>
-            </address>
+    <hr>
 
-            <address>
-                <h4>Horario de Atención</h4>
-                <p>
-                    <strong>Lunes a Viernes:</strong> <time datetime="09:00">9:00 AM</time> - <time datetime="18:00">6:00 PM</time><br>
-                    <strong>Sábados:</strong> <time datetime="10:00">10:00 AM</time> - <time datetime="16:00">4:00 PM</time><br>
-                    <strong>Domingos:</strong> Cerrado<br>
-                    <strong>Últimas actualizaciones:</strong> <time datetime="2024-06-16">16 de junio de 2024</time>
-                </p>
-            </address>
-        </section>
+    <!-- ==================== EQUIPO ==================== -->
+    <section aria-labelledby="titulo-equipo">
+      <h2 id="titulo-equipo">Nuestro equipo directivo</h2>
 
-        <!-- Preguntas Frecuentes -->
-        <section class="faq">
-            <h3>Preguntas Frecuentes</h3>
+      <article>
+        <figure>
+          <img src="https://placehold.co/120x120?text=CEO" alt="Foto de Rodrigo Vásquez, CEO de TechStore Online" width="120" height="120">
+          <figcaption>Rodrigo Vásquez</figcaption>
+        </figure>
+        <h3>Rodrigo Vásquez</h3>
+        <p><abbr title="Chief Executive Officer">CEO</abbr> &amp; Co-fundador</p>
+        <p>Ingeniero en Informática con <data value="14">14 años</data> de experiencia en ecommerce.</p>
+      </article>
 
-            <details>
-                <summary>¿Cuáles son tus horarios de atención?</summary>
-                <p>
-                    Estamos disponibles de lunes a viernes de 9:00 AM a 6:00 PM, 
-                    sábados de 10:00 AM a 4:00 PM. Los domingos estamos cerrados.
-                </p>
-            </details>
+      <article>
+        <figure>
+          <img src="https://placehold.co/120x120?text=CTO" alt="Foto de Ana Morales, CTO de TechStore Online" width="120" height="120">
+          <figcaption>Ana Morales</figcaption>
+        </figure>
+        <h3>Ana Morales</h3>
+        <p><abbr title="Chief Technology Officer">CTO</abbr></p>
+        <p>Especialista en arquitecturas cloud y <abbr title="Inteligencia Artificial">IA</abbr> aplicada al retail.</p>
+      </article>
 
-            <details>
-                <summary>¿Ofrecen garantía en los productos?</summary>
-                <p>
-                    Sí, todos nuestros productos cuentan con garantía del fabricante. 
-                    Ofrecemos además garantía extendida y pólizas de protección especiales.
-                </p>
-            </details>
+      <article>
+        <figure>
+          <img src="https://placehold.co/120x120?text=CMO" alt="Foto de Luis Fernández, CMO de TechStore Online" width="120" height="120">
+          <figcaption>Luis Fernández</figcaption>
+        </figure>
+        <h3>Luis Fernández</h3>
+        <p><abbr title="Chief Marketing Officer">CMO</abbr></p>
+        <p>Experto en marketing digital y crecimiento de marcas en mercados emergentes.</p>
+      </article>
+    </section>
 
-            <details>
-                <summary>¿Cuál es la política de devoluciones?</summary>
-                <p>
-                    Aceptamos devoluciones dentro de 30 días desde la compra en condiciones originales. 
-                    Ofrecemos reembolso total o cambio por otro producto.
-                </p>
-            </details>
+    <hr>
 
-            <details>
-                <summary>¿Hacen envíos internacionales?</summary>
-                <p>
-                    Actualmente operamos en toda la región latinoamericana. 
-                    Contáctanos para consultar disponibilidad en tu país específico.
-                </p>
-            </details>
+    <!-- ==================== PREGUNTAS FRECUENTES CON DETAILS ==================== -->
+    <section aria-labelledby="titulo-faq">
+      <h2 id="titulo-faq">Preguntas frecuentes</h2>
 
-            <details>
-                <summary>¿Cómo puedo rastrear mi pedido?</summary>
-                <p>
-                    Recibirás un número de seguimiento por email. Puedes ingresar en tu cuenta 
-                    o contactar a nuestro equipo de soporte con tu número de pedido.
-                </p>
-            </details>
-        </section>
+      <details>
+        <summary>¿Qué es TechStore Online?</summary>
+        <p>
+          TechStore Online es una plataforma de <abbr title="Comercio Electrónico">ecommerce</abbr> especializada
+          en productos tecnológicos. Vendemos laptops, smartphones, accesorios, gaming y mucho más, con envío a
+          <data value="8">8 países</data> de América Latina.
+        </p>
+      </details>
 
-        <!-- Testimonios -->
-        <section class="testimonios">
-            <h3>Lo que Dicen Nuestros Clientes</h3>
+      <details>
+        <summary>¿Cómo garantizan la autenticidad de los productos?</summary>
+        <p>
+          Todos nuestros productos provienen directamente de distribuidores oficiales autorizados.
+          Contamos con certificaciones de <abbr title="Apple Authorized Reseller">AAR</abbr>,
+          <abbr title="Samsung Premium Partner">SPP</abbr> y otros sellos de calidad.
+        </p>
+      </details>
 
-            <article class="testimonio">
-                <blockquote>
-                    <p>
-                        "Compré una laptop en TechStore hace 2 años y sigue funcionando perfectamente. 
-                        El servicio fue excepcional y el precio muy competitivo."
-                    </p>
-                    <cite>Carlos Rodríguez - Ingeniero</cite>
-                </blockquote>
-            </article>
+      <details>
+        <summary>¿Tienen tiendas físicas?</summary>
+        <p>
+          Sí, contamos con <data value="12">12 tiendas físicas</data> en Chile y estamos expandiéndonos.
+          Visita nuestra <a href="contacto.html">página de contacto</a> para encontrar la tienda más cercana.
+        </p>
+      </details>
 
-            <article class="testimonio">
-                <blockquote>
-                    <p>
-                        "Su equipo de soporte técnico resolvió mi problema en menos de una hora. 
-                        Profesionales y amables, definitivamente vuelvo a comprar."
-                    </p>
-                    <cite>María González - Diseñadora Gráfica</cite>
-                </blockquote>
-            </article>
+      <details>
+        <summary>¿Cuál es la política de devoluciones?</summary>
+        <p>
+          Aceptamos devoluciones hasta <strong>30 días</strong> después de la compra, siempre que el producto
+          esté en su estado original con todos sus accesorios y embalaje. Para iniciar el proceso, visita nuestra
+          <a href="contacto.html">sección de contacto</a>.
+        </p>
+      </details>
 
-            <article class="testimonio">
-                <blockquote>
-                    <p>
-                        "Las opciones de financiamiento son muy flexibles y el proceso de compra es simple. 
-                        Recomiendo TechStore a todos mis amigos."
-                    </p>
-                    <cite>Juan López - Emprendedor</cite>
-                </blockquote>
-            </article>
-        </section>
-    </main>
+      <details>
+        <summary>¿Tienen programa de puntos o fidelización?</summary>
+        <p>
+          Sí. Por cada <data value="1000">$1.000</data> en compras acumulas
+          <data value="10">10 puntos TechCoins</data>. Los puntos se pueden canjear por descuentos,
+          productos o envíos gratis.
+        </p>
+      </details>
+    </section>
 
-    <footer>
-        <address>
-            <p>TechStore Online - Todos los derechos reservados</p>
-            <p>
-                Última modificación: <time datetime="2024-06-16T10:30:00">16 de junio de 2024, 10:30 AM</time>
-            </p>
-            <p>
-                <a href="#">Política de Privacidad</a> | 
-                <a href="#">Términos y Condiciones</a> | 
-                <a href="#">Política de Cookies</a>
-            </p>
-        </address>
-        <small>&copy; 2026 TechStore Online - <abbr title="Sociedad Anónima">S.A.</abbr></small>
-    </footer>
+    <hr>
+
+    <!-- ==================== CERTIFICACIONES ==================== -->
+    <section aria-labelledby="titulo-certs">
+      <h2 id="titulo-certs">Certificaciones y reconocimientos</h2>
+      <ul>
+        <li>
+          🏆 Premio <cite>Mejor Ecommerce LATAM</cite>
+          <time datetime="2022">2022</time> y <time datetime="2023">2023</time>
+        </li>
+        <li>
+          ✅ Certificado <abbr title="Payment Card Industry Data Security Standard">PCI DSS</abbr>
+          — Seguridad en pagos con tarjeta
+        </li>
+        <li>
+          🌿 Empresa <abbr title="Carbono Neutral">CN</abbr> certificada desde <time datetime="2023">2023</time>
+        </li>
+        <li>
+          📜 <abbr title="International Organization for Standardization">ISO</abbr> 9001:2015
+          — Gestión de calidad
+        </li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <!-- ==================== BLOG / ARTÍCULOS ==================== -->
+    <section aria-labelledby="titulo-blog">
+      <h2 id="titulo-blog">Últimas publicaciones del blog</h2>
+
+      <article>
+        <header>
+          <h3><a href="#">Los mejores laptops de 2024 para estudiantes</a></h3>
+          <p>
+            Por <strong>Ana Morales</strong> |
+            <time datetime="2024-03-10">10 de marzo de 2024</time>
+          </p>
+        </header>
+        <p>
+          Comparamos las mejores opciones del mercado teniendo en cuenta precio,
+          rendimiento y durabilidad de batería...
+        </p>
+        <footer>
+          <a href="#">Leer más →</a>
+        </footer>
+      </article>
+
+      <article>
+        <header>
+          <h3><a href="#">¿Vale la pena el iPhone 15?</a></h3>
+          <p>
+            Por <strong>Luis Fernández</strong> |
+            <time datetime="2024-02-20">20 de febrero de 2024</time>
+          </p>
+        </header>
+        <p>
+          Analizamos todas las novedades del iPhone 15 y te decimos si justifica la actualización
+          desde modelos anteriores...
+        </p>
+        <footer>
+          <a href="#">Leer más →</a>
+        </footer>
+      </article>
+
+    </section>
+
+    <hr>
+
+    <!-- ==================== CÓDIGO DE TEXTO TÉCNICO ==================== -->
+    <section aria-labelledby="titulo-tech">
+      <h2 id="titulo-tech">Notas técnicas del desarrollador</h2>
+
+      <p>Esta sección muestra el uso de etiquetas de texto técnico de <abbr title="HyperText Markup Language 5">HTML5</abbr>:</p>
+
+      <p>Para limpiar la caché del navegador, usa el atajo de teclado
+        <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd> en Windows, o
+        <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd> en macOS.
+      </p>
+
+      <p>El código de respuesta del servidor fue: <samp>200 OK — Connection established</samp></p>
+
+      <p>
+        La fórmula del precio con <abbr title="Impuesto al Valor Agregado">IVA</abbr> es:
+        precio<sub>total</sub> = precio<sub>neto</sub> × 1.19
+      </p>
+
+      <p>
+        Versión actual: TechStore v<sup>2</sup>.4.1
+      </p>
+
+      <p>
+        La variable que almacena el carrito se llama:
+        <var>carritoCompras</var> de tipo <code>Array&lt;Producto&gt;</code>
+      </p>
+
+      <pre><code>
+const carritoCompras = [];
+
+function agregarProducto(producto) {
+  carritoCompras.push(producto);
+  actualizarContador();
+}
+      </code></pre>
+
+      <p>Texto marcado para edición: <del>precio antiguo: $999</del> <ins>precio nuevo: $799</ins></p>
+
+      <p>
+        El símbolo <abbr title="Agua">H<sub>2</sub>O</abbr> se usa en nuestros certificados
+        de responsabilidad ambiental. Energía expresada en W·h (watt<sup>-hora</sup>).
+      </p>
+
+      <p>
+        <q cite="https://www.w3.org/TR/html5/">
+          HTML5 es la quinta revisión del estándar HTML creado en 1990.
+        </q>
+        — <cite>W3C HTML5 Specification</cite>
+      </p>
+
+      <p>
+        <span lang="en">
+          <abbr title="Application Programming Interface">API</abbr> REST
+        </span>
+        son las siglas de
+        <dfn title="Interfaz de Programación de Aplicaciones de Transferencia de Estado Representacional">
+          Application Programming Interface Representational State Transfer
+        </dfn>.
+      </p>
+
+    </section>
+
+    <hr>
+
+    <!-- ==================== LABORATORIO HTML5 EXTENDIDO ==================== -->
+    <section aria-labelledby="lab-acerca">
+      <h2 id="lab-acerca">Laboratorio HTML5 — Etiquetas avanzadas</h2>
+
+      <h3>Anotaciones Ruby (pronunciación)</h3>
+      <p>
+        Nombre de la empresa en japonés:
+        <ruby>
+          テック<rp>(</rp><rt>Tekku</rt><rp>)</rp>
+          ストア<rp>(</rp><rt>Sutoa</rt><rp>)</rp>
+        </ruby>
+      </p>
+
+      <h3>Texto bidireccional (BDI / BDO)</h3>
+      <p>Usuario árabe: <bdi>أحمد</bdi> realizó una compra.</p>
+      <p>Slogan al revés: <bdo dir="rtl">La tecnología es para todos</bdo></p>
+
+      <h3>Saltos de línea sugeridos (WBR)</h3>
+      <p>
+        Ruta del archivo:
+        /home<wbr>/usuario<wbr>/documentos<wbr>/techstore<wbr>/pedidos<wbr>/2024<wbr>/marzo<wbr>/ORD-0001.pdf
+      </p>
+
+      <h3>Datos estructurados (DATA)</h3>
+      <ul>
+        <li><data value="SKU-1001">Laptop Gamer Pro</data></li>
+        <li><data value="SKU-1002">Smartphone Ultra X</data></li>
+        <li><data value="SKU-1003">Monitor 4K Curvo</data></li>
+        <li><data value="SKU-1004">Teclado Mecánico RGB</data></li>
+      </ul>
+
+      <h3>Listas de definición</h3>
+      <dl>
+        <dt><abbr title="HyperText Markup Language 5">HTML5</abbr></dt>
+        <dd>Quinta versión del lenguaje de marcado estándar para páginas web.</dd>
+
+        <dt><abbr title="Cascading Style Sheets 3">CSS3</abbr></dt>
+        <dd>Tercer nivel del lenguaje de hojas de estilo para dar diseño a documentos HTML.</dd>
+
+        <dt><abbr title="JavaScript">JS</abbr></dt>
+        <dd>Lenguaje de programación interpretado, orientado a objetos, basado en prototipos.</dd>
+      </dl>
+
+    </section>
+
+  </main>
+
+  <!-- ==================== PIE DE PÁGINA ==================== -->
+  <footer>
+    <div>
+      <section>
+        <h3>TechStore Online</h3>
+        <p>Tu tienda de tecnología favorita desde <time datetime="2010">2010</time>.</p>
+        <ul aria-label="Redes sociales">
+          <li><a href="#" aria-label="Facebook">Facebook</a></li>
+          <li><a href="#" aria-label="Instagram">Instagram</a></li>
+          <li><a href="#" aria-label="Twitter">Twitter</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Información</h3>
+        <ul>
+          <li><a href="acerca.html">Sobre nosotros</a></li>
+          <li><a href="#">Términos y condiciones</a></li>
+          <li><a href="#">Política de privacidad</a></li>
+          <li><a href="#">Preguntas frecuentes</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Ayuda</h3>
+        <ul>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="#">Envíos y entregas</a></li>
+          <li><a href="#">Devoluciones</a></li>
+        </ul>
+      </section>
+    </div>
+
+    <hr>
+
+    <address>
+      <strong>TechStore Online</strong><br>
+      Av. Tecnología 1234, Santiago de Chile<br>
+      <a href="tel:+56212345678">+56 2 1234 5678</a> |
+      <a href="mailto:contacto@techstore.cl">contacto@techstore.cl</a>
+    </address>
+    <p><small>&copy; <time datetime="2024">2024</time> TechStore Online. Todos los derechos reservados.</small></p>
+  </footer>
+
 </body>
 </html>

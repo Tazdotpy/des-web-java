@@ -1,273 +1,453 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contacto - TechStore Online">
-    <title>Contacto - TechStore Online</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contáctanos en TechStore Online. Estamos disponibles 24/7 para ayudarte.">
+  <meta name="author" content="TechStore Online">
+  <title>Contacto - TechStore Online</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animaciones.css">
 </head>
 <body>
-    <header>
-        <h1>TechStore Online</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="productos.html">Productos</a></li>
-                <li><a href="carrito.html">Carrito</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="acerca.html">Acerca de</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <h2>Contacto - TechStore Online</h2>
+  <div>
+    <p><small>🚚 Envío gratis en compras mayores a $50.000</small></p>
+  </div>
 
-        <section class="contacto-contenedor">
-            <!-- Información de Contacto -->
-            <aside class="info-contacto">
-                <h3>Información de Contacto</h3>
-                <address>
-                    <p><strong>Dirección:</strong><br>Calle Principal 123, Ciudad Tecnológica</p>
-                    <p><strong>Teléfono:</strong> <a href="tel:+1234567890">+1 (234) 567-890</a></p>
-                    <p><strong>Email:</strong> <a href="mailto:contacto@techstore.com">contacto@techstore.com</a></p>
-                    <p><strong>Horario de Atención:</strong><br>Lunes a Viernes: 9:00 AM - 6:00 PM<br>Sábados: 10:00 AM - 4:00 PM<br>Domingos: Cerrado</p>
-                </address>
-            </aside>
+  <header>
+    <div>
+      <figure>
+        <a href="index.html">
+          <img src="img/ui/logo.png" alt="Logo TechStore Online — Ir al inicio">
+        </a>
+      </figure>
+      <form action="productos.html" method="get" role="search">
+        <label for="busqueda">Buscar:</label>
+        <input type="search" id="busqueda" name="q" placeholder="Buscar productos..." aria-label="Buscar productos">
+        <button type="submit">Buscar</button>
+      </form>
+      <div>
+        <a href="carrito.html" aria-label="Ver carrito">🛒 Carrito</a>
+        <a href="#" aria-label="Mi cuenta">👤 Mi cuenta</a>
+      </div>
+    </div>
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="productos.html?cat=ofertas">Ofertas</a></li>
+        <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
-            <!-- Formulario de Contacto -->
-            <section class="formulario-contacto">
-                <h3>Envíanos tu Mensaje</h3>
-                
-                <form method="post" action="procesar-contacto.php">
-                    <!-- Información Personal -->
-                    <fieldset>
-                        <legend>Información Personal</legend>
+  <main>
 
-                        <div class="form-group">
-                            <label for="nombre">Nombre Completo: <span class="requerido">*</span></label>
-                            <input type="text" id="nombre" name="nombre" placeholder="Juan Pérez" required>
-                        </div>
+    <!-- Breadcrumb -->
+    <nav aria-label="Ruta de navegación">
+      <ol>
+        <li><a href="index.html">Inicio</a></li>
+        <li aria-current="page">Contacto</li>
+      </ol>
+    </nav>
 
-                        <div class="form-group">
-                            <label for="email">Correo Electrónico: <span class="requerido">*</span></label>
-                            <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" required autocomplete="email">
-                        </div>
+    <h1>Contáctanos</h1>
+    <p>Nuestro equipo está disponible <strong>24/7</strong> para ayudarte. Completa el formulario y te responderemos en menos de 24 horas.</p>
 
-                        <div class="form-group">
-                            <label for="telefono">Teléfono: <span class="requerido">*</span></label>
-                            <input type="tel" id="telefono" name="telefono" placeholder="+1 (234) 567-890" required pattern="[0-9+\s\-\(\)]+">
-                        </div>
+    <div>
 
-                        <div class="form-group">
-                            <label for="url-sitio">Sitio Web (opcional):</label>
-                            <input type="url" id="url-sitio" name="url-sitio" placeholder="https://ejemplo.com">
-                        </div>
-                    </fieldset>
+      <!-- ==================== FORMULARIO COMPLETO ==================== -->
+      <section aria-labelledby="titulo-formulario">
+        <h2 id="titulo-formulario">Formulario de contacto</h2>
 
-                    <!-- Información del Mensaje -->
-                    <fieldset>
-                        <legend>Contenido del Mensaje</legend>
+        <form action="#" method="post" id="form-contacto" novalidate aria-label="Formulario de contacto con TechStore Online">
 
-                        <div class="form-group">
-                            <label for="asunto">Asunto: <span class="requerido">*</span></label>
-                            <input type="text" id="asunto" name="asunto" placeholder="¿En qué podemos ayudarte?" required>
-                        </div>
+          <!-- Campo oculto -->
+          <input type="hidden" name="origen" value="pagina-contacto">
+          <input type="hidden" name="version" value="1.0">
 
-                        <div class="form-group">
-                            <label for="mensaje">Mensaje: <span class="requerido">*</span></label>
-                            <textarea id="mensaje" name="mensaje" rows="6" placeholder="Escribe tu mensaje aquí..." required></textarea>
-                        </div>
+          <!-- ── Datos personales ── -->
+          <fieldset>
+            <legend>Datos personales</legend>
 
-                        <div class="form-group">
-                            <label for="tipo-consulta">Tipo de Consulta: <span class="requerido">*</span></label>
-                            <select id="tipo-consulta" name="tipo-consulta" required>
-                                <option value="">-- Selecciona una opción --</option>
-                                <option value="ventas">Ventas y Productos</option>
-                                <option value="soporte">Soporte Técnico</option>
-                                <option value="devolucion">Devoluciones</option>
-                                <option value="garantia">Garantía</option>
-                                <option value="otro">Otro</option>
-                            </select>
-                        </div>
-                    </fieldset>
-
-                    <!-- Datos Específicos -->
-                    <fieldset>
-                        <legend>Información Adicional</legend>
-
-                        <div class="form-group">
-                            <label for="num-pedido">Número de Pedido (si aplica):</label>
-                            <input type="number" id="num-pedido" name="num-pedido" min="1" placeholder="Ej: 123456">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="fecha-pedido">Fecha del Pedido:</label>
-                            <input type="date" id="fecha-pedido" name="fecha-pedido">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="fecha-hora-exacta">Fecha y Hora Exacta:</label>
-                            <input type="datetime-local" id="fecha-hora-exacta" name="fecha-hora-exacta">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="color-preferencia">Color de Preferencia:</label>
-                            <input type="color" id="color-preferencia" name="color-preferencia" value="#000000">
-                        </div>
-
-                        <div class="form-group">
-                            <label for=\"presupuesto\">Rango de Presupuesto Aproximado (0 - $5000):</label>
-                            <input type="range" id="presupuesto" name="presupuesto" min="0" max="5000" step="100" value="500">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="archivo-adjunto">Adjuntar Archivo (Imagen, PDF, etc.):</label>
-                            <input type="file" id="archivo-adjunto" name="archivo-adjunto" accept=".jpg,.jpeg,.png,.pdf,.doc,.docx">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="archivos-multiples">Adjuntar Múltiples Archivos:</label>
-                            <input type="file" id="archivos-multiples" name="archivos-multiples" multiple accept=".jpg,.jpeg,.png,.pdf">
-                        </div>
-                    </fieldset>
-
-                    <!-- Preferencias de Contacto -->
-                    <fieldset>
-                        <legend>Preferencias de Contacto</legend>
-
-                        <div class="form-group">
-                            <p><strong>¿Cómo prefieres que nos contactemos?</strong></p>
-                            <label>
-                                <input type="radio" name="metodo-contacto" value="email" checked>
-                                Por Email
-                            </label>
-                            <label>
-                                <input type="radio" name="metodo-contacto" value="telefono">
-                                Por Teléfono
-                            </label>
-                            <label>
-                                <input type="radio" name="metodo-contacto" value="whatsapp">
-                                Por WhatsApp
-                            </label>
-                        </div>
-
-                        <div class="form-group">
-                            <p><strong>¿Deseas recibir información sobre ofertas?</strong></p>
-                            <label>
-                                <input type="checkbox" name="newsletter" value="si" checked>
-                                Sí, deseo recibir ofertas y promociones
-                            </label>
-                            <label>
-                                <input type="checkbox" name="terminos" value="acepto" required>
-                                Acepto los términos y condiciones
-                            </label>
-                        </div>
-                    </fieldset>
-
-                    <!-- Campos Ocultos y de Control -->
-                    <input type="hidden" name="formulario-version" value="1.0">
-
-                    <!-- Contraseña (Demostración) -->
-                    <fieldset>
-                        <legend>Seguridad (Opcional)</legend>
-                        <div class="form-group">
-                            <label for="contrasena">Contraseña de Acceso (si requiere):</label>
-                            <input type="password" id="contrasena" name="contrasena" placeholder="••••••••" autocomplete="new-password">
-                        </div>
-                    </fieldset>
-
-                    <!-- Botones de Envío -->
-                    <div class="form-botones">
-                        <button type="submit">Enviar Mensaje</button>
-                        <button type="reset">Limpiar Formulario</button>
-                    </div>
-                </form>
-            </section>
-        </section>
-
-        <!-- Laboratorio HTML5 - Elementos Avanzados -->
-        <section class="laboratorio-html5">
-            <h3>🔬 Laboratorio HTML5 - Elementos Avanzados</h3>
-            <p>En esta sección demostramos el uso de etiquetas HTML5 menos comunes:</p>
-
-            <!-- Etiqueta ruby para anotaciones de rubí -->
-            <div class="demo-ruby">
-                <h4>Anotaciones Ruby (ruby, rt, rp)</h4>
-                <p>Ejemplo con caracteres asiáticos:</p>
-                <p>
-                    <ruby>
-                        HTML
-                        <rp>(</rp>
-                        <rt>HyperText Markup Language</rt>
-                        <rp>)</rp>
-                    </ruby>
-                </p>
+            <div>
+              <label for="nombre">
+                Nombre completo: <abbr title="Campo obligatorio" aria-label="obligatorio">*</abbr>
+              </label>
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                placeholder="Ej: María González"
+                required
+                minlength="3"
+                maxlength="80"
+                autocomplete="name"
+                aria-required="true"
+                aria-describedby="nombre-ayuda"
+              >
+              <small id="nombre-ayuda">Ingresa tu nombre y apellido completo.</small>
             </div>
 
-            <!-- Etiqueta bdi para texto bidireccional -->
-            <div class="demo-bdi">
-                <h4>Texto Bidireccional (bdi)</h4>
-                <p>Soporte para idiomas mixtos:</p>
-                <p>
-                    Mi contacto es <bdi>Ahmed</bdi> quien vive en España.
-                </p>
-                <p>
-                    La empresa es <bdi dir="rtl">رقم الهاتف</bdi> (número de teléfono en árabe)
-                </p>
+            <div>
+              <label for="email">
+                Correo electrónico: <abbr title="Campo obligatorio" aria-label="obligatorio">*</abbr>
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="correo@ejemplo.com"
+                required
+                autocomplete="email"
+                aria-required="true"
+                aria-describedby="email-ayuda"
+                multiple
+              >
+              <small id="email-ayuda">Puedes ingresar varios correos separados por coma.</small>
             </div>
 
-            <!-- Etiqueta bdo para dirección de texto -->
-            <div class="demo-bdo">
-                <h4>Dirección de Texto (bdo)</h4>
-                <p><bdo dir="rtl">Este texto se muestra de derecha a izquierda</bdo></p>
+            <div>
+              <label for="contrasena">Crear contraseña para tu cuenta:</label>
+              <input
+                type="password"
+                id="contrasena"
+                name="contrasena"
+                placeholder="Mínimo 8 caracteres"
+                minlength="8"
+                maxlength="32"
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                autocomplete="new-password"
+                aria-describedby="contrasena-ayuda"
+              >
+              <small id="contrasena-ayuda">Debe incluir al menos 1 número, 1 minúscula y 1 mayúscula.</small>
             </div>
 
-            <!-- Etiqueta wbr para saltos de palabra -->
-            <div class="demo-wbr">
-                <h4>Saltos de Palabra (wbr)</h4>
-                <p>
-                    URL Largo: https://www.techstore<wbr>.com/productos<wbr>/laptops<wbr>/gaming
-                </p>
+            <div>
+              <label for="telefono">
+                Teléfono: <abbr title="Campo obligatorio" aria-label="obligatorio">*</abbr>
+              </label>
+              <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                placeholder="+56 9 1234 5678"
+                required
+                pattern="[\+]?[0-9\s\-]{8,15}"
+                autocomplete="tel"
+                aria-required="true"
+                aria-describedby="telefono-ayuda"
+              >
+              <small id="telefono-ayuda">Incluye el código de país. Ej: +56 9 1234 5678</small>
             </div>
 
-            <!-- Etiqueta data para datos máquina-legibles -->
-            <div class="demo-data">
-                <h4>Datos Máquina-Legibles (data)</h4>
-                <p>
-                    Producto: 
-                    <data value="SKU-12345">Laptop Gaming Pro</data>
-                </p>
-                <p>
-                    Precio: 
-                    <data value="1299.99">$1,299.99 USD</data>
-                </p>
+            <div>
+              <label for="sitio-web">Sitio web (opcional):</label>
+              <input
+                type="url"
+                id="sitio-web"
+                name="sitio_web"
+                placeholder="https://tu-sitio.com"
+                autocomplete="url"
+                aria-describedby="url-ayuda"
+              >
+              <small id="url-ayuda">Incluye https:// al inicio de la URL.</small>
             </div>
 
-            <!-- Etiqueta mark para destacado -->
-            <div class="demo-mark">
-                <h4>Texto Destacado (mark)</h4>
-                <p>
-                    Tenemos una <mark>oferta especial del 25%</mark> en laptops gaming esta semana.
-                </p>
+            <div>
+              <label for="edad">Edad:</label>
+              <input
+                type="number"
+                id="edad"
+                name="edad"
+                min="13"
+                max="120"
+                step="1"
+                placeholder="25"
+                aria-describedby="edad-ayuda"
+              >
+              <small id="edad-ayuda">Debes tener al menos 13 años para registrarte.</small>
             </div>
 
-            <!-- Etiqueta time -->
-            <div class="demo-time">
-                <h4>Elemento Tiempo (time)</h4>
-                <p>
-                    Este formulario fue actualizado el <time datetime="2024-06-16T10:30:00">16 de junio de 2024</time>.
-                </p>
-            </div>
-        </section>
-    </main>
+          </fieldset>
 
-    <footer>
+          <!-- ── Fecha y hora de contacto preferida ── -->
+          <fieldset>
+            <legend>Preferencias de contacto</legend>
+
+            <div>
+              <label for="fecha-contacto">Fecha preferida de contacto:</label>
+              <input
+                type="date"
+                id="fecha-contacto"
+                name="fecha_contacto"
+                min="2024-01-01"
+                max="2025-12-31"
+                aria-label="Seleccionar fecha preferida para ser contactado"
+              >
+            </div>
+
+            <div>
+              <label for="hora-contacto">Fecha y hora exacta (opcional):</label>
+              <input
+                type="datetime-local"
+                id="hora-contacto"
+                name="hora_contacto"
+                aria-label="Seleccionar fecha y hora exacta para contacto"
+              >
+            </div>
+
+            <div>
+              <label for="metodo-contacto">Medio de contacto preferido:</label>
+              <select id="metodo-contacto" name="metodo_contacto" aria-label="Seleccionar cómo desea ser contactado">
+                <option value="">Selecciona una opción...</option>
+                <optgroup label="Digital">
+                  <option value="email">Correo electrónico</option>
+                  <option value="whatsapp">WhatsApp</option>
+                  <option value="chat">Chat en línea</option>
+                </optgroup>
+                <optgroup label="Telefónico">
+                  <option value="llamada">Llamada telefónica</option>
+                  <option value="videollamada">Videollamada</option>
+                </optgroup>
+              </select>
+            </div>
+
+          </fieldset>
+
+          <!-- ── Consulta ── -->
+          <fieldset>
+            <legend>Tu consulta</legend>
+
+            <div>
+              <label for="asunto">
+                Asunto: <abbr title="Campo obligatorio" aria-label="obligatorio">*</abbr>
+              </label>
+              <select id="asunto" name="asunto" required aria-required="true" aria-label="Seleccionar el asunto de tu consulta">
+                <option value="">Selecciona el asunto...</option>
+                <option value="pedido">Consulta sobre pedido</option>
+                <option value="devolucion">Devolución o garantía</option>
+                <option value="producto">Información de producto</option>
+                <option value="pago">Problemas con pago</option>
+                <option value="envio">Seguimiento de envío</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="numero-orden">Número de orden (si aplica):</label>
+              <input
+                type="text"
+                id="numero-orden"
+                name="numero_orden"
+                placeholder="Ej: ORD-2024-0001"
+                pattern="ORD-[0-9]{4}-[0-9]{4}"
+                aria-describedby="orden-ayuda"
+                readonly
+                onfocus="this.removeAttribute('readonly')"
+              >
+              <small id="orden-ayuda">Formato: ORD-AAAA-NNNN. Encuéntralo en tu email de confirmación.</small>
+            </div>
+
+            <div>
+              <label for="mensaje">
+                Mensaje: <abbr title="Campo obligatorio" aria-label="obligatorio">*</abbr>
+              </label>
+              <textarea
+                id="mensaje"
+                name="mensaje"
+                rows="6"
+                cols="50"
+                placeholder="Describe tu consulta con el mayor detalle posible..."
+                required
+                minlength="20"
+                maxlength="1000"
+                aria-required="true"
+                aria-describedby="mensaje-ayuda"
+              ></textarea>
+              <small id="mensaje-ayuda">Mínimo 20 caracteres, máximo 1000.</small>
+            </div>
+
+          </fieldset>
+
+          <!-- ── Personalización ── -->
+          <fieldset>
+            <legend>Personalización (opcional)</legend>
+
+            <div>
+              <label for="color-favorito">Tu color favorito:</label>
+              <input
+                type="color"
+                id="color-favorito"
+                name="color_favorito"
+                value="#1E3A8A"
+                aria-label="Seleccionar color favorito para personalizar tu experiencia"
+              >
+            </div>
+
+            <div>
+              <label for="satisfaccion">Nivel de satisfacción actual (1-10):</label>
+              <input
+                type="range"
+                id="satisfaccion"
+                name="satisfaccion"
+                min="1"
+                max="10"
+                step="1"
+                value="7"
+                aria-label="Deslizar para indicar nivel de satisfacción del 1 al 10"
+                aria-describedby="satisfaccion-ayuda"
+              >
+              <output for="satisfaccion" id="satisfaccion-ayuda">7</output>
+            </div>
+
+          </fieldset>
+
+          <!-- ── Archivos adjuntos ── -->
+          <fieldset>
+            <legend>Archivos adjuntos</legend>
+
+            <div>
+              <label for="adjunto">Adjuntar imagen o documento:</label>
+              <input
+                type="file"
+                id="adjunto"
+                name="adjunto"
+                accept="image/*,.pdf,.doc,.docx"
+                multiple
+                aria-describedby="adjunto-ayuda"
+              >
+              <small id="adjunto-ayuda">Formatos aceptados: JPG, PNG, PDF, DOC. Máximo 5MB por archivo.</small>
+            </div>
+
+          </fieldset>
+
+          <!-- ── Preferencias de comunicación ── -->
+          <fieldset>
+            <legend>Preferencias de comunicación</legend>
+
+            <p>¿Cómo te enteraste de nosotros?</p>
+            <label><input type="radio" name="origen_conocimiento" value="google" required> Google</label>
+            <label><input type="radio" name="origen_conocimiento" value="redes"> Redes sociales</label>
+            <label><input type="radio" name="origen_conocimiento" value="amigo"> Recomendación de amigo</label>
+            <label><input type="radio" name="origen_conocimiento" value="publicidad"> Publicidad</label>
+            <label><input type="radio" name="origen_conocimiento" value="otro"> Otro</label>
+
+            <p>Suscripciones:</p>
+            <label>
+              <input type="checkbox" name="newsletter" value="si">
+              Quiero recibir ofertas y novedades por email
+            </label>
+            <label>
+              <input type="checkbox" name="sms" value="si">
+              Quiero recibir notificaciones por SMS
+            </label>
+            <label>
+              <input type="checkbox" name="terminos" value="aceptado" required aria-required="true">
+              He leído y acepto los <a href="#">términos y condiciones</a> y la <a href="#">política de privacidad</a> <abbr title="Campo obligatorio" aria-label="obligatorio">*</abbr>
+            </label>
+
+            <!-- Campo deshabilitado como ejemplo -->
+            <label for="campo-deshabilitado">Campo de solo lectura (ejemplo):</label>
+            <input
+              type="text"
+              id="campo-deshabilitado"
+              name="campo_demo"
+              value="Este campo está deshabilitado"
+              disabled
+              aria-disabled="true"
+              aria-label="Ejemplo de campo deshabilitado"
+            >
+          </fieldset>
+
+          <!-- Botones de acción -->
+          <div>
+            <button type="submit" aria-label="Enviar formulario de contacto">📨 Enviar mensaje</button>
+            <button type="reset" aria-label="Limpiar todos los campos del formulario">🗑 Limpiar formulario</button>
+          </div>
+
+          <!-- Output dinámico (para JS futuro) -->
+          <output id="resultado-formulario" name="resultado" for="nombre email mensaje" aria-live="polite"></output>
+
+        </form>
+      </section>
+
+      <!-- ==================== INFO DE CONTACTO ==================== -->
+      <aside aria-labelledby="titulo-info-contacto">
+        <h2 id="titulo-info-contacto">Información de contacto</h2>
+
         <address>
-            <p>TechStore Online - Centro de Atención al Cliente</p>
-            <p>Disponible 24/7 en <a href="mailto:ayuda@techstore.com">ayuda@techstore.com</a></p>
+          <p>
+            <strong>TechStore Online</strong><br>
+            Av. Tecnología 1234, Piso 5<br>
+            Santiago de Chile, Chile<br>
+            <abbr title="Código Postal">CP</abbr> 8320000
+          </p>
+          <p>
+            📞 <a href="tel:+56212345678">+56 2 1234 5678</a><br>
+            📱 <a href="tel:+56912345678">+56 9 1234 5678</a> (WhatsApp)<br>
+            ✉ <a href="mailto:contacto@techstore.cl">contacto@techstore.cl</a><br>
+            🌐 <a href="https://www.techstore.cl" target="_blank" rel="noopener noreferrer">www.techstore.cl</a>
+          </p>
         </address>
-        <small>&copy; 2024 TechStore Online</small>
-    </footer>
+
+        <section aria-labelledby="titulo-horarios">
+          <h3 id="titulo-horarios">Horarios de atención</h3>
+          <dl>
+            <dt>Lunes a Viernes:</dt>
+            <dd><time datetime="09:00">9:00</time> – <time datetime="18:00">18:00</time></dd>
+            <dt>Sábados:</dt>
+            <dd><time datetime="10:00">10:00</time> – <time datetime="14:00">14:00</time></dd>
+            <dt>Domingos y festivos:</dt>
+            <dd>Cerrado</dd>
+            <dt>Chat en línea:</dt>
+            <dd>24/7 todos los días</dd>
+          </dl>
+        </section>
+
+        <section aria-labelledby="titulo-preguntas">
+          <h3 id="titulo-preguntas">Preguntas frecuentes</h3>
+          <details>
+            <summary>¿Cuánto demora el envío?</summary>
+            <p>Los envíos estándar tardan de 3 a 5 días hábiles. El envío express llega en 24 horas.</p>
+          </details>
+          <details>
+            <summary>¿Cómo hago una devolución?</summary>
+            <p>Tienes 30 días desde la recepción del producto para solicitar una devolución. Escríbenos a <a href="mailto:devoluciones@techstore.cl">devoluciones@techstore.cl</a>.</p>
+          </details>
+          <details>
+            <summary>¿Aceptan tarjetas internacionales?</summary>
+            <p>Sí, aceptamos Visa, Mastercard y American Express de cualquier país.</p>
+          </details>
+        </section>
+
+        <section aria-labelledby="titulo-redes-contacto">
+          <h3 id="titulo-redes-contacto">Síguenos en redes</h3>
+          <ul>
+            <li><a href="#" aria-label="Facebook de TechStore">📘 Facebook</a></li>
+            <li><a href="#" aria-label="Instagram de TechStore">📷 Instagram</a></li>
+            <li><a href="#" aria-label="Twitter de TechStore">🐦 Twitter / X</a></li>
+            <li><a href="#" aria-label="YouTube de TechStore">▶ YouTube</a></li>
+            <li><a href="#" aria-label="TikTok de TechStore">🎵 TikTok</a></li>
+          </ul>
+        </section>
+
+      </aside>
+
+    </div>
+
+  </main>
+
+  <footer>
+    <address>
+      <strong>TechStore Online</strong> |
+      <a href="tel:+56212345678">+56 2 1234 5678</a> |
+      <a href="mailto:contacto@techstore.cl">contacto@techstore.cl</a>
+    </address>
+    <p><small>&copy; 2024 TechStore Online. Todos los derechos reservados.</small></p>
+  </footer>
+
 </body>
 </html>

@@ -1,0 +1,502 @@
+/* ============================================================
+   TechStore Online — animaciones.css
+   Práctica 2: Animaciones, transiciones y transformaciones CSS3
+   ============================================================ */
+
+/* ============================================================
+   1. LOADER ANIMADO — BONUS
+   ============================================================ */
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-primario, #1E3A8A);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  animation: loader-salida 0.5s ease 2s forwards;
+}
+
+#loader p {
+  color: #fff;
+  margin-top: 1.5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  animation: parpadeo 1s ease-in-out infinite;
+}
+
+.loader-spinner {
+  width: 56px;
+  height: 56px;
+  border: 5px solid rgba(255,255,255,0.2);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: girar 0.8s linear infinite;
+}
+
+@keyframes girar {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes parpadeo {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
+
+@keyframes loader-salida {
+  to {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+/* ============================================================
+   2. ANIMACIÓN DEL BANNER HERO
+   ============================================================ */
+section[aria-label="Banner promocional principal"] article {
+  animation: entrar-izquierda 0.8s ease-out both;
+}
+
+section[aria-label="Banner promocional principal"] > aside {
+  animation: entrar-derecha 0.8s ease-out 0.2s both;
+}
+
+@keyframes entrar-izquierda {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes entrar-derecha {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ============================================================
+   3. APARICIÓN GRADUAL DE TARJETAS DE PRODUCTOS
+   ============================================================ */
+section[aria-labelledby="titulo-productos"] article,
+section[aria-labelledby="titulo-listado"] article {
+  animation: aparecer 0.5s ease-out both;
+}
+
+/* Delay escalonado para efecto cascada */
+section[aria-labelledby="titulo-productos"] article:nth-child(2) { animation-delay: 0.05s; }
+section[aria-labelledby="titulo-productos"] article:nth-child(3) { animation-delay: 0.10s; }
+section[aria-labelledby="titulo-productos"] article:nth-child(4) { animation-delay: 0.15s; }
+section[aria-labelledby="titulo-productos"] article:nth-child(5) { animation-delay: 0.20s; }
+section[aria-labelledby="titulo-productos"] article:nth-child(6) { animation-delay: 0.25s; }
+section[aria-labelledby="titulo-productos"] article:nth-child(7) { animation-delay: 0.30s; }
+section[aria-labelledby="titulo-productos"] article:nth-child(8) { animation-delay: 0.35s; }
+section[aria-labelledby="titulo-productos"] article:nth-child(9) { animation-delay: 0.40s; }
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ============================================================
+   4. BANNER PROMOCIONAL ANIMADO — texto pulsante
+   ============================================================ */
+section[aria-label="Banner promocional principal"] h1 {
+  animation: pulso-titulo 3s ease-in-out infinite;
+}
+
+@keyframes pulso-titulo {
+  0%, 100% { text-shadow: 0 0 0px rgba(255,255,255,0); }
+  50%       { text-shadow: 0 0 20px rgba(255,255,255,0.4); }
+}
+
+/* ============================================================
+   5. BOTÓN COMPRAR AHORA — rebote
+   ============================================================ */
+section[aria-label="Banner promocional principal"] a[href="producto.html"] {
+  animation: rebote 2s ease-in-out 1.5s infinite;
+}
+
+@keyframes rebote {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-6px); }
+}
+
+section[aria-label="Banner promocional principal"] a[href="producto.html"]:hover {
+  animation: none;
+  transform: translateY(-2px);
+}
+
+/* ============================================================
+   6. TRANSICIONES EN BOTONES
+   ============================================================ */
+button {
+  transition:
+    background-color 0.2s ease,
+    border-color     0.2s ease,
+    transform        0.15s ease,
+    box-shadow       0.2s ease;
+}
+
+button:hover:not(:disabled) {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* ============================================================
+   7. TRANSICIÓN EN ENLACES DEL FOOTER
+   ============================================================ */
+footer ul li a {
+  transition:
+    color         0.2s ease,
+    padding-left  0.2s ease;
+}
+
+/* ============================================================
+   8. ANIMACIÓN DE NOTIFICACIÓN / BADGE
+   ============================================================ */
+.badge-animado {
+  animation: ping 1.5s cubic-bezier(0,0,0.2,1) infinite;
+}
+
+@keyframes ping {
+  75%, 100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+/* ============================================================
+   9. PARALLAX SUTIL EN HERO — BONUS
+   ============================================================ */
+section[aria-label="Banner promocional principal"]::after {
+  content: '';
+  position: absolute;
+  bottom: -40px;
+  left: -40px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(255,255,255,0.06), transparent 70%);
+  border-radius: 50%;
+  animation: flotar 6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes flotar {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  33%       { transform: translateY(-20px) translateX(10px); }
+  66%       { transform: translateY(10px) translateX(-10px); }
+}
+
+/* ============================================================
+   10. SLIDER CSS SIN JAVASCRIPT — BONUS
+   ============================================================ */
+.slider {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+.slider-track {
+  display: flex;
+  width: 300%;
+  animation: slide-auto 12s steps(1) infinite;
+}
+
+.slider-item {
+  width: calc(100% / 3);
+  flex-shrink: 0;
+}
+
+.slider-item img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+@keyframes slide-auto {
+  0%   { transform: translateX(0%); }
+  33%  { transform: translateX(-33.333%); }
+  66%  { transform: translateX(-66.666%); }
+  100% { transform: translateX(0%); }
+}
+
+/* Puntos indicadores del slider */
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.slider-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #CBD5E1;
+}
+
+.slider-dot:first-child { background-color: var(--color-secundario, #2563EB); }
+
+/* ============================================================
+   11. GALERÍA CON LIGHTBOX CSS — BONUS
+   ============================================================ */
+.galeria-lightbox {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.galeria-lightbox a {
+  display: block;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.galeria-lightbox a img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  transition: transform 0.4s ease, filter 0.4s ease;
+  filter: brightness(0.9);
+}
+
+.galeria-lightbox a:hover img {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
+/* Lightbox al hacer :target */
+.lightbox-target {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.92);
+  z-index: 500;
+  align-items: center;
+  justify-content: center;
+  animation: lightbox-entrada 0.3s ease;
+}
+
+.lightbox-target:target {
+  display: flex;
+}
+
+@keyframes lightbox-entrada {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.lightbox-target img {
+  max-width: 90vw;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+}
+
+.lightbox-target a.cerrar {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  text-decoration: none;
+  line-height: 1;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.lightbox-target a.cerrar:hover { opacity: 1; }
+
+/* ============================================================
+   12. TRANSFORMACIONES VARIAS
+   ============================================================ */
+
+/* Rotate en iconos de redes sociales */
+footer ul li a:hover .icono-social {
+  transform: rotate(10deg) scale(1.2);
+  transition: transform 0.3s ease;
+}
+
+/* Skew en etiqueta decorativa */
+.etiqueta-sesgo {
+  display: inline-block;
+  transform: skew(-8deg);
+  background-color: var(--color-acento, #F59E0B);
+  padding: 2px 12px;
+  color: #000;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.etiqueta-sesgo span {
+  display: inline-block;
+  transform: skew(8deg);
+}
+
+/* Scale en imágenes de categorías */
+section[aria-labelledby="titulo-categorias"] article a:hover img {
+  transform: scale(1.15) rotate(-3deg);
+  transition: transform 0.4s ease;
+}
+
+/* ============================================================
+   13. GRADIENTES ADICIONALES
+   ============================================================ */
+.fondo-gradiente-azul {
+  background: linear-gradient(135deg, #1E3A8A, #3B82F6);
+}
+
+.fondo-gradiente-acento {
+  background: linear-gradient(135deg, #F59E0B, #EF4444);
+}
+
+.fondo-radial {
+  background: radial-gradient(circle at center, #EFF6FF, #DBEAFE);
+}
+
+/* ============================================================
+   14. SOMBRA DE TEXTO
+   ============================================================ */
+.texto-sombra {
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+h1 {
+  text-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+/* ============================================================
+   15. ANIMACIÓN CONTADOR REGRESIVO — (soporte visual)
+   ============================================================ */
+.contador-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, var(--color-error, #EF4444), #DC2626);
+  color: #fff;
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.875rem;
+  animation: pulso-rojo 1.5s ease-in-out infinite;
+}
+
+@keyframes pulso-rojo {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(239,68,68,0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(239,68,68,0);
+  }
+}
+
+/* ============================================================
+   16. EFECTO PARALLAX EN SECCIÓN — BONUS
+   ============================================================ */
+.seccion-parallax {
+  background-image: linear-gradient(rgba(30,58,138,0.85), rgba(30,58,138,0.85)),
+                    url('https://placehold.co/1400x500?text=TechStore+Background');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  padding: 5rem 2rem;
+  text-align: center;
+  color: #fff;
+}
+
+.seccion-parallax h2 {
+  color: #fff;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* ============================================================
+   17. REVEAL SCROLL — clase utilitaria
+   ============================================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================================
+   18. TRANSICIÓN PÁGINA — fade in al cargar
+   ============================================================ */
+body {
+  animation: fade-in-pagina 0.4s ease-out both;
+}
+
+@keyframes fade-in-pagina {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ============================================================
+   19. HOVER EN TARJETAS — transición completa
+   ============================================================ */
+section[aria-labelledby="titulo-productos"] article,
+section[aria-labelledby="titulo-listado"] article {
+  transition:
+    transform    0.3s ease,
+    box-shadow   0.3s ease,
+    border-color 0.3s ease;
+}
+
+section[aria-labelledby="titulo-productos"] article figure img,
+section[aria-labelledby="titulo-listado"] article figure img {
+  transition: transform 0.5s ease;
+}
+
+/* ============================================================
+   20. ANIMACIÓN MARCA DE VERIFICACIÓN — estado OK
+   ============================================================ */
+.check-animado::before {
+  content: '✓';
+  display: inline-block;
+  color: var(--color-exito, #10B981);
+  font-weight: 800;
+  animation: check-entrada 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
+
+@keyframes check-entrada {
+  from {
+    opacity: 0;
+    transform: scale(0) rotate(-45deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}

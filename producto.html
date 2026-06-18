@@ -1,204 +1,345 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Detalle del producto - TechStore Online">
-    <title>Detalle del Producto - TechStore Online</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Apple MacBook Air M2 - Detalles, especificaciones técnicas, galería y video del producto.">
+  <meta name="author" content="TechStore Online">
+  <title>MacBook Air M2 - TechStore Online</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animaciones.css">
 </head>
 <body>
-    <header>
-        <h1>TechStore Online</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="productos.html">Productos</a></li>
-                <li><a href="carrito.html">Carrito</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="acerca.html">Acerca de</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <h2>Laptop Gaming Pro - Detalle del Producto</h2>
+  <div>
+    <p><small>🚚 Envío gratis en compras mayores a $50.000</small></p>
+  </div>
 
-        <section class="producto-detalle">
-            <!-- Galería Multimedia Responsiva -->
-            <section class="galeria-multimedia">
-                <h3>Galería del Producto</h3>
-                
-                <picture>
-                    <source media="(min-width: 1024px)" srcset="img/laptop-gaming-desktop.jpg">
-                    <source media="(min-width: 768px)" srcset="img/laptop-gaming-tablet.jpg">
-                    <img src="img/laptop-gaming-mobile.jpg" alt="Laptop Gaming Pro vista frontal en todos los dispositivos" width="400" height="400">
-                </picture>
+  <header>
+    <div>
+      <figure>
+        <a href="index.html">
+          <img src="img/ui/logo.png" alt="Logo TechStore Online — Ir al inicio">
+        </a>
+      </figure>
+      <form action="productos.html" method="get" role="search">
+        <label for="busqueda">Buscar:</label>
+        <input type="search" id="busqueda" name="q" placeholder="Buscar productos..." aria-label="Buscar productos" autocomplete="on">
+        <button type="submit">Buscar</button>
+      </form>
+      <div>
+        <a href="carrito.html" aria-label="Ver carrito">🛒 Carrito</a>
+        <a href="#" aria-label="Mi cuenta">👤 Mi cuenta</a>
+      </div>
+    </div>
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="productos.html?cat=ofertas">Ofertas</a></li>
+        <li><a href="productos.html?cat=novedades">Novedades</a></li>
+        <li><a href="acerca.html">Blog</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
-                <!-- Video del Producto -->
-                <div class="video-container">
-                    <h4>Video del Producto</h4>
-                    <video width="400" height="300" controls>
-                        <source src="video/laptop-gaming-demo.mp4" type="video/mp4">
-                        <source src="video/laptop-gaming-demo.webm" type="video/webm">
-                        Tu navegador no soporta el elemento video.
-                    </video>
-                </div>
+  <main>
 
-                <!-- Audio Promocional -->
-                <div class="audio-container">
-                    <h4>Descripción de Audio</h4>
-                    <audio controls>
-                        <source src="audio/laptop-gaming-descripcion.mp3" type="audio/mpeg">
-                        <source src="audio/laptop-gaming-descripcion.ogg" type="audio/ogg">
-                        Tu navegador no soporta el elemento audio.
-                    </audio>
-                </div>
-            </section>
+    <nav aria-label="Ruta de navegación (breadcrumb)">
+      <ol>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="productos.html?cat=laptops">Laptops</a></li>
+        <li>MacBook Air M2</li>
+      </ol>
+    </nav>
 
-            <!-- Información del Producto -->
-            <section class="info-producto">
-                <h3>Laptop Gaming Pro</h3>
-                <p><strong>Marca:</strong> TechBrand</p>
-                <p><strong>Modelo:</strong> GP-2024-Ultra</p>
-                <p><strong>Precio: $1,299</strong></p>
-                <p><strong>Descuento:</strong> <mark>25% OFF</mark></p>
-                <p><strong>Disponibilidad:</strong> <mark>En Stock</mark></p>
-                
-                <p><strong>Descripción General:</strong></p>
-                <p>La Laptop Gaming Pro es una máquina de alto rendimiento diseñada para gamers profesionales y creadores de contenido. Con un procesador de última generación y una tarjeta gráfica RTX 4070, ofrece el máximo rendimiento en juegos y aplicaciones exigentes.</p>
+    <article aria-labelledby="nombre-producto">
 
-                <!-- Tabla de Especificaciones Técnicas -->
-                <table class="especificaciones">
-                    <caption>Especificaciones Técnicas de la Laptop Gaming Pro</caption>
-                    <thead>
-                        <tr>
-                            <th>Característica</th>
-                            <th>Especificación</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Procesador</strong></td>
-                            <td>Intel Core i9-13900H (24 núcleos)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>RAM</strong></td>
-                            <td>32 GB DDR5</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Almacenamiento</strong></td>
-                            <td>1 TB SSD NVMe</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Tarjeta Gráfica</strong></td>
-                            <td>NVIDIA RTX 4070 (12GB GDDR6)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Pantalla</strong></td>
-                            <td>15.6" FHD IPS 165Hz</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Resolución</strong></td>
-                            <td>1920 x 1080 píxeles</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Batería</strong></td>
-                            <td>86Wh Li-Po (8-10 horas)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Peso</strong></td>
-                            <td>2.5 kg</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Puertos</strong></td>
-                            <td>2x USB-C Thunderbolt 4, 2x USB 3.2, HDMI 2.1, Jack 3.5mm</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Sistema Operativo</strong></td>
-                            <td>Windows 11 Pro</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Conectividad</strong></td>
-                            <td>WiFi 6E, Bluetooth 5.3</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Color</strong></td>
-                            <td>Negro Mate con detalles RGB</td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <td colspan="2"><strong>Garantía:</strong> 2 años de cobertura internacional</td>
-                        </tr>
-                    </tfoot>
-                </table>
+      <header>
+        <h1 id="nombre-producto">Apple MacBook Air M2</h1>
+        <p>
+          Marca: <strong>Apple</strong> |
+          SKU: <data value="SKU-2001">MBX-M2-256</data> |
+          Categoría: <a href="productos.html?cat=laptops">Laptops</a>
+        </p>
+        <p>⭐⭐⭐⭐⭐ <a href="#resenas"><small>(312 reseñas)</small></a></p>
+      </header>
 
-                <!-- Acciones de Compra -->
-                <section class="acciones-compra">
-                    <h4>Opciones de Compra</h4>
-                    <label for="cantidad">Cantidad:</label>
-                    <input type="number" id="cantidad" name="cantidad" min="1" max="10" value="1">
-                    
-                    <button>Agregar al Carrito</button>
-                    <button>Comprar Ahora</button>
-                </section>
+      <!-- ==================== GALERÍA MULTIMEDIA ==================== -->
+      <section aria-labelledby="titulo-galeria">
+        <h2 id="titulo-galeria">Galería de imágenes</h2>
 
-                <!-- Información Adicional -->
-                <section class="info-adicional">
-                    <h4>Información Adicional</h4>
-                    <ul>
-                        <li>Envío gratuito para pedidos superiores a $100</li>
-                        <li>Devolución de 30 días sin preguntas</li>
-                        <li>Garantía extendida disponible</li>
-                        <li>Soporte técnico 24/7</li>
-                    </ul>
-                </section>
+        <figure>
+          <picture>
+            <source media="(min-width: 1024px)" srcset="img/productos/macbook-air.jpg" type="image/webp">
+            <source media="(min-width: 768px)"  srcset="img/productos/macbook-air.jpg">
+            <img
+              src="img/productos/macbook-air.jpg"
+              alt="Apple MacBook Air M2 en color plateado, vista frontal con pantalla encendida"
+              width="700" height="450"
+            >
+          </picture>
+          <figcaption>MacBook Air M2 — Vista frontal. Disponible en Plateado, Gris Espacial, Blanco Estrella y Medianoche.</figcaption>
+        </figure>
 
-                <!-- Reseñas de Clientes -->
-                <section class="resenas">
-                    <h4>Reseñas de Clientes</h4>
-                    <article class="resena">
-                        <p><strong>Juan García</strong> - ⭐⭐⭐⭐⭐</p>
-                        <p>"Excelente laptop, cumple todas mis expectativas para gaming y edición de video. La construcción es sólida y el rendimiento es impresionante."</p>
-                    </article>
-                    <article class="resena">
-                        <p><strong>María López</strong> - ⭐⭐⭐⭐</p>
-                        <p>"Muy buena máquina, aunque un poco pesada para llevar. Definitivamente recomendada para gamers profesionales."</p>
-                    </article>
-                </section>
-            </section>
-        </section>
+        <!-- Miniaturas -->
+        <figure>
+          <img src="img/ui/macbook-thumb1.jpg" alt="MacBook Air M2 vista frontal abierta" width="120" height="80">
+          <figcaption>Vista frontal</figcaption>
+        </figure>
+        <figure>
+          <img src="img/ui/macbook-thumb2.jpg" alt="MacBook Air M2 vista lateral cerrado" width="120" height="80">
+          <figcaption>Vista lateral</figcaption>
+        </figure>
+        <figure>
+          <img src="img/ui/macbook-thumb3.jpg" alt="MacBook Air M2 teclado y trackpad" width="120" height="80">
+          <figcaption>Teclado</figcaption>
+        </figure>
+        <figure>
+          <img src="img/ui/macbook-thumb4.jpg" alt="MacBook Air M2 puertos MagSafe y USB-C" width="120" height="80">
+          <figcaption>Puertos</figcaption>
+        </figure>
+      </section>
 
-        <!-- Productos Relacionados -->
-        <section class="productos-relacionados">
-            <h3>Productos Relacionados</h3>
-            <article class="producto">
-                <h4>Monitor 4K Gaming</h4>
-                <img src="img/monitor-gaming-4k.jpg" alt="Monitor 4K para gaming profesional" width="150" height="150">
-                <p>Monitor de 32" 4K 144Hz ideal para gaming</p>
-                <p><strong>$599</strong></p>
+      <!-- ==================== INFO Y PRECIO ==================== -->
+      <section aria-labelledby="titulo-info-compra">
+        <h2 id="titulo-info-compra">Información de compra</h2>
+        <p>Precio: <strong>$1.299.990</strong> <del>$1.499.990</del> <mark>Ahorra $200.000</mark></p>
+        <p>Disponibilidad: <ins>En stock</ins> — <strong>¡Solo quedan 5 unidades!</strong></p>
+        <p>Envío estimado: <time datetime="2024-12-20">20 de diciembre, 2024</time></p>
+
+        <form action="carrito.html" method="get" aria-label="Agregar al carrito">
+          <fieldset>
+            <legend>Opciones del producto</legend>
+            <label for="color-producto">Color:</label>
+            <select id="color-producto" name="color" aria-label="Seleccionar color">
+              <option value="plateado">Plateado</option>
+              <option value="gris">Gris Espacial</option>
+              <option value="blanco">Blanco Estrella</option>
+              <option value="medianoche">Medianoche</option>
+            </select>
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" id="cantidad" name="cantidad" value="1" min="1" max="10" aria-label="Cantidad">
+          </fieldset>
+          <button type="submit" aria-label="Agregar MacBook Air M2 al carrito">🛒 Agregar al carrito</button>
+          <button type="button" aria-label="Agregar a favoritos">♥ Favoritos</button>
+        </form>
+
+        <ul aria-label="Beneficios de compra">
+          <li>✅ Garantía oficial Apple 12 meses</li>
+          <li>🔄 Devolución gratuita en 30 días</li>
+          <li>🚚 Envío gratis a todo el país</li>
+          <li>💳 Hasta 12 cuotas sin interés</li>
+        </ul>
+      </section>
+
+      <!-- ==================== VIDEO DEL PRODUCTO ==================== -->
+      <section aria-labelledby="titulo-video">
+        <h2 id="titulo-video">Video del producto</h2>
+        <figure>
+          <video
+            controls
+            width="700"
+            height="394"
+            poster="img/productos/macbook-air.jpg"
+            aria-label="Video de presentación del Apple MacBook Air M2"
+            preload="metadata"
+          >
+            <source src="video/macbook-air-m2.mp4" type="video/mp4">
+            <source src="video/macbook-air-m2.webm" type="video/webm">
+            <track kind="subtitles" src="video/subtitulos-es.vtt" srclang="es" label="Español">
+            <p>Tu navegador no soporta video HTML5. <a href="video/macbook-air-m2.mp4">Descargar video</a>.</p>
+          </video>
+          <figcaption>Video oficial de presentación del Apple MacBook Air M2</figcaption>
+        </figure>
+      </section>
+
+      <!-- ==================== AUDIO PROMOCIONAL ==================== -->
+      <section aria-labelledby="titulo-audio">
+        <h2 id="titulo-audio">Audio promocional</h2>
+        <figure>
+          <audio controls aria-label="Audio promocional del MacBook Air M2" preload="metadata">
+            <source src="audio/promo-macbook.mp3" type="audio/mpeg">
+            <source src="audio/promo-macbook.ogg" type="audio/ogg">
+            <p>Tu navegador no soporta audio HTML5. <a href="audio/promo-macbook.mp3">Descargar audio</a>.</p>
+          </audio>
+          <figcaption>Anuncio de radio — MacBook Air M2 en TechStore</figcaption>
+        </figure>
+      </section>
+
+      <!-- ==================== DESCRIPCIÓN ==================== -->
+      <section aria-labelledby="titulo-descripcion">
+        <h2 id="titulo-descripcion">Descripción del producto</h2>
+        <p>
+          El <strong>MacBook Air con chip M2</strong> redefine lo que puede ser una laptop ultradelgada.
+          Con hasta <mark>18 horas de batería</mark>, un diseño completamente rediseñado y la potencia
+          del chip M2 de Apple, es el compañero perfecto para estudiantes y profesionales.
+        </p>
+        <p>
+          El nuevo diseño incluye una pantalla Liquid Retina de 13.6" con más de <strong>500 nits</strong>
+          de brillo, cámara FaceTime <abbr title="High Definition">HD</abbr> de 1080p, y un sistema de
+          sonido de cuatro altavoces con audio espacial personalizado.
+        </p>
+        <blockquote cite="https://www.apple.com/macbook-air">
+          <p>El MacBook Air M2 es el salto más grande en la historia del Air.</p>
+          <footer>— <cite>Apple Inc., 2022</cite></footer>
+        </blockquote>
+      </section>
+
+      <!-- ==================== TABLA ESPECIFICACIONES ==================== -->
+      <section aria-labelledby="titulo-specs">
+        <h2 id="titulo-specs">Especificaciones técnicas</h2>
+
+        <table>
+          <caption>Especificaciones técnicas — Apple MacBook Air M2 (modelo base)</caption>
+          <colgroup>
+            <col>
+            <col>
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">Característica</th>
+              <th scope="col">Valor</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Procesador</th>
+              <td>Apple M2 — CPU 8 núcleos, GPU 8 núcleos</td>
+            </tr>
+            <tr>
+              <th scope="row"><abbr title="Random Access Memory">RAM</abbr></th>
+              <td>8 GB Memoria unificada</td>
+            </tr>
+            <tr>
+              <th scope="row"><abbr title="Solid State Drive">SSD</abbr></th>
+              <td>256 GB</td>
+            </tr>
+            <tr>
+              <th scope="row">Pantalla</th>
+              <td>13.6" Liquid Retina, 2560×1664, 224 <abbr title="Píxeles por pulgada">ppi</abbr></td>
+            </tr>
+            <tr>
+              <th scope="row">Batería</th>
+              <td>Hasta 18 horas de uso</td>
+            </tr>
+            <tr>
+              <th scope="row">Cámara</th>
+              <td>FaceTime <abbr title="High Definition">HD</abbr> 1080p</td>
+            </tr>
+            <tr>
+              <th scope="row">Conectividad</th>
+              <td>Wi-Fi 6, Bluetooth 5.3, 2× <abbr title="Universal Serial Bus tipo C / Thunderbolt">USB-C / Thunderbolt</abbr></td>
+            </tr>
+            <tr>
+              <th scope="row">Sistema operativo</th>
+              <td>macOS Sonoma</td>
+            </tr>
+            <tr>
+              <th scope="row">Peso</th>
+              <td>1.24 kg</td>
+            </tr>
+            <tr>
+              <th scope="row">Dimensiones</th>
+              <td>304.1 × 215 × 11.3 mm</td>
+            </tr>
+            <tr>
+              <th scope="row">Colores disponibles</th>
+              <td>Medianoche, Blanco Estrella, Gris Espacial, Plateado</td>
+            </tr>
+            <tr>
+              <th scope="row">Garantía</th>
+              <td>12 meses garantía oficial Apple</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="2">
+                <small>* Especificaciones sujetas a cambios. Consulte el sitio oficial de Apple para información actualizada.</small>
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
+
+      <!-- ==================== RESEÑAS ==================== -->
+      <section aria-labelledby="titulo-resenas" id="resenas">
+        <h2 id="titulo-resenas">Reseñas de clientes</h2>
+        <p>Calificación promedio: <strong>4.8 / 5</strong> — basada en 312 reseñas</p>
+
+        <article>
+          <header>
+            <h3>María González</h3>
+            <p>⭐⭐⭐⭐⭐ — <time datetime="2024-11-15">15 de noviembre, 2024</time></p>
+          </header>
+          <p>Increíble laptop, súper liviana y rápida. La batería dura todo el día. 100% recomendada.</p>
+        </article>
+
+        <article>
+          <header>
+            <h3>Carlos Pérez</h3>
+            <p>⭐⭐⭐⭐☆ — <time datetime="2024-10-28">28 de octubre, 2024</time></p>
+          </header>
+          <p>Excelente rendimiento para programación. Solo le falta más puertos USB-C. Por lo demás, perfecta.</p>
+        </article>
+
+        <article>
+          <header>
+            <h3>Ana Rodríguez</h3>
+            <p>⭐⭐⭐⭐⭐ — <time datetime="2024-09-12">12 de septiembre, 2024</time></p>
+          </header>
+          <p>Cambié de Windows a Mac y no me arrepiento. El chip M2 es una bestia. Altamente recomendado.</p>
+        </article>
+      </section>
+
+      <!-- Productos relacionados -->
+      <section aria-labelledby="titulo-relacionados">
+        <h2 id="titulo-relacionados">Productos relacionados</h2>
+        <ul>
+          <li>
+            <article>
+              <figure>
+                <img src="img/productos/macbook-pro.jpg" alt="MacBook Pro M3" width="130" height="130">
+              </figure>
+              <h3><a href="producto.html">MacBook Pro M3</a></h3>
+              <p><strong>$1.899.990</strong></p>
             </article>
-            <article class="producto">
-                <h4>Mousepad XL RGB</h4>
-                <img src="img/mousepad-rgb.jpg" alt="Mousepad XL con iluminación RGB" width="150" height="150">
-                <p>Mousepad grande con LED RGB personalizable</p>
-                <p><strong>$49</strong></p>
+          </li>
+          <li>
+            <article>
+              <figure>
+                <img src="img/productos/magic-mouse.jpg" alt="Apple Magic Mouse" width="130" height="130">
+              </figure>
+              <h3><a href="producto.html">Magic Mouse</a></h3>
+              <p><strong>$89.990</strong></p>
             </article>
-            <article class="producto">
-                <h4>Refrigerador Laptop</h4>
-                <img src="img/refrigerador-laptop.jpg" alt="Refrigerador de laptop con ventiladores" width="150" height="150">
-                <p>Sistema de refrigeración activa para laptops gaming</p>
-                <p><strong>$89</strong></p>
+          </li>
+          <li>
+            <article>
+              <figure>
+                <img src="img/productos/airpods-pro.jpg" alt="AirPods Pro 2da Gen" width="130" height="130">
+              </figure>
+              <h3><a href="producto.html">AirPods Pro 2</a></h3>
+              <p><strong>$299.990</strong></p>
             </article>
-        </section>
-    </main>
+          </li>
+        </ul>
+      </section>
 
-    <footer>
-        <address>
-            <p>TechStore Online</p>
-            <p>Email: <a href="mailto:soporte@techstore.com">soporte@techstore.com</a></p>
-        </address>
-        <small>&copy; 2024 TechStore Online</small>
-    </footer>
+    </article>
+  </main>
+
+  <footer>
+    <address>
+      <strong>TechStore Online</strong> |
+      <a href="tel:+56212345678">+56 2 1234 5678</a> |
+      <a href="mailto:contacto@techstore.cl">contacto@techstore.cl</a>
+    </address>
+    <p><small>&copy; 2024 TechStore Online. Todos los derechos reservados.</small></p>
+  </footer>
+
 </body>
 </html>
