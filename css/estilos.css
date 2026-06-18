@@ -12,17 +12,19 @@
    2. VARIABLES CSS
    ============================================================ */
 :root {
-  --color-primario:     #1E3A8A;
-  --color-secundario:   #2563EB;
+  /* Dark grey + amber/orange theme */
+  --color-primario:     #1A1A1A;
+  --color-secundario:   #D97706;
   --color-acento:       #F59E0B;
-  --color-acento-hover: #D97706;
-  --color-fondo:        #F8FAFC;
-  --color-fondo-card:   #FFFFFF;
-  --color-texto:        #1F2937;
-  --color-texto-suave:  #6B7280;
-  --color-borde:        #E5E7EB;
-  --color-exito:        #10B981;
-  --color-error:        #EF4444;
+  --color-acento-hover: #B45309;
+  --color-fondo:        #111111;
+  --color-fondo-card:   #1E1E1E;
+  --color-fondo-alt:    #252525;
+  --color-texto:        #E5E5E5;
+  --color-texto-suave:  #9CA3AF;
+  --color-borde:        #333333;
+  --color-exito:        #4ADE80;
+  --color-error:        #F87171;
 
   --fuente-principal: 'Inter', sans-serif;
   --fuente-titulo:    'Poppins', sans-serif;
@@ -147,7 +149,7 @@ p {
 /* Pseudoelemento ::selection */
 ::selection {
   background-color: var(--color-secundario);
-  color: #ffffff;
+  color: #E5E5E5;
 }
 
 a {
@@ -160,7 +162,7 @@ a {
 a:hover   { color: var(--color-primario); text-decoration: underline; }
 a:focus   { outline: 2px solid var(--color-acento); outline-offset: 2px; }
 a:active  { color: var(--color-acento); }
-a:visited { color: #7C3AED; }
+a:visited { color: #D97706; }
 
 strong { font-weight: 700; }
 em     { font-style: italic; }
@@ -168,7 +170,7 @@ small  { font-size: 0.875rem; color: var(--color-texto-suave); }
 
 mark {
   background-color: var(--color-acento);
-  color: #000;
+  color: #E5E5E5;
   padding: 0 var(--espacio-xs);
   border-radius: var(--radio-sm);
   font-size: 0.75rem;
@@ -177,7 +179,7 @@ mark {
 
 code, kbd, samp {
   font-family: 'Courier New', monospace;
-  background-color: #F1F5F9;
+  background-color: #1A1A1A;
   border-radius: var(--radio-sm);
   padding: 0.1em 0.4em;
   font-size: 0.9em;
@@ -185,7 +187,7 @@ code, kbd, samp {
 
 pre {
   font-family: 'Courier New', monospace;
-  background-color: #F1F5F9;
+  background-color: #1A1A1A;
   border-radius: var(--radio-md);
   padding: var(--espacio-md);
   overflow-x: auto;
@@ -197,7 +199,7 @@ blockquote {
   border-left: 4px solid var(--color-secundario);
   padding: var(--espacio-md) var(--espacio-lg);
   margin: var(--espacio-lg) 0;
-  background-color: #EFF6FF;
+  background-color: #1E1E1E;
   border-radius: 0 var(--radio-md) var(--radio-md) 0;
   font-style: italic;
   color: var(--color-texto-suave);
@@ -259,7 +261,7 @@ main {
    6. TOPBAR
    ============================================================ */
 body > div:first-child {
-  background: linear-gradient(90deg, var(--color-primario), var(--color-secundario));
+  background: linear-gradient(90deg, #1A1A1A, #2A2A2A);
   color: #fff;
   text-align: center;
   height: var(--alto-topbar);
@@ -478,7 +480,7 @@ section[aria-label="Banner promocional principal"] {
   display: grid;
   grid-template-columns: 1fr 280px;
   gap: var(--espacio-xl);
-  background: linear-gradient(135deg, var(--color-primario) 0%, var(--color-secundario) 60%, #3B82F6 100%);
+  background: linear-gradient(135deg, var(--color-primario) 0%, var(--color-secundario) 60%, #F59E0B 100%);
   border-radius: var(--radio-xl);
   padding: var(--espacio-2xl);
   margin-bottom: var(--espacio-2xl);
@@ -516,7 +518,7 @@ section[aria-label="Banner promocional principal"] a[href="producto.html"] {
   margin-top: var(--espacio-md);
   padding: var(--espacio-sm) var(--espacio-xl);
   background-color: var(--color-acento);
-  color: #000;
+  color: #E5E5E5;
   font-weight: 700;
   border-radius: var(--radio-full);
   transition: var(--transicion-normal);
@@ -652,7 +654,7 @@ section[aria-labelledby="titulo-productos"] article figure,
 section[aria-labelledby="titulo-listado"] article figure {
   margin: 0;
   overflow: hidden;
-  background-color: #F9FAFB;
+  background-color: #181818;
 }
 
 section[aria-labelledby="titulo-productos"] article figure img,
@@ -831,7 +833,7 @@ input:required { border-left: 3px solid var(--color-acento); }
 input:disabled,
 textarea:disabled,
 select:disabled {
-  background-color: #F3F4F6;
+  background-color: #1A1A1A;
   color: var(--color-texto-suave);
   cursor: not-allowed;
   opacity: 0.7;
@@ -898,7 +900,7 @@ select {
 output {
   display: inline-block;
   padding: var(--espacio-xs) var(--espacio-sm);
-  background-color: #EFF6FF;
+  background-color: #1E1E1E;
   border-radius: var(--radio-sm);
   font-weight: 600;
   color: var(--color-secundario);
@@ -985,7 +987,7 @@ article[aria-labelledby="nombre-producto"] > header {
 video {
   width: 100%;
   border-radius: var(--radio-md);
-  background-color: #000;
+  background-color: #E5E5E5;
 }
 
 audio {
@@ -1016,7 +1018,7 @@ caption {
 }
 
 thead {
-  background: linear-gradient(90deg, var(--color-primario), var(--color-secundario));
+  background: linear-gradient(90deg, #1A1A1A, #2A2A2A);
   color: #fff;
 }
 
@@ -1030,12 +1032,12 @@ thead th {
 }
 
 /* Pseudoclase :nth-child(even) */
-tbody tr:nth-child(even)  { background-color: #F8FAFC; }
+tbody tr:nth-child(even)  { background-color: #111111; }
 tbody tr:nth-child(odd)   { background-color: var(--color-fondo-card); }
 
 /* Pseudoclase :hover en filas */
 tbody tr:hover {
-  background-color: #EFF6FF;
+  background-color: #1E1E1E;
   transition: var(--transicion-rapida);
 }
 
@@ -1049,7 +1051,7 @@ tbody td, tbody th {
 tbody th[scope="row"] {
   font-weight: 600;
   color: var(--color-primario);
-  background-color: #F0F4FF;
+  background-color: #1E1E1E;
   white-space: nowrap;
 }
 
@@ -1110,7 +1112,7 @@ summary {
   cursor: pointer;
   font-weight: 600;
   color: var(--color-primario);
-  background-color: #F0F4FF;
+  background-color: #1E1E1E;
   list-style: none;
   display: flex;
   justify-content: space-between;
@@ -1119,7 +1121,7 @@ summary {
   user-select: none;
 }
 
-summary:hover { background-color: #E0EAFF; }
+summary:hover { background-color: #252525; }
 
 /* Pseudoelemento ::after en summary */
 summary::after {
@@ -1177,7 +1179,7 @@ svg {
    22. LABORATORIO HTML5
    ============================================================ */
 section[aria-labelledby="lab-titulo"] {
-  background: linear-gradient(135deg, #F0F4FF, #E0EAFF);
+  background: linear-gradient(135deg, #1E1E1E, #252525);
   border: 2px dashed var(--color-secundario);
   border-radius: var(--radio-xl);
   padding: var(--espacio-xl);
@@ -1193,7 +1195,7 @@ bdo, bdi { font-style: italic; color: var(--color-acento); }
    23. FOOTER — Flexbox
    ============================================================ */
 footer {
-  background: linear-gradient(135deg, #0F172A, var(--color-primario));
+  background: linear-gradient(135deg, #0D0D0D, var(--color-primario));
   color: rgba(255,255,255,0.85);
   padding: var(--espacio-3xl) 0 var(--espacio-xl);
   margin-top: auto;
@@ -1290,7 +1292,7 @@ footer form input[type="email"]:focus {
 footer form button {
   border-radius: 0 var(--radio-md) var(--radio-md) 0;
   background-color: var(--color-acento);
-  color: #000;
+  color: #E5E5E5;
   border-color: var(--color-acento);
   font-size: 0.875rem;
   white-space: nowrap;
@@ -1383,22 +1385,22 @@ article:hover img.efecto-gris {
    28. MODO OSCURO — BONUS
    ============================================================ */
 .dark-theme {
-  --color-fondo:      #0F172A;
-  --color-fondo-card: #1E293B;
-  --color-texto:      #F1F5F9;
-  --color-texto-suave:#94A3B8;
-  --color-borde:      #334155;
-  --color-primario:   #3B82F6;
-  --color-secundario: #60A5FA;
+  --color-fondo:      #0D0D0D;
+  --color-fondo-card: #1A1A1A;
+  --color-texto:      #1A1A1A;
+  --color-texto-suave:#9CA3AF;
+  --color-borde:      #2A2A2A;
+  --color-primario:   #F59E0B;
+  --color-secundario: #FBBF24;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-fondo:      #0F172A;
-    --color-fondo-card: #1E293B;
-    --color-texto:      #F1F5F9;
-    --color-texto-suave:#94A3B8;
-    --color-borde:      #334155;
+    --color-fondo:      #0D0D0D;
+    --color-fondo-card: #1A1A1A;
+    --color-texto:      #1A1A1A;
+    --color-texto-suave:#9CA3AF;
+    --color-borde:      #2A2A2A;
   }
 }
 
@@ -1412,3 +1414,451 @@ article:hover img.efecto-gris {
 .cursor-grab { cursor: grab; }
 button      { cursor: pointer; }
 abbr        { cursor: help; }
+
+/* ============================================================
+   DARK THEME — Additional overrides for readability
+   ============================================================ */
+
+/* Body & base */
+body {
+  background-color: #111111;
+  color: #E5E5E5;
+}
+
+/* Headings readable on dark */
+h1, h2, h3, h4, h5, h6 {
+  color: #F59E0B;
+}
+
+/* Paragraphs */
+p { color: #D1D5DB; }
+
+/* Links */
+a { color: #F59E0B; }
+a:hover { color: #FBBF24; }
+a:visited { color: #FCD34D; }
+
+/* Topbar */
+body > div:first-child {
+  background: #1A1A1A;
+  border-bottom: 1px solid #333;
+}
+
+/* Header */
+header {
+  background-color: #161616;
+  border-bottom: 1px solid #333;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.6);
+}
+
+/* Search input in header */
+header > div > form[role="search"] input[type="search"] {
+  background-color: #252525;
+  border-color: #444;
+  color: #E5E5E5;
+}
+header > div > form[role="search"] input[type="search"]:focus {
+  border-color: #F59E0B;
+  box-shadow: 0 0 0 3px rgba(245,158,11,0.2);
+}
+header > div > form[role="search"] button {
+  background-color: #D97706;
+  color: #111;
+  font-weight: 700;
+}
+header > div > form[role="search"] button:hover {
+  background-color: #F59E0B;
+}
+
+/* Nav bar */
+header > nav {
+  background-color: #1A1A1A;
+  border-top: 1px solid #2A2A2A;
+}
+header > nav > ul > li > a {
+  color: #D1D5DB;
+}
+header > nav > ul > li > a:hover {
+  color: #F59E0B;
+  background-color: rgba(245,158,11,0.08);
+}
+header > nav > ul > li > a::after {
+  background-color: #F59E0B;
+}
+header > nav > ul > li > a[aria-current="page"] {
+  color: #F59E0B;
+  background-color: rgba(245,158,11,0.1);
+}
+
+/* User action links */
+header > div > div a {
+  color: #D1D5DB;
+}
+header > div > div a:hover {
+  background-color: #252525;
+  color: #F59E0B;
+}
+
+/* Hero banner */
+section[aria-label="Banner promocional principal"] {
+  background: linear-gradient(135deg, #1A1A1A 0%, #222222 60%, #1E1E1E 100%);
+  border: 1px solid #333;
+}
+section[aria-label="Banner promocional principal"] h1 { color: #F59E0B; }
+section[aria-label="Banner promocional principal"] p  { color: #D1D5DB; }
+section[aria-label="Banner promocional principal"] > aside li {
+  background: rgba(245,158,11,0.08);
+  border: 1px solid rgba(245,158,11,0.15);
+}
+section[aria-label="Banner promocional principal"] > aside strong { color: #F59E0B; }
+section[aria-label="Banner promocional principal"] > aside p { color: #9CA3AF; }
+section[aria-label="Banner promocional principal"] a[href="producto.html"] {
+  background-color: #D97706;
+  color: #111111;
+}
+section[aria-label="Banner promocional principal"] a[href="producto.html"]:hover {
+  background-color: #F59E0B;
+  color: #111111;
+}
+
+/* Cards */
+section[aria-labelledby="titulo-productos"] article,
+section[aria-labelledby="titulo-listado"] article {
+  background-color: #1E1E1E;
+  border-color: #2E2E2E;
+}
+section[aria-labelledby="titulo-productos"] article:hover,
+section[aria-labelledby="titulo-listado"] article:hover {
+  border-color: #F59E0B;
+  box-shadow: 0 8px 30px rgba(245,158,11,0.15);
+}
+section[aria-labelledby="titulo-productos"] article h3,
+section[aria-labelledby="titulo-listado"] article h3 {
+  color: #F5F5F5;
+}
+section[aria-labelledby="titulo-productos"] article p,
+section[aria-labelledby="titulo-listado"] article p {
+  color: #9CA3AF;
+}
+section[aria-labelledby="titulo-productos"] article footer,
+section[aria-labelledby="titulo-listado"] article footer {
+  border-top-color: #2E2E2E;
+  background-color: #181818;
+}
+section[aria-labelledby="titulo-productos"] article figure,
+section[aria-labelledby="titulo-listado"] article figure {
+  background-color: #181818;
+}
+
+/* mark tags (badges) — readable on dark */
+mark {
+  background-color: #D97706;
+  color: #111111;
+}
+
+/* del and ins */
+del  { color: #9CA3AF; }
+ins  { color: #4ADE80; }
+
+/* Category items */
+section[aria-labelledby="titulo-categorias"] article a {
+  background-color: #1E1E1E;
+  border-color: #2E2E2E;
+}
+section[aria-labelledby="titulo-categorias"] article a:hover {
+  border-color: #F59E0B;
+  background-color: #252525;
+}
+section[aria-labelledby="titulo-categorias"] figcaption { color: #E5E5E5; }
+
+/* Tables */
+thead { background: linear-gradient(90deg, #1A1A1A, #252525); }
+thead th { color: #F59E0B; }
+tbody tr:nth-child(even) { background-color: #1A1A1A; }
+tbody tr:nth-child(odd)  { background-color: #1E1E1E; }
+tbody tr:hover           { background-color: #252525; }
+tbody td, tbody th       { color: #D1D5DB; border-color: #2E2E2E; }
+tbody th[scope="row"]    { color: #F59E0B; background-color: #1A1A1A; }
+tfoot td                 { background-color: #161616; color: #9CA3AF; border-top-color: #333; }
+tfoot tr:last-child td   { background-color: #D97706; color: #111111; }
+caption                  { color: #F59E0B; }
+
+/* Forms */
+input[type="text"], input[type="email"], input[type="password"],
+input[type="tel"], input[type="number"], input[type="date"],
+input[type="datetime-local"], input[type="url"], input[type="search"],
+input[type="file"], textarea, select {
+  background-color: #1E1E1E;
+  border-color: #333;
+  color: #E5E5E5;
+}
+input:focus, textarea:focus, select:focus {
+  border-color: #F59E0B;
+  box-shadow: 0 0 0 3px rgba(245,158,11,0.2);
+}
+input:required { border-left-color: #F59E0B; }
+input:valid:not(:placeholder-shown)   { border-color: #4ADE80; }
+input:invalid:not(:placeholder-shown) { border-color: #F87171; }
+input:disabled, textarea:disabled, select:disabled {
+  background-color: #161616;
+  color: #555;
+}
+select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23F59E0B' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+}
+fieldset { border-color: #333; }
+legend   { color: #F59E0B; }
+label    { color: #D1D5DB; }
+output   { background-color: #252525; color: #F59E0B; }
+
+/* Buttons */
+button[type="submit"],
+button[aria-label*="carrito"],
+button[aria-label*="Agregar"],
+button[aria-label*="pago"] {
+  background-color: #D97706;
+  color: #111111;
+  border-color: #D97706;
+}
+button[type="submit"]:hover,
+button[aria-label*="carrito"]:hover,
+button[aria-label*="Agregar"]:hover {
+  background-color: #F59E0B;
+  border-color: #F59E0B;
+  color: #111111;
+  box-shadow: 0 4px 12px rgba(245,158,11,0.35);
+}
+button[type="reset"] {
+  color: #F59E0B;
+  border-color: #F59E0B;
+}
+button[type="reset"]:hover {
+  background-color: #F59E0B;
+  color: #111111;
+}
+button:disabled, button[disabled] {
+  background-color: #2A2A2A;
+  color: #555;
+  border-color: #2A2A2A;
+}
+
+/* Sidebar filters */
+aside[aria-labelledby="titulo-filtros"] {
+  background-color: #1E1E1E;
+  border-color: #2E2E2E;
+}
+aside[aria-labelledby="titulo-filtros"] h2 { color: #F59E0B; }
+
+/* blockquote */
+blockquote {
+  background-color: #1A1A1A;
+  border-left-color: #D97706;
+}
+blockquote cite { color: #F59E0B; }
+
+/* hr */
+hr { border-color: #2A2A2A; }
+
+/* details / summary */
+details { background-color: #1E1E1E; border-color: #333; }
+summary {
+  background-color: #252525;
+  color: #F59E0B;
+}
+summary:hover { background-color: #2A2A2A; }
+summary::after { color: #F59E0B; }
+
+/* dialog */
+dialog {
+  background-color: #1E1E1E;
+  color: #E5E5E5;
+  border: 1px solid #333;
+}
+
+/* Laboratorio HTML5 — FIX: readable text */
+section[aria-labelledby="lab-titulo"] {
+  background: #1A1A1A;
+  border: 2px dashed #D97706;
+  color: #E5E5E5;
+}
+section[aria-labelledby="lab-titulo"] h2 { color: #F59E0B; }
+section[aria-labelledby="lab-titulo"] p,
+section[aria-labelledby="lab-titulo"] ul,
+section[aria-labelledby="lab-titulo"] li { color: #D1D5DB; }
+ruby { color: #E5E5E5; }
+rt   { color: #F59E0B; }
+bdo, bdi { color: #FBBF24; }
+
+/* SVG */
+svg {
+  background-color: #1E1E1E;
+  border-color: #333;
+}
+
+/* Breadcrumb */
+nav[aria-label*="Ruta"] ol li { color: #9CA3AF; }
+nav[aria-label*="Ruta"] ol li a { color: #F59E0B; }
+nav[aria-label*="Ruta"] ol li:last-child { color: #E5E5E5; }
+nav[aria-label*="Ruta"] ol li + li::before { color: #555; }
+
+/* Pagination */
+nav[aria-label*="Paginación"] ol li a {
+  border-color: #333;
+  color: #D1D5DB;
+  background-color: #1E1E1E;
+}
+nav[aria-label*="Paginación"] ol li a:hover {
+  border-color: #F59E0B;
+  color: #F59E0B;
+}
+nav[aria-label*="Paginación"] ol li a[aria-current="page"] {
+  background-color: #D97706;
+  border-color: #D97706;
+  color: #111111;
+}
+
+/* Cart progress steps */
+section[aria-labelledby="titulo-progreso"] ol li {
+  background-color: #252525;
+  color: #9CA3AF;
+}
+section[aria-labelledby="titulo-progreso"] ol li:first-child {
+  background-color: #D97706;
+  color: #111111;
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(135deg, #0D0D0D, #1A1A1A);
+  border-top: 1px solid #2A2A2A;
+}
+footer h3 { color: #F59E0B; }
+footer ul li a { color: #9CA3AF; }
+footer ul li a:hover { color: #F59E0B; }
+footer address { color: #6B7280; }
+footer address a { color: #D97706; }
+footer address a:hover { color: #F59E0B; }
+footer > p:last-child { color: rgba(255,255,255,0.3); }
+footer form input[type="email"] {
+  background-color: rgba(255,255,255,0.07);
+  border-color: rgba(255,255,255,0.15);
+  color: #E5E5E5;
+}
+footer form button {
+  background-color: #D97706;
+  color: #111111;
+  border-color: #D97706;
+}
+footer form button:hover {
+  background-color: #F59E0B;
+  border-color: #F59E0B;
+}
+
+/* Dark mode override — keep consistent */
+.dark-theme, @media (prefers-color-scheme: dark) {}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-fondo:      #111111;
+    --color-fondo-card: #1E1E1E;
+    --color-texto:      #E5E5E5;
+    --color-texto-suave:#9CA3AF;
+    --color-borde:      #333333;
+  }
+}
+
+/* ── Fix: spacing / text cutoff ── */
+/* Give article headers proper overflow handling */
+section[aria-labelledby="titulo-productos"] article header,
+section[aria-labelledby="titulo-listado"] article header {
+  padding: 0.75rem 0.75rem 0;
+  min-height: 0;
+}
+
+/* Description text: cap height and clip cleanly */
+section[aria-labelledby="titulo-productos"] article p,
+section[aria-labelledby="titulo-listado"] article p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  padding: 0 0.75rem;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  margin-bottom: 0.25rem;
+  min-height: 0;
+}
+
+/* Prevent mark/badge from overlapping text in card */
+section[aria-labelledby="titulo-produtos"] article,
+section[aria-labelledby="titulo-listado"] article {
+  padding-top: 0;
+}
+
+/* Product image area: fixed height, clean containment */
+section[aria-labelledby="titulo-produtos"] article figure img,
+section[aria-labelledby="titulo-listado"] article figure img {
+  height: 180px;
+  object-fit: contain;
+  padding: 0.75rem;
+}
+
+/* abbr tooltip readable on dark */
+abbr[title] { color: #FBBF24; border-bottom: 1px dotted #F59E0B; }
+
+/* code/kbd/samp on dark */
+code, kbd, samp {
+  background-color: #252525;
+  color: #FBBF24;
+  border: 1px solid #333;
+}
+pre {
+  background-color: #161616;
+  border-left-color: #D97706;
+  color: #E5E5E5;
+}
+
+/* ── Spacing / cutoff fixes ── */
+
+/* Cards: stretch to full height evenly */
+section[aria-labelledby="titulo-productos"],
+section[aria-labelledby="titulo-listado"] {
+  align-items: stretch;
+}
+
+/* Ensure card content stacks correctly without overflow */
+section[aria-labelledby="titulo-produtos"] article,
+section[aria-labelledby="titulo-listado"] article,
+section[aria-labelledby="titulo-productos"] article {
+  overflow: visible;
+  min-height: 0;
+}
+
+/* Card h3 — clamp to 2 lines max so it doesn't push content down */
+section[aria-labelledby="titulo-produtos"] article h3,
+section[aria-labelledby="titulo-listado"] article h3,
+section[aria-labelledby="titulo-productos"] article h3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 0.92rem;
+  line-height: 1.35;
+}
+
+/* Fix: main padding-top accounts for fixed header height correctly */
+main {
+  padding-top: calc(var(--alto-total-header) + 1.5rem);
+}
+
+/* Prevent hero section from clipping at top */
+section[aria-label="Banner promocional principal"] {
+  margin-top: 0.5rem;
+}
+
+/* Fix: ensure mark badge doesn't overlap description text */
+section[aria-labelledby="titulo-produtos"] article > header,
+section[aria-labelledby="titulo-listado"] article > header,
+section[aria-labelledby="titulo-productos"] article > header {
+  position: relative;
+  padding-top: 0.5rem;
+}
