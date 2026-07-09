@@ -50,8 +50,9 @@
       </form>
 
       <div>
-        <a href="carrito.html" aria-label="Ver carrito">🛒 Carrito</a>
+        <a href="carrito.html" aria-label="Ver carrito">🛒 Carrito <span data-carrito-contador>0</span></a>
         <a href="404.html" aria-label="Mi cuenta">👤 Mi cuenta</a>
+        <button type="button" id="btn-tema" aria-label="Cambiar tema">☀️ Modo claro</button>
       </div>
     </div>
 
@@ -78,7 +79,7 @@
     </nav>
 
     <h1>Catálogo de Productos</h1>
-    <p>Mostrando <strong>12</strong> de <strong>48</strong> productos</p>
+    <p id="contador-resultados">Cargando productos...</p>
 
     <div>
 
@@ -93,6 +94,7 @@
             <legend>Categoría</legend>
             <label><input type="checkbox" name="cat" value="laptops"> Laptops</label>
             <label><input type="checkbox" name="cat" value="smartphones"> Smartphones</label>
+            <label><input type="checkbox" name="cat" value="tablets"> Tablets</label>
             <label><input type="checkbox" name="cat" value="audio"> Audio</label>
             <label><input type="checkbox" name="cat" value="gaming"> Gaming</label>
             <label><input type="checkbox" name="cat" value="accesorios"> Accesorios</label>
@@ -204,163 +206,10 @@
       <section aria-labelledby="titulo-listado">
         <h2 id="titulo-listado">Resultados</h2>
 
-        <!-- Producto 1 -->
-        <article>
-          <header>
-            <mark>NUEVO</mark>
-            <figure>
-              <img src="img/productos/macbook-air.jpg" alt="Apple MacBook Air M2 en color plateado" width="180" height="180">
-            </figure>
-            <h3><a href="producto.html">Apple MacBook Air M2</a></h3>
-          </header>
-          <p>Chip M2, 8GB RAM, SSD 256GB, pantalla Liquid Retina 13.6". El portátil más delgado de Apple.</p>
-          <p>Precio: <strong>RD$76,800</strong></p>
-          <p>⭐⭐⭐⭐⭐ <small>(312 reseñas)</small></p>
-          <p>Disponibilidad: <ins>En stock</ins></p>
-          <footer>
-            <a href="producto.html">Ver detalle</a>
-            <button type="button" aria-label="Agregar MacBook Air M2 al carrito">🛒 Agregar</button>
-          </footer>
-        </article>
-
-        <!-- Producto 2 -->
-        <article>
-          <header>
-            <figure>
-              <img src="img/productos/iphone-15.jpg" alt="iPhone 15 en color negro" width="180" height="180">
-            </figure>
-            <h3><a href="producto.html">iPhone 15 128GB</a></h3>
-          </header>
-          <p>Chip A16 Bionic, cámara principal 48MP, Dynamic Island y USB-C. El iPhone más avanzado.</p>
-          <p>Precio: <strong>RD$53,200</strong> <del>$999.990</del><br><mark>10% OFF</mark></p>
-          <p>⭐⭐⭐⭐⭐ <small>(521 reseñas)</small></p>
-          <p>Disponibilidad: <ins>En stock</ins></p>
-          <footer>
-            <a href="producto.html">Ver detalle</a>
-            <button type="button" aria-label="Agregar iPhone 15 al carrito">🛒 Agregar</button>
-          </footer>
-        </article>
-
-        <!-- Producto 3 -->
-        <article>
-          <header>
-            <figure>
-              <img src="img/productos/galaxy-s24.jpg" alt="Samsung Galaxy S24 Ultra en color titanio" width="180" height="180">
-            </figure>
-            <h3><a href="producto.html">Samsung Galaxy S24 Ultra</a></h3>
-          </header>
-          <p>Pantalla Dynamic AMOLED 6.8", cámara 200MP, S Pen integrado y batería de 5000mAh.</p>
-          <p>Precio: <strong>RD$70,900</strong></p>
-          <p>⭐⭐⭐⭐☆ <small>(183 reseñas)</small></p>
-          <p>Disponibilidad: <ins>En stock</ins></p>
-          <footer>
-            <a href="producto.html">Ver detalle</a>
-            <button type="button" aria-label="Agregar Galaxy S24 Ultra al carrito">🛒 Agregar</button>
-          </footer>
-        </article>
-
-        <!-- Producto 4 -->
-        <article>
-          <header>
-            <mark>OFERTA</mark>
-            <figure>
-              <img src="img/productos/dell-xps.jpg" alt="Dell XPS 15 laptop en color negro" width="180" height="180">
-            </figure>
-            <h3><a href="producto.html">Dell XPS 15</a></h3>
-          </header>
-          <p>Intel Core i7-13700H, 16GB RAM, SSD 512GB, pantalla OLED 3.5K. Para creadores de contenido.</p>
-          <p>Precio: <strong>RD$100,500</strong> <del>RD$118,200</del><br><mark>15% OFF</mark></p>
-          <p>⭐⭐⭐⭐☆ <small>(97 reseñas)</small></p>
-          <p>Disponibilidad: <ins>En stock</ins></p>
-          <footer>
-            <a href="producto.html">Ver detalle</a>
-            <button type="button" aria-label="Agregar Dell XPS 15 al carrito">🛒 Agregar</button>
-          </footer>
-        </article>
-
-        <!-- Producto 5 -->
-        <article>
-          <header>
-            <figure>
-              <img src="img/productos/airpods-pro.jpg" alt="Apple AirPods Pro 2da generación con estuche MagSafe" width="180" height="180">
-            </figure>
-            <h3><a href="producto.html">AirPods Pro (2da Gen)</a></h3>
-          </header>
-          <p>Cancelación activa de ruido, modo de transparencia adaptable, audio espacial personalizado.</p>
-          <p>Precio: <strong>RD$17,700</strong></p>
-          <p>⭐⭐⭐⭐⭐ <small>(447 reseñas)</small></p>
-          <p>Disponibilidad: <ins>En stock</ins></p>
-          <footer>
-            <a href="producto.html">Ver detalle</a>
-            <button type="button" aria-label="Agregar AirPods Pro al carrito">🛒 Agregar</button>
-          </footer>
-        </article>
-
-        <!-- Producto 6 -->
-        <article>
-          <header>
-            <figure>
-              <img src="img/productos/rtx-4070.jpg" alt="Tarjeta de video ASUS RTX 4070 SUPER" width="180" height="180">
-            </figure>
-            <h3><a href="producto.html">ASUS RTX 4070 SUPER</a></h3>
-          </header>
-          <p>12GB GDDR6X, soporte Ray Tracing, DLSS 3 y conectividad triple DisplayPort + HDMI 2.1.</p>
-          <p>Precio: <strong>RD$50,200</strong></p>
-          <p>⭐⭐⭐⭐⭐ <small>(65 reseñas)</small></p>
-          <p>Disponibilidad: <ins>En stock</ins></p>
-          <footer>
-            <a href="producto.html">Ver detalle</a>
-            <button type="button" aria-label="Agregar RTX 4070 SUPER al carrito">🛒 Agregar</button>
-          </footer>
-        </article>
-
-        <!-- Producto 7 -->
-        <article>
-          <header>
-            <figure>
-              <img src="img/productos/monitor-lg.jpg" alt="Monitor LG UltraGear 27 pulgadas QHD 165Hz" width="180" height="180">
-            </figure>
-            <h3><a href="producto.html">LG UltraGear 27" QHD</a></h3>
-          </header>
-          <p>Panel IPS 2560x1440, 165Hz, 1ms GTG, G-Sync Compatible y HDR10. Perfecto para gaming.</p>
-          <p>Precio: <strong>RD$29,500</strong></p>
-          <p>⭐⭐⭐⭐☆ <small>(78 reseñas)</small></p>
-          <p>Disponibilidad: <ins>En stock</ins></p>
-          <footer>
-            <a href="producto.html">Ver detalle</a>
-            <button type="button" aria-label="Agregar monitor LG UltraGear al carrito">🛒 Agregar</button>
-          </footer>
-        </article>
-
-        <!-- Producto 8 -->
-        <article>
-          <header>
-            <mark>AGOTADO</mark>
-            <figure>
-              <img src="img/productos/ps5.jpg" alt="Sony PlayStation 5 consola digital" width="180" height="180">
-            </figure>
-            <h3><a href="producto.html">Sony PlayStation 5</a></h3>
-          </header>
-          <p>CPU AMD Zen 2 8 núcleos, GPU RDNA 2, SSD ultra-rápido 825GB y soporte 4K a 120fps.</p>
-          <p>Precio: <strong>RD$41,500</strong></p>
-          <p>⭐⭐⭐⭐⭐ <small>(892 reseñas)</small></p>
-          <p>Disponibilidad: <del>Agotado</del></p>
-          <footer>
-            <a href="producto.html">Ver detalle</a>
-            <button type="button" disabled aria-disabled="true" aria-label="PlayStation 5 no disponible">Sin stock</button>
-          </footer>
-        </article>
-
-        <!-- Paginación -->
-        <nav aria-label="Paginación de productos">
-          <ol>
-            <li><a href="?page=1" aria-current="page" aria-label="Página 1, actual">1</a></li>
-            <li><a href="?page=2" aria-label="Ir a página 2">2</a></li>
-            <li><a href="?page=3" aria-label="Ir a página 3">3</a></li>
-            <li><a href="?page=4" aria-label="Ir a página 4">4</a></li>
-            <li><a href="?page=2" aria-label="Siguiente página">Siguiente &rsaquo;</a></li>
-          </ol>
-        </nav>
+        <!-- Las tarjetas se generan dinámicamente con productos.js -->
+        <div id="grid-productos" aria-live="polite" aria-label="Listado de productos">
+          <p>Cargando productos...</p>
+        </div>
 
       </section>
     </div>
@@ -375,5 +224,7 @@
     <p><small>&copy; 2025 TechStore RD. Todos los derechos reservados.</small></p>
   </footer>
 
+  <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/productos.js"></script>
 </body>
 </html>

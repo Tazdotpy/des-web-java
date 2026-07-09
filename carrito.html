@@ -29,8 +29,9 @@
         <button type="submit">Buscar</button>
       </form>
       <div>
-        <a href="carrito.html" aria-label="Ver carrito" aria-current="page">🛒 Carrito <strong>(3)</strong></a>
+        <a href="carrito.html" aria-label="Ver carrito" aria-current="page">🛒 Carrito <span data-carrito-contador>0</span></a>
         <a href="404.html" aria-label="Mi cuenta">👤 Mi cuenta</a>
+        <button type="button" id="btn-tema" aria-label="Cambiar tema">☀️ Modo claro</button>
       </div>
     </div>
     <nav aria-label="Navegación principal">
@@ -79,151 +80,52 @@
     <section aria-labelledby="titulo-carrito">
       <h2 id="titulo-carrito">Mis productos</h2>
 
-      <table aria-describedby="desc-carrito">
-        <caption>Lista de productos en tu carrito de compras</caption>
-        <thead>
-          <tr>
-            <th scope="col">Producto</th>
-            <th scope="col">Precio unitario</th>
-            <th scope="col">Cantidad</th>
-            <th scope="col">Descuento</th>
-            <th scope="col">Subtotal</th>
-            <th scope="col">Acciones</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- Producto 1 -->
-          <tr>
-            <td>
-              <figure>
-                <img src="img/productos/macbook-air.jpg" alt="Apple MacBook Air M2 plateado" width="70" height="70">
-                <figcaption>
-                  <strong>Apple MacBook Air M2</strong><br>
-                  <small>Color: Plateado | SKU: <data value="SKU-2001">MBX-M2-256</data></small>
-                </figcaption>
-              </figure>
-            </td>
-            <td>RD$76,800</td>
-            <td>
-              <form action="#" method="post" aria-label="Actualizar cantidad MacBook Air M2">
-                <label for="qty-1" class="sr-only">Cantidad:</label>
-                <input type="number" id="qty-1" name="cantidad_1" value="1" min="1" max="10" aria-label="Cantidad de MacBook Air M2">
-                <button type="submit" aria-label="Actualizar cantidad">Actualizar</button>
-              </form>
-            </td>
-            <td>
-              <meter
-                value="13"
-                min="0"
-                max="100"
-                low="5"
-                high="20"
-                optimum="15"
-                aria-label="Descuento del 13% en MacBook Air M2"
-              >13%</meter>
-              <small>13% OFF</small>
-            </td>
-            <td><strong>RD$66,800</strong></td>
-            <td>
-              <button type="button" aria-label="Eliminar MacBook Air M2 del carrito">🗑 Eliminar</button>
-              <button type="button" aria-label="Guardar MacBook Air M2 en favoritos">♥ Guardar</button>
-            </td>
-          </tr>
+      <!-- Estado: carrito vacío (JS lo muestra/oculta) -->
+      <div id="carrito-vacio" role="alert">
+        <p>Tu carrito está vacío. <a href="productos.html">¡Explora nuestro catálogo!</a></p>
+      </div>
 
-          <!-- Producto 2 -->
-          <tr>
-            <td>
-              <figure>
-                <img src="img/productos/airpods-pro.jpg" alt="Apple AirPods Pro 2da generación" width="70" height="70">
-                <figcaption>
-                  <strong>AirPods Pro (2da Gen)</strong><br>
-                  <small>Color: Blanco | SKU: <data value="SKU-3001">APP-PRO-2</data></small>
-                </figcaption>
-              </figure>
-            </td>
-            <td>RD$17,700</td>
-            <td>
-              <form action="#" method="post" aria-label="Actualizar cantidad AirPods Pro">
-                <label for="qty-2" class="sr-only">Cantidad:</label>
-                <input type="number" id="qty-2" name="cantidad_2" value="1" min="1" max="10" aria-label="Cantidad de AirPods Pro">
-                <button type="submit" aria-label="Actualizar cantidad">Actualizar</button>
-              </form>
-            </td>
-            <td>
-              <meter
-                value="0"
-                min="0"
-                max="100"
-                aria-label="Sin descuento en AirPods Pro"
-              >0%</meter>
-              <small>Sin descuento</small>
-            </td>
-            <td><strong>RD$17,700</strong></td>
-            <td>
-              <button type="button" aria-label="Eliminar AirPods Pro del carrito">🗑 Eliminar</button>
-              <button type="button" aria-label="Guardar AirPods Pro en favoritos">♥ Guardar</button>
-            </td>
-          </tr>
+      <!-- Estado: carrito con items (JS lo muestra/oculta) -->
+      <div id="carrito-con-items" class="oculto">
+        <table aria-describedby="desc-carrito">
+          <caption>Lista de productos en tu carrito de compras</caption>
+          <thead>
+            <tr>
+              <th scope="col">Producto</th>
+              <th scope="col">Precio unitario</th>
+              <th scope="col">Cantidad</th>
+              <th scope="col">Subtotal</th>
+              <th scope="col">Acciones</th>
+            </tr>
+          </thead>
+          <!-- Las filas se renderizan con JS desde localStorage -->
+          <tbody id="cuerpo-carrito"></tbody>
 
-          <!-- Producto 3 -->
-          <tr>
-            <td>
-              <figure>
-                <img src="img/productos/logitech-mouse.jpg" alt="Mouse Logitech MX Master 3S negro" width="70" height="70">
-                <figcaption>
-                  <strong>Logitech MX Master 3S</strong><br>
-                  <small>Color: Negro | SKU: <data value="SKU-4001">LOG-MX3S</data></small>
-                </figcaption>
-              </figure>
-            </td>
-            <td>RD$7,700</td>
-            <td>
-              <form action="#" method="post" aria-label="Actualizar cantidad MX Master 3S">
-                <label for="qty-3" class="sr-only">Cantidad:</label>
-                <input type="number" id="qty-3" name="cantidad_3" value="2" min="1" max="10" aria-label="Cantidad de Logitech MX Master 3S">
-                <button type="submit" aria-label="Actualizar cantidad">Actualizar</button>
-              </form>
-            </td>
-            <td>
-              <meter
-                value="10"
-                min="0"
-                max="100"
-                low="5"
-                high="25"
-                optimum="10"
-                aria-label="Descuento del 10% en MX Master 3S"
-              >10%</meter>
-              <small>10% OFF</small>
-            </td>
-            <td><strong>RD$13,800</strong></td>
-            <td>
-              <button type="button" aria-label="Eliminar MX Master 3S del carrito">🗑 Eliminar</button>
-              <button type="button" aria-label="Guardar MX Master 3S en favoritos">♥ Guardar</button>
-            </td>
-          </tr>
-        </tbody>
-
-        <tfoot>
-          <tr>
-            <td colspan="4"><strong>Subtotal productos:</strong></td>
-            <td colspan="2"><strong>RD$98,400</strong></td>
-          </tr>
-          <tr>
-            <td colspan="4">Envío:</td>
-            <td colspan="2"><ins>Gratis</ins></td>
-          </tr>
-          <tr>
-            <td colspan="4"><abbr title="Impuesto al Valor Agregado">ITBIS</abbr> (18%):</td>
-            <td colspan="2">RD$18,700</td>
-          </tr>
-          <tr>
-            <td colspan="4"><strong>Total a pagar:</strong></td>
-            <td colspan="2"><strong>RD$117,100</strong></td>
-          </tr>
-        </tfoot>
-      </table>
-      <p id="desc-carrito"><small>Los precios incluyen IVA. El envío es gratis para compras mayores a RD$5,000.</small></p>
+          <tfoot>
+            <tr id="fila-cupon" class="oculto">
+              <td colspan="3">Descuento cupón:</td>
+              <td colspan="2">−<span id="ahorro-cupon">RD$0</span></td>
+            </tr>
+            <tr>
+              <td colspan="3"><strong>Subtotal:</strong></td>
+              <td colspan="2"><strong id="sub-carrito">RD$0</strong></td>
+            </tr>
+            <tr>
+              <td colspan="3">Envío:</td>
+              <td colspan="2"><span id="envio-carrito">Gratis</span></td>
+            </tr>
+            <tr>
+              <td colspan="3"><abbr title="Impuesto al Valor Agregado">ITBIS</abbr> (18%):</td>
+              <td colspan="2"><span id="itbis-carrito">RD$0</span></td>
+            </tr>
+            <tr>
+              <td colspan="3"><strong>Total a pagar:</strong></td>
+              <td colspan="2"><strong id="total-carrito">RD$0</strong></td>
+            </tr>
+          </tfoot>
+        </table>
+        <p id="desc-carrito"><small>ITBIS incluido. Envío gratis en compras mayores a RD$5,000.</small></p>
+      </div>
     </section>
 
     <hr>
@@ -273,32 +175,40 @@
     <!-- ==================== CUPÓN DE DESCUENTO ==================== -->
     <section aria-labelledby="titulo-cupon">
       <h2 id="titulo-cupon">¿Tienes un cupón de descuento?</h2>
-      <form action="#" method="post" aria-label="Formulario de cupón de descuento">
+      <form id="form-cupon" action="#" method="post" aria-label="Formulario de cupón de descuento">
         <label for="cupon">Código de cupón:</label>
         <input
           type="text"
           id="cupon"
           name="cupon"
-          placeholder="Ej: TECH2024"
+          placeholder="Ej: TECH10"
           pattern="[A-Z0-9]{4,12}"
           aria-describedby="cupon-ayuda"
           autocomplete="off"
         >
-        <p id="cupon-ayuda"><small>Ingresa el código en mayúsculas, entre 4 y 12 caracteres.</small></p>
+        <p id="cupon-ayuda"><small>Ingresa el código en mayúsculas. Prueba: TECH10, TECHSTORE20, BIENVENIDO</small></p>
         <button type="submit">Aplicar cupón</button>
       </form>
+      <p id="resultado-cupon" aria-live="polite"></p>
     </section>
 
     <!-- ==================== ACCIONES DEL CARRITO ==================== -->
     <section aria-labelledby="titulo-acciones">
       <h2 id="titulo-acciones">Resumen y acciones</h2>
-      <p><small>⚠️ Los botones de acción (vaciar carrito, actualizar cantidades) requieren JavaScript y serán funcionales en la Práctica 3.</small></p>
-      <p>Total a pagar: <strong>RD$117,100</strong> (IVA incluido)</p>
+      <p>Total a pagar: <strong id="total-resumen">RD$0</strong> (<abbr title="Impuesto al Valor Agregado">ITBIS</abbr> incluido)</p>
       <ul>
         <li><a href="productos.html">← Seguir comprando</a></li>
-        <li><button type="button" aria-label="Vaciar carrito completo" title="Requiere JavaScript (Práctica 3)">🗑 Vaciar carrito</button></li>
-        <li><a href="contacto.html" aria-label="Proceder al pago">Proceder al pago →</a></li>
+        <li><button type="button" id="btn-vaciar" aria-label="Vaciar carrito completo">🗑 Vaciar carrito</button></li>
+        <li><button type="button" id="btn-pago" aria-label="Proceder al pago">Proceder al pago →</button></li>
       </ul>
+    </section>
+
+    <!-- ==================== HISTORIAL DE PEDIDOS (BONUS) ==================== -->
+    <section aria-labelledby="titulo-historial">
+      <h2 id="titulo-historial">Mis pedidos anteriores</h2>
+      <div id="historial-pedidos" aria-live="polite">
+        <p>Cargando historial...</p>
+      </div>
     </section>
 
     <!-- ==================== PRODUCTOS SUGERIDOS ==================== -->
@@ -310,9 +220,9 @@
             <figure>
               <img src="img/productos/magic-kb.jpg" alt="Apple Magic Keyboard con Touch ID" width="120" height="120">
             </figure>
-            <h3><a href="producto.html">Magic Keyboard con Touch ID</a></h3>
+            <h3><a href="producto.html?id=magic-kb">Magic Keyboard con Touch ID</a></h3>
             <p><strong>RD$7,100</strong></p>
-            <button type="button" aria-label="Agregar Magic Keyboard al carrito">🛒 Agregar</button>
+            <button type="button" class="btn-sugerido" data-id="magic-kb" aria-label="Agregar Magic Keyboard al carrito">🛒 Agregar</button>
           </article>
         </li>
         <li>
@@ -320,9 +230,9 @@
             <figure>
               <img src="img/productos/usb-hub.jpg" alt="Hub USB-C 7 en 1" width="120" height="120">
             </figure>
-            <h3><a href="producto.html">Hub USB-C 7 en 1</a></h3>
+            <h3><a href="producto.html?id=usb-hub">Hub USB-C 7 en 1</a></h3>
             <p><strong>RD$2,400</strong></p>
-            <button type="button" aria-label="Agregar Hub USB-C al carrito">🛒 Agregar</button>
+            <button type="button" class="btn-sugerido" data-id="usb-hub" aria-label="Agregar Hub USB-C al carrito">🛒 Agregar</button>
           </article>
         </li>
         <li>
@@ -330,9 +240,9 @@
             <figure>
               <img src="img/productos/sleeve-mb.jpg" alt="Funda para MacBook Air 13 pulgadas" width="120" height="120">
             </figure>
-            <h3><a href="producto.html">Funda MacBook Air 13"</a></h3>
+            <h3><a href="producto.html?id=sleeve-mb">Funda MacBook Air 13"</a></h3>
             <p><strong>RD$1,800</strong></p>
-            <button type="button" aria-label="Agregar funda MacBook al carrito">🛒 Agregar</button>
+            <button type="button" class="btn-sugerido" data-id="sleeve-mb" aria-label="Agregar funda MacBook al carrito">🛒 Agregar</button>
           </article>
         </li>
       </ul>
@@ -349,5 +259,31 @@
     <p><small>&copy; 2025 TechStore RD. Todos los derechos reservados.</small></p>
   </footer>
 
+  <!-- ==================== MODAL CHECKOUT ==================== -->
+  <div id="modal-checkout" class="oculto" role="dialog" aria-modal="true"
+       aria-labelledby="titulo-modal" aria-hidden="true">
+    <div class="modal-contenido">
+      <button type="button" id="btn-cerrar-modal" aria-label="Cerrar">✕</button>
+      <h2 id="titulo-modal">Confirmar pedido</h2>
+      <form id="form-checkout" novalidate>
+        <div>
+          <label for="checkout-nombre">Nombre completo:</label>
+          <input type="text" id="checkout-nombre" required autocomplete="name"
+                 placeholder="Ej: María González">
+          <span id="error-checkout-nombre" class="error-campo" aria-live="polite"></span>
+        </div>
+        <div>
+          <label for="checkout-email">Correo electrónico:</label>
+          <input type="email" id="checkout-email" required autocomplete="email"
+                 placeholder="correo@ejemplo.com">
+          <span id="error-checkout-email" class="error-campo" aria-live="polite"></span>
+        </div>
+        <button type="submit">✅ Confirmar compra</button>
+      </form>
+    </div>
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/carrito.js"></script>
 </body>
 </html>

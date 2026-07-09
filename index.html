@@ -48,9 +48,10 @@
 
       <!-- Acciones del usuario -->
       <div>
-        <a href="carrito.html" aria-label="Ver carrito de compras">🛒 Carrito <span>0</span></a>
+        <a href="carrito.html" aria-label="Ver carrito de compras">🛒 Carrito <span data-carrito-contador>0</span></a>
         <a href="404.html" aria-label="Ver favoritos">♥ Favoritos</a>
         <a href="404.html" aria-label="Mi cuenta">👤 Mi cuenta</a>
+        <button type="button" id="btn-tema" aria-label="Cambiar tema">☀️ Modo claro</button>
       </div>
     </div>
 
@@ -78,7 +79,7 @@
         </header>
         <p>Sonido premium, cancelación de ruido y hasta 30 horas de batería. Experimenta la música como nunca antes.</p>
         <p>Precio especial: <strong>RD$11,800</strong> <del>RD$14,800</del></p>
-        <a href="producto.html" aria-label="Comprar Auriculares SoundPro X1 ahora">Comprar ahora</a>
+        <a href="producto.html?id=sony-auriculares" aria-label="Comprar Auriculares SoundPro X1 ahora">Comprar ahora</a>
 
         <figure>
           <img
@@ -209,8 +210,8 @@
         <p>⭐⭐⭐⭐☆ <small>(128 reseñas)</small></p>
         <p>Disponibilidad: <ins>En stock</ins></p>
         <footer>
-          <a href="producto.html">Ver detalle</a>
-          <button type="button" aria-label="Agregar Samsung Galaxy A54 al carrito">🛒 Agregar al carrito</button>
+          <a href="producto.html?id=galaxy-a54">Ver detalle</a>
+          <button type="button" class="btn-agregar-inicio" data-id="galaxy-a54" aria-label="Agregar Samsung Galaxy A54 al carrito">🛒 Agregar al carrito</button>
         </footer>
       </article>
 
@@ -229,8 +230,8 @@
         <p>⭐⭐⭐⭐☆ <small>(86 reseñas)</small></p>
         <p>Disponibilidad: <ins>En stock</ins></p>
         <footer>
-          <a href="producto.html">Ver detalle</a>
-          <button type="button" aria-label="Agregar Lenovo IdeaPad 3 al carrito">🛒 Agregar al carrito</button>
+          <a href="producto.html?id=lenovo-ideapad">Ver detalle</a>
+          <button type="button" class="btn-agregar-inicio" data-id="lenovo-ideapad" aria-label="Agregar Lenovo IdeaPad 3 al carrito">🛒 Agregar al carrito</button>
         </footer>
       </article>
 
@@ -250,8 +251,8 @@
         <p>⭐⭐⭐⭐☆ <small>(73 reseñas)</small></p>
         <p>Disponibilidad: <ins>En stock</ins></p>
         <footer>
-          <a href="producto.html">Ver detalle</a>
-          <button type="button" aria-label="Agregar Sony WH-CH720N al carrito">🛒 Agregar al carrito</button>
+          <a href="producto.html?id=sony-auriculares">Ver detalle</a>
+          <button type="button" class="btn-agregar-inicio" data-id="sony-auriculares" aria-label="Agregar Sony WH-CH720N al carrito">🛒 Agregar al carrito</button>
         </footer>
       </article>
 
@@ -270,8 +271,8 @@
         <p>⭐⭐⭐⭐☆ <small>(48 reseñas)</small></p>
         <p>Disponibilidad: <ins>En stock</ins></p>
         <footer>
-          <a href="producto.html">Ver detalle</a>
-          <button type="button" aria-label="Agregar Xiaomi Watch 2 al carrito">🛒 Agregar al carrito</button>
+          <a href="producto.html?id=xiaomi-watch">Ver detalle</a>
+          <button type="button" class="btn-agregar-inicio" data-id="xiaomi-watch" aria-label="Agregar Xiaomi Watch 2 al carrito">🛒 Agregar al carrito</button>
         </footer>
       </article>
 
@@ -290,7 +291,7 @@
         <p>⭐⭐⭐☆☆ <small>(32 reseñas)</small></p>
         <p>Disponibilidad: <del>Agotado</del></p>
         <footer>
-          <a href="producto.html">Ver detalle</a>
+          <a href="producto.html?id=xbox-control">Ver detalle</a>
           <button type="button" disabled aria-label="Control Xbox no disponible actualmente" aria-disabled="true">Sin stock</button>
         </footer>
       </article>
@@ -311,8 +312,8 @@
         <p>⭐⭐⭐⭐⭐ <small>(112 reseñas)</small></p>
         <p>Disponibilidad: <ins>En stock</ins></p>
         <footer>
-          <a href="producto.html">Ver detalle</a>
-          <button type="button" aria-label="Agregar Echo Dot al carrito">🛒 Agregar al carrito</button>
+          <a href="producto.html?id=echo-dot">Ver detalle</a>
+          <button type="button" class="btn-agregar-inicio" data-id="echo-dot" aria-label="Agregar Echo Dot al carrito">🛒 Agregar al carrito</button>
         </footer>
       </article>
 
@@ -331,8 +332,8 @@
         <p>⭐⭐⭐⭐⭐ <small>(204 reseñas)</small></p>
         <p>Disponibilidad: <ins>En stock</ins></p>
         <footer>
-          <a href="producto.html">Ver detalle</a>
-          <button type="button" aria-label="Agregar iPad Air al carrito">🛒 Agregar al carrito</button>
+          <a href="producto.html?id=ipad-air">Ver detalle</a>
+          <button type="button" class="btn-agregar-inicio" data-id="ipad-air" aria-label="Agregar iPad Air al carrito">🛒 Agregar al carrito</button>
         </footer>
       </article>
 
@@ -352,8 +353,8 @@
         <p>⭐⭐⭐⭐⭐ <small>(89 reseñas)</small></p>
         <p>Disponibilidad: <ins>En stock</ins></p>
         <footer>
-          <a href="producto.html">Ver detalle</a>
-          <button type="button" aria-label="Agregar Logitech MX Master 3S al carrito">🛒 Agregar al carrito</button>
+          <a href="producto.html?id=logitech-mouse">Ver detalle</a>
+          <button type="button" class="btn-agregar-inicio" data-id="logitech-mouse" aria-label="Agregar Logitech MX Master 3S al carrito">🛒 Agregar al carrito</button>
         </footer>
       </article>
 
@@ -559,5 +560,7 @@
     <p><small>&copy; 2025 TechStore RD. Todos los derechos reservados.</small></p>
   </footer>
 
+  <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/inicio.js"></script>
 </body>
 </html>

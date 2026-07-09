@@ -29,8 +29,9 @@
         <button type="submit">Buscar</button>
       </form>
       <div>
-        <a href="carrito.html" aria-label="Ver carrito">🛒 Carrito</a>
+        <a href="carrito.html" aria-label="Ver carrito">🛒 Carrito <span data-carrito-contador>0</span></a>
         <a href="404.html" aria-label="Mi cuenta">👤 Mi cuenta</a>
+        <button type="button" id="btn-tema" aria-label="Cambiar tema">☀️ Modo claro</button>
       </div>
     </div>
     <nav aria-label="Navegación principal">
@@ -51,12 +52,15 @@
       <ol>
         <li><a href="index.html">Inicio</a></li>
         <li><a href="productos.html">Productos</a></li>
-        <li><a href="productos.html">Laptops</a></li>
-        <li>MacBook Air M2</li>
+        <li id="breadcrumb-producto">MacBook Air M2</li>
       </ol>
     </nav>
 
-    <article aria-labelledby="nombre-producto">
+    <!-- JS renderiza aquí la info dinámica para cualquier producto -->
+    <div id="contenedor-producto" class="oculto" aria-live="polite"></div>
+
+    <!-- Contenido estático de Práctica 1 (MacBook Air) — se oculta cuando el id no es macbook-air -->
+    <article id="seccion-estatica-macbook" aria-labelledby="nombre-producto">
 
       <header>
         <h1 id="nombre-producto">Apple MacBook Air M2</h1>
@@ -107,11 +111,11 @@
       <!-- ==================== INFO Y PRECIO ==================== -->
       <section aria-labelledby="titulo-info-compra">
         <h2 id="titulo-info-compra">Información de compra</h2>
-        <p>Precio: <strong>RD$76,800</strong> <del>RD$88,700</del> <mark>Ahorra $200.000</mark></p>
-        <p>Disponibilidad: <ins>En stock</ins> — <strong>¡Solo quedan 5 unidades!</strong></p>
+        <p id="precio-producto">Precio: <strong>RD$76,800</strong></p>
+        <p id="stock-producto">Disponibilidad: <ins>En stock</ins> — <strong>¡Solo quedan 12 unidades!</strong></p>
         <p>Envío estimado: <time datetime="2024-12-20">20 de diciembre, 2024</time></p>
 
-        <form action="carrito.html" method="get" aria-label="Agregar al carrito">
+        <form id="form-agregar" action="carrito.html" method="get" aria-label="Agregar al carrito">
           <fieldset>
             <legend>Opciones del producto</legend>
             <label for="color-producto">Color:</label>
@@ -304,8 +308,8 @@
               <figure>
                 <img src="img/productos/macbook-pro.jpg" alt="MacBook Pro M3" width="130" height="130">
               </figure>
-              <h3><a href="producto.html">MacBook Pro M3</a></h3>
-              <p><strong>$1.899.990</strong></p>
+              <h3><a href="producto.html?id=macbook-pro">MacBook Pro M3</a></h3>
+              <p><strong>RD$124,500</strong></p>
             </article>
           </li>
           <li>
@@ -313,8 +317,8 @@
               <figure>
                 <img src="img/productos/magic-mouse.jpg" alt="Apple Magic Mouse" width="130" height="130">
               </figure>
-              <h3><a href="producto.html">Magic Mouse</a></h3>
-              <p><strong>$89.990</strong></p>
+              <h3><a href="producto.html?id=magic-mouse">Magic Mouse</a></h3>
+              <p><strong>RD$5,800</strong></p>
             </article>
           </li>
           <li>
@@ -322,7 +326,7 @@
               <figure>
                 <img src="img/productos/airpods-pro.jpg" alt="AirPods Pro 2da Gen" width="130" height="130">
               </figure>
-              <h3><a href="producto.html">AirPods Pro 2</a></h3>
+              <h3><a href="producto.html?id=airpods-pro">AirPods Pro 2</a></h3>
               <p><strong>RD$17,700</strong></p>
             </article>
           </li>
@@ -341,5 +345,7 @@
     <p><small>&copy; 2025 TechStore RD. Todos los derechos reservados.</small></p>
   </footer>
 
+  <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/producto.js"></script>
 </body>
 </html>
